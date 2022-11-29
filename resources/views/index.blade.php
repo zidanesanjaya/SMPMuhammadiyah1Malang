@@ -48,18 +48,20 @@
 
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="active" href="{{ url ('http://127.0.0.1:8000/') }}">Home</a></li>
-                <li><a href="#about">Profile</a></li>
+                <!-- <li><a class="active" href="{{ url ('http://127.0.0.1:8000/') }}">Home</a></li> -->
+                <li><a class="active" href="#hero">Home</a></li>
+                <li><a href="#main">Profile</a></li>
                 <li><a href="#cermus">Cerita Muhasa</a></li>
                 <li><a href="#galeri">Galeri</a></li>
-                <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
-                <li><a href="{{ url ('http://127.0.0.1:8000/aksi') }}">AKSI</a></li>
+                <!-- <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li> -->
+                <li><a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}">PPDB</a></li>
+                <li><a href="{{ url ('https://aksi.smpmuhasa.sch.id/') }}">AKSI</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
         <!-- .navbar -->
 
-        <a href="courses.html" class="get-started-btn">Daftar Sekarang</a>
+        <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="get-started-btn">Daftar Sekarang</a>
 
         </div>
     </header><!-- End Header -->
@@ -69,61 +71,11 @@
         <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
         <h1>SMP MUHAMMADIYAH 1 MALANG</h1>
         <h2>Berjiwa Pemimpin - Berakhlak Islami</h2>
-        <a href="courses.html" class="btn-get-started">Daftar Sekarang</a>
+        <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="btn-get-started">Daftar Sekarang</a>
         </div>
     </section><!-- End Hero -->
 
     <main id="main">
-                <!-- ======= Why Us Section ======= -->
-                <section id="why-us" class="why-us">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row">
-            <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="content">
-                <h3>Why Choose Mentor?</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                    Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-                </p>
-                <div class="text-center">
-                    <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon-boxes d-flex flex-column justify-content-center">
-                <div class="row">
-                    <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                        <i class="bx bx-receipt"></i>
-                        <h4>Corporis voluptates sit</h4>
-                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                    </div>
-                    </div>
-                    <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                        <i class="bx bx-cube-alt"></i>
-                        <h4>Ullamco laboris ladore pan</h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                    </div>
-                    </div>
-                    <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                        <i class="bx bx-images"></i>
-                        <h4>Labore consequatur</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                    </div>
-                    </div>
-                </div>
-                </div><!-- End .content-->
-            </div>
-            </div>
-
-        </div>
-        </section>
-        <!-- End Why Us Section -->
-
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
         <div class="container" data-aos="fade-up">
@@ -133,7 +85,7 @@
                 <img src="/img/about.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                <h3>Profile Sekolah</h3>
                 <p class="fst-italic">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua.
@@ -152,6 +104,79 @@
 
         </div>
         </section><!-- End About Section -->
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="content">
+                <h3>Kenapa Harus Muhasa?</h3>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                    Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                </p>
+                <div class="text-center">
+                    <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                </div> -->
+                </div>
+            </div>
+            <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-boxes d-flex flex-column justify-content-center">
+                <div class="row">
+
+                    <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                        <!-- <i class="bx bx-receipt"></i> -->
+                        <img src="/img/icon/sabe.png" style="width: height; height: 50px; margin-bottom: 50px;">
+                        <h4>Salat Berjamaah</h4>
+                        <p>Membiasakan siswa untuk melakukan sholat sunnah dhuha sebelum memulai kegiatan belajar dan juga membiasakan siswa untuk sholat berjamaah tepat waktu</p>
+                    </div>
+                    </div>
+
+                    <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                        <!-- <i class="bx bx-receipt"></i> -->
+                        <img src="/img/icon/taqu.png" style="width: height; height: 50px; margin-bottom: 50px;">
+                        <h4>Tahfidz Qur'an</h4>
+                        <p>Program Hafalan Juz 30 bagi Setiap Siswa dan Program Tahfidz Lanjutan untuk Siswa yang Sudah Hafal Juz 30</p>
+                    </div>
+                    </div>
+
+                    <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                        <!-- <i class="bx bx-receipt"></i> -->
+                        <img src="/img/icon/olim.png" style="width: height; height: 50px; margin-bottom: 50px;">
+                        <h4>Olimpiade</h4>
+                        <p>Program Pendampingan Siswa untuk Mengembangkan Kemampuannya dalam Bidang Akademik maupun Non-akademik serta Mengikutsertakan Siswa dalam Pelbagai Lomba Lokal, Nasional hingga Internasional</p>
+                    </div>
+                    </div>
+
+                    <!-- <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                        <i class="bx bx-cube-alt"></i>
+                        <h4>Ullamco laboris ladore pan</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    </div>
+                    </div>
+
+                    <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                        <i class="bx bx-images"></i>
+                        <h4>Labore consequatur</h4>
+                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    </div>
+                    </div> -->
+
+                </div>
+                </div><!-- End .content-->
+            </div>
+            </div>
+
+        </div>
+        </section>
+        <!-- End Why Us Section -->
 
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts section-bg">
@@ -178,19 +203,18 @@
                 <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
                 <p>Trainers</p>
             </div>
-
             </div>
-
         </div>
-        </section><!-- End Counts Section -->
+        </section>
+        <!-- End Counts Section -->
 
         <!-- ======= Popular Courses Section ======= -->
-        <section id="popular-courses" class="courses">
+        <section id="cermus" class="courses">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-            <h2>Courses</h2>
-            <p>Popular Courses</p>
+            <h2>CERMUS</h2>
+            <p>Cerita Muhasa</p>
             </div>
 
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
@@ -279,7 +303,7 @@
         </section><!-- End Popular Courses Section -->
 
         <!-- ======= Trainers Section ======= -->
-        <section id="trainers" class="trainers">
+        <section id="galeri" class="trainers">
         <div class="container" data-aos="fade-up">
 
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
@@ -343,7 +367,80 @@
             </div>
 
         </div>
-        </section><!-- End Trainers Section -->
+        </section>
+        <!-- End Trainers Section -->
+
+                <!-- ======= Trainers Section ======= -->
+                <section id="trainers" class="trainers">
+        <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Testimoni</h2>
+            <p>Testimoni Alumni</p>
+        </div>
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                <img src="/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                <div class="member-content">
+                    <h4>Walter White</h4>
+                    <span>Web Development</span>
+                    <p>
+                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                    </p>
+                    <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                <img src="/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+                <div class="member-content">
+                    <h4>Sarah Jhinson</h4>
+                    <span>Marketing</span>
+                    <p>
+                    Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                    </p>
+                    <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                <img src="/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+                <div class="member-content">
+                    <h4>William Anderson</h4>
+                    <span>Content</span>
+                    <p>
+                    Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                    </p>
+                    <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+        </section>
+        <!-- End Trainers Section -->
 
     </main><!-- End #main -->
 
