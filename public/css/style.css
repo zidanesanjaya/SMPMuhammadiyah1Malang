@@ -8,6 +8,44 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.zpreloaderBg {
+  position: fixed;
+  z-index: 10; 
+  top: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.zpreloader {
+  margin: auto;
+  background: url(https://main.smpmuhasa.sch.id/wp-content/uploads/2022/03/cropped-fav.png) no-repeat center;
+  background-size: 150px;
+  width: 300px;
+  height: 300px;
+}
+
+
+.zpreloader2 {
+border: 5px solid #f3f3f3;
+border-top: 5px solid #71ce7d;
+border-radius: 50%;
+width: 250px;
+height: 250px;
+animation: spin 1s ease-in-out infinite ;
+position: relative;
+margin: auto;
+top: -280px;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;

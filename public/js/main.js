@@ -5,6 +5,29 @@
 * License: https://bootstrapmade.com/license/
 */
 
+// preloader
+var preloadTime;
+
+function preloader() {
+  preloadTime = setTimeout(showPage, 5000);
+}
+
+function showPage() {
+  document.getElementById("zpreloader").style.display = "none";
+}
+// preloader
+
+const btn = document.getElementById('bsambutan');
+
+btn.addEventListener('click', () => {
+  // 👇️ hide button
+  btn.style.display = 'none';
+
+  // 👇️ show div
+  const box = document.getElementById('sambutan');
+  box.style.display = 'block';
+});
+
 (function() {
   "use strict";
 

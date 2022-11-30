@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Mentor Bootstrap Template - Index</title>
+    <title>Smp Muhammadiyah 1 Malang</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="/img/favicon.png" rel="icon">
+    <link href="/img/logohead.png" rel="icon">
     <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -37,7 +37,10 @@
     </head>
 
     <body>
-
+    <!-- <div class="zpreloaderBg" id="preloader" onload="zpreloader()">
+        <div class="zpreloader"></div>
+        <div class="zpreloader2"></div>
+    </div> -->
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
@@ -112,10 +115,10 @@
                         Saya ucapkan selamat datang di Laman Website Resmi SMP Muhammadiyah 1 Malang.
                         </p>
                     <details>
-                        <summary style="margin-left: 22px; background: #5fcf80; color: #fff; border-radius: 50px; padding: 8px 25px; white-space: nowrap; transition: 0.3s; font-size: 14px; display: inline-block;">
+                        <summary id="bsambutan" style="margin-left: 22px; background: #5fcf80; color: #fff; border-radius: 50px; padding: 8px 25px; white-space: nowrap; transition: 0.3s; font-size: 14px; display: inline-block;">
                             Baca Selengkapnya
                         </summary>
-                        <p>
+                        <p id="sambutan">
                         Seraya memanjatkan puji syukur kehadirat Allah SWT, disertai perasaan bangga saya menuliskan kata Sambutan Kepala sekolah, setelah dilakukan update, baik dari sisi pengelolaan maupun isinya. 
                         Di era global dan pesatnya Teknologi Informasi ini, tidak dipungkiri bahwa keberadaan sebuah website untuk suatu organisasi, termasuk SMP Muhammadiyah 1 Malang, sangatlah penting. 
                         Website dapat digunakan sebagai media berbagi informasi - informasi dari sekolah, yang memang harus diketahui oleh masyarakat secara luas. 
