@@ -68,12 +68,28 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-content-center align-items-center">
-        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-        <h1>SMP MUHAMMADIYAH 1 MALANG</h1>
-        <h2>Berjiwa Pemimpin - Berakhlak Islami</h2>
-        <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="btn-get-started">Daftar Sekarang</a>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="position: absolute; z-index: 1=;" data-interval="100">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2500">
+                <img src="/img/hero-bg.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img src="/img/hero-bg.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500" repeat>
+                <img src="/img/hero-bg.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
+            </div>
         </div>
-    </section><!-- End Hero -->
+    </div>
+        <div style="position: absolute; z-index: 2;">
+            <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+                <h1>SMP MUHAMMADIYAH 1 MALANG</h1>
+                <h2>Berjiwa Pemimpin - Berakhlak Islami</h2>
+                <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="btn-get-started">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero -->
 
     <main id="main">
         <!-- ======= About Section ======= -->
@@ -213,8 +229,8 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-            <h2>CERMUS</h2>
-            <p>Cerita Muhasa</p>
+                <h2>CERMUS</h2>
+                <p>Cerita Muhasa</p>
             </div>
 
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
@@ -305,6 +321,10 @@
         <!-- ======= Trainers Section ======= -->
         <section id="galeri" class="trainers">
         <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <p>Galeri</p>
+                <h2></h2>
+            </div>
 
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
