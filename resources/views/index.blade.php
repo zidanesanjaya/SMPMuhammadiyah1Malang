@@ -68,7 +68,7 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="position: absolute; z-index: 1=;" data-interval="100">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="position: absolute; z-index: 1;" data-interval="100">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="2500">
                 <img src="/img/hero-bg.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
