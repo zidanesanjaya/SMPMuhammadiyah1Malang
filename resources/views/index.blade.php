@@ -93,33 +93,97 @@
 
     <main id="main">
         <!-- ======= About Section ======= -->
+        <br>
+        <br>
+        <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
+                <img src="/img/about.jpg" class="img-fluid" alt="">
+            </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <div class="section-title">
+                    <h2>Kepala Sekolah</h2>
+                    <p>Yanur Setyaningrum, M.Pd</p>
+                </div>
+                        <!-- <summary>Sambutan Kepala Sekolah</summary> -->
+                        <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
+                        <p class="fst-italic">
+                        Saya ucapkan selamat datang di Laman Website Resmi SMP Muhammadiyah 1 Malang.
+                        </p>
+                    <details>
+                        <summary style="margin-left: 22px; background: #5fcf80; color: #fff; border-radius: 50px; padding: 8px 25px; white-space: nowrap; transition: 0.3s; font-size: 14px; display: inline-block;">
+                            Baca Selengkapnya
+                        </summary>
+                        <p>
+                        Seraya memanjatkan puji syukur kehadirat Allah SWT, disertai perasaan bangga saya menuliskan kata Sambutan Kepala sekolah, setelah dilakukan update, baik dari sisi pengelolaan maupun isinya. 
+                        Di era global dan pesatnya Teknologi Informasi ini, tidak dipungkiri bahwa keberadaan sebuah website untuk suatu organisasi, termasuk SMP Muhammadiyah 1 Malang, sangatlah penting. 
+                        Website dapat digunakan sebagai media berbagi informasi - informasi dari sekolah, yang memang harus diketahui oleh masyarakat secara luas. 
+                        Disamping itu, website ini juga nantinya akan menjadi wadah kreasi siswa-siswi SMP Muhammadiyah 1 Malang. 
+                        Oleh karena itu, saya sangat berharap, melalui website ini, SMP Muhammadiyah 1 Malang akan semakin berkembang, sehingga pada waktunya nanti dapat memberikan kontribusi bagai kemajuan masyarakat secara luas dan SMP Muhammadiyah 1 Malang sendiri khususnya, Terima kasih.
+                        </p>
+                        <h3>Wassalamu’alaikum Warahmatullahi Wabarakatuh</h3>
+                        <p style="text-align: right;">
+                            Kepala Sekolah SMP Muhammadiyah 1 Malang
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- End About Section -->
+        
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts section-bg">
+        <div class="container">
+
+            <div class="row counters">
+                <div class="col-lg-6 col-12 text-center">
+                    <span>Visi</span>
+                    <p>TERBENTUKNYA PRIBADI BERJIWA KEPEMIMPINAN ISLAMI, PEDULI DAN BERWAWASAN KEUNGGULAN
+                    </p>
+                </div>
+
+                <div class="col-lg-6 col-12 text-center">
+                    <span>Misi</span>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Meningkatkan profesionalisme tenaga pendidik dan kependidikan</li>
+                        <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap dan karakter islami di lingkungan sekolah</li>
+                        <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap dan karakter islami di lingkungan sekolah.</li>
+                        <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap peduli terhadap sesama</li>
+                        <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap peduli terhadap sesama</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- End Counts Section -->
+
+        <!-- ======= About Section ======= -->
         <section id="about" class="about">
         <div class="container" data-aos="fade-up">
 
             <div class="row">
             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                <img src="/img/about.jpg" class="img-fluid" alt="">
+                <img src="/img/depanSekolah.jpg" class="img-fluid" alt="" style="height: 480px; width: 450px;">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                 <h3>Profile Sekolah</h3>
                 <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                SMP Muhammadiyah 1 Malang (Muhasa)
                 </p>
-                <ul>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
                 <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                Berdiri setahun setelah Indonesia Merdeka, tepatnya pada tanggal 18 Agustus 1946 atas prakarsa para tokoh Muhammadiyah Kota Malang. 
+                Muhasa adalah cikal bakal pendidikan naungan Muhammadiyah Kota Malang yang dirintis oleh KH. M. Bedjo Dermalaksono, bersama Djoko Raharjo, Suryawiyana, dan Abdul Rahman. 
+                Pada awal perintisannya sempat beberapa kali berpindah tempat, yang akhirnya menetap sejak tahun 1951 hingga sekarang di Jalan Bridjen Slamet Riyadi No. 134 (dulu Oroo-oro Dowo 134) yang tidak lain adalah kediaman Kh. M. Bedjo Dermolaksono.
                 </p>
 
             </div>
             </div>
 
         </div>
-        </section><!-- End About Section -->
+        </section>
+        <!-- End About Section -->
 
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us">
@@ -128,6 +192,9 @@
             <div class="row">
             <div class="col-lg-4 d-flex align-items-stretch">
                 <div class="content">
+                <h3 style="text-align: center; font-size: 250%;-webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #3C4048;">SMP MUHAMMADIYAH 1 MALANG</h3>
+                <hr>
                 <h3>Kenapa Harus Muhasa?</h3>
                 <!-- <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
