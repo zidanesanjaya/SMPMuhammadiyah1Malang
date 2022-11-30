@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,11 @@ Route::get('/ppdb', function () {
 Route::get('/aksi', function () {
     return view('aksi');
 });
+
+Route::get('dashboard', [AuthController::class, 'dashboard']); 
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('login_ppdb', [AuthController::class, 'login'])->name('login.login_ppdb'); 
+Route::get('register', [AuthController::class, 'registration'])->name('register');
+Route::post('registration_ppdb', [AuthController::class, 'Registration_Ppdb'])->name('register.register_ppdb'); 
+Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
