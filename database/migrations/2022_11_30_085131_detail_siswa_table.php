@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('detail_siswa', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_user'); // FK
+            $table->unsignedBigInteger('id_gelombang'); // FK
             $table->string('nama_lengkap');
             $table->string('tempat_lahir');
             $table->string('tanggal_lahir');
