@@ -26,11 +26,15 @@ class AuthController extends Controller
    
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                        ->withSuccess('Signed in');
+            $user = Auth::user();
+            if($user->role == 'siswa'){
+                return redirect()->intended('dashboard')
+                ->withSuccess('Signed in');
+            }else{
+                return redirect("login")->withErrors(['auth' => ['Anda Tidak Bisa Login Kedalam PPDB (Bukan Siswa)']]);
+            }
         }
-  
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("login")->withErrors(['auth' => ['Email Atau Password Salah']]);
     }
     public function dashboard()
     {
