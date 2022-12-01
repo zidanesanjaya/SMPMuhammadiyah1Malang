@@ -20,15 +20,6 @@ function showPage() {
 
 const btn = document.getElementById('bsambutan');
 
-btn.addEventListener('click', () => {
-  // 👇️ hide button
-  btn.style.display = 'none';
-
-  // 👇️ show div
-  const box = document.getElementById('sambutan');
-  box.style.display = 'block';
-});
-
 (function() {
   "use strict";
 

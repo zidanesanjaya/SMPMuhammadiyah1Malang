@@ -621,6 +621,16 @@
 
 <!-- Template Main JS File -->
 <script src="/js/main.js"></script>
+<script>
+    btn.addEventListener('click', () => {
+    // 👇️ hide button
+    btn.style.display = 'none';
+
+    // 👇️ show div
+    const box = document.getElementById('sambutan');
+    box.style.display = 'block';
+    });
+</script>
 
 </body>
 
