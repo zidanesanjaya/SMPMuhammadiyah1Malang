@@ -377,7 +377,7 @@
         <!-- Gallery Start -->
     <div id="galeri" class="trainers container-xxl py-5">
     <br><br>
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="section-title">
                     <p>Galeri Muhasa</p>
@@ -535,7 +535,7 @@
         <!-- End Trainers Section -->
 
         <section class="venue section-padding" id="section_6">
-                <div class="container">
+                <div class="container" data-aos="fade-up">
                     <div class="row">
                     <div class="section-title">
                         <h2>Lokasi</h2>
