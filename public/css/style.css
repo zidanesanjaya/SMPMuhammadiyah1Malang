@@ -12,7 +12,7 @@
   LOCATION
 -----------------------------------------*/
 .venue {
-  background: var(--section-bg-color);
+  background: #f6f7f6;
 }
 
 .venue-thumb {
@@ -27,7 +27,7 @@
 }
 
 .venue-info-title {
-  background: var(--navbar-bg-color);
+  background: #5fcf80;
   padding: 20px 40px;
 }
 
@@ -38,14 +38,14 @@
 /*** Project Portfolio ***/
 #portfolio-flters {
   display: inline-block;
-  background: var(--light);
+  background: lightblue;
   padding: 10px 15px;
 }
 
 #portfolio-flters li {
   display: inline-block;
   font-weight: 500;
-  color: var(--primary);
+  color: #0dcaf0;
   cursor: pointer;
   transition: .5s;
   border-bottom: 2px solid transparent;
@@ -53,10 +53,11 @@
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
-  color: var(--dark);
-  border-color: var(--dark);
+  color: #000000;
+  border-color: #000000;
 }
 
+/* portofolio */
 .portfolio-inner {
   position: relative;
   overflow: hidden;
