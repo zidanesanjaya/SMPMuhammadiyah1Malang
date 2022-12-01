@@ -161,7 +161,7 @@
     <div class="container" data-aos="fade-up">
 
         <div class="row">
-        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-left" data-aos-delay="100">
             <img src="/img/depanSekolah.jpg" class="img-fluid" alt="" style="height: 480px; width: 450px;">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -169,7 +169,7 @@
             <p class="fst-italic">
             SMP Muhammadiyah 1 Malang (Muhasa)
             </p>
-            <p>
+            <p style="text-align: justify;">
             Berdiri setahun setelah Indonesia Merdeka, tepatnya pada tanggal 18 Agustus 1946 atas prakarsa para tokoh Muhammadiyah Kota Malang. 
             Muhasa adalah cikal bakal pendidikan naungan Muhammadiyah Kota Malang yang dirintis oleh KH. M. Bedjo Dermalaksono, bersama Djoko Raharjo, Suryawiyana, dan Abdul Rahman. 
             Pada awal perintisannya sempat beberapa kali berpindah tempat, yang akhirnya menetap sejak tahun 1951 hingga sekarang di Jalan Bridjen Slamet Riyadi No. 134 (dulu Oroo-oro Dowo 134) yang tidak lain adalah kediaman Kh. M. Bedjo Dermolaksono.
