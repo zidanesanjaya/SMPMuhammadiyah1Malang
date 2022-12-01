@@ -13,6 +13,10 @@ class AuthController extends Controller
     {
         return view('auth.login_ppdb');
     }  
+    public function login_admin()
+    {
+        return view('auth.login_admin');
+    }  
     public function registration()
     {
         return view('auth.registration_ppdb');
@@ -31,15 +35,42 @@ class AuthController extends Controller
                 return redirect()->intended('dashboard')
                 ->withSuccess('Signed in');
             }else{
-                return redirect("login")->withErrors(['auth' => ['Anda Tidak Bisa Login Kedalam PPDB (Bukan Siswa)']]);
+                return redirect("login")->withErrors(['auth' => ['Halaman Ini Hanya Untuk Siswa']]);
             }
         }
         return redirect("login")->withErrors(['auth' => ['Email Atau Password Salah']]);
+    }
+    public function login_admin_auth(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+   
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+            if($user->role == 'admin'){
+                return redirect()->intended('dashboard_admin')
+                ->withSuccess('Signed in');
+            }else{
+                return redirect("login_admin")->withErrors(['auth' => ['Halaman Ini Hanya Login Khusus Admin Dan User(Karyawan)']]);
+            }
+        }
+        return redirect("login_admin")->withErrors(['auth' => ['Email Atau Password Salah']]);
     }
     public function dashboard()
     {
         if(Auth::check()){
             return view('dashboard_ppdb.dashboard');
+        }
+  
+        return redirect("login")->withSuccess('You are not allowed to access');
+    }
+    public function dashboard_admin()
+    {
+        if(Auth::check()){
+            return view('dashboard_admin.dashboard');
         }
   
         return redirect("login")->withSuccess('You are not allowed to access');

@@ -1,11 +1,11 @@
 <main class="login-form">
     <div class="card">
-        <h3 class="card-header text-center">Login Siswa</h3>
+        <h3 class="card-header text-center">Login Admin</h3>
         <div class="card-body">
             @if ($errors->has('auth'))
                 <span class="text-danger">{{ $errors->first('auth') }}</span>
             @endif
-            <form method="POST" action="{{ route('login.login_ppdb') }}">
+            <form method="POST" action="{{ route('login.login_admin_auth') }}">
                 @csrf
                 <div class="form-group mb-3">
                     <input type="text" placeholder="Email" id="email" class="form-control" name="email" required

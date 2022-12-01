@@ -38,10 +38,16 @@ Route::get('/aksi', function () {
     return view('aksi');
 });
 
+// Login And Register Page
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
+Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin']); 
 Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('login_ppdb', [AuthController::class, 'login'])->name('login.login_ppdb'); 
+Route::get('login_admin', [AuthController::class, 'login_admin'])->name('login_admin');
 Route::get('register', [AuthController::class, 'registration'])->name('register');
+
+//Authetication
+Route::post('login_ppdb', [AuthController::class, 'login'])->name('login.login_ppdb'); 
+Route::post('login_admin_auth', [AuthController::class, 'login_admin_auth'])->name('login.login_admin_auth'); 
 Route::post('registration_ppdb', [AuthController::class, 'Registration_Ppdb'])->name('register.register_ppdb'); 
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 

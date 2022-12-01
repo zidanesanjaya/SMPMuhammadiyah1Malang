@@ -29,7 +29,8 @@
                 </ul>
             </div>
 
-            Anda Login Sebagai Siswa
+
+            Anda Login Admin / User
         </div>
     </nav>
     @yield('content')
