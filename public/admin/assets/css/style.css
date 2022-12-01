@@ -3168,6 +3168,7 @@ select.custom-file-control:not([size]):not([multiple]), select.form-control:not(
 ===================*/
 .accountbg {
   background: url("../images/bg-account.jpg");
+  filter: brightness(10%);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -3589,9 +3590,9 @@ body.fixed-left .side-menu.left {
 
 #sidebar-menu {
   background-color: #ffffff;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 #sidebar-menu .badge {
