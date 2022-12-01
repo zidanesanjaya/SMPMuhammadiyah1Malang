@@ -199,13 +199,6 @@
             -webkit-text-stroke-color: #3C4048;">SMP MUHAMMADIYAH 1 MALANG</h3>
                 <hr>
                 <h3>Kenapa Harus Muhasa?</h3>
-                <!-- <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                    Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-                </p>
-                <div class="text-center">
-                    <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                </div> -->
                 </div>
             </div>
             <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
@@ -238,25 +231,9 @@
                         <p>Program Pendampingan Siswa untuk Mengembangkan Kemampuannya dalam Bidang Akademik maupun Non-akademik serta Mengikutsertakan Siswa dalam Pelbagai Lomba Lokal, Nasional hingga Internasional</p>
                     </div>
                     </div>
-
-                    <!-- <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                        <i class="bx bx-cube-alt"></i>
-                        <h4>Ullamco laboris ladore pan</h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                    </div>
-                    </div>
-
-                    <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                        <i class="bx bx-images"></i>
-                        <h4>Labore consequatur</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                    </div>
-                    </div> -->
-
                 </div>
-                </div><!-- End .content-->
+                </div>
+                <!-- End .content-->
             </div>
             </div>
 
@@ -272,22 +249,22 @@
 
             <div class="col-lg-3 col-6 text-center">
                 <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Students</p>
+                <p>Siswa</p>
             </div>
 
             <div class="col-lg-3 col-6 text-center">
                 <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Courses</p>
+                <p>Mata Pelajaran</p>
             </div>
 
             <div class="col-lg-3 col-6 text-center">
                 <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Events</p>
+                <p>Guru</p>
             </div>
 
             <div class="col-lg-3 col-6 text-center">
                 <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Trainers</p>
+                <p>Ekstrakulikuler</p>
             </div>
             </div>
         </div>
@@ -318,7 +295,7 @@
                     <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                     <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                        <img src="/img/user.png" class="img-fluid" alt="">
                         <span>Antonio</span>
                     </div>
                     <div class="trainer-rank d-flex align-items-center">
@@ -344,7 +321,7 @@
                     <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                     <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+                        <img src="/img/user.png" class="img-fluid" alt="">
                         <span>Lana</span>
                     </div>
                     <div class="trainer-rank d-flex align-items-center">
@@ -357,108 +334,133 @@
                 </div>
             </div> <!-- End Course Item-->
 
+            
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                 <div class="course-item">
                 <img src="/img/course-3.jpg" class="img-fluid" alt="...">
                 <div class="course-content">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4>Content</h4>
-                    <p class="price">$180</p>
+                        <h4>Content</h4>
+                        <p class="price">$180</p>
                     </div>
 
                     <h3><a href="course-details.html">Copywriting</a></h3>
-                    <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+                        <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                     <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-                        <span>Brandon</span>
-                    </div>
+                        <div class="trainer-profile d-flex align-items-center">
+                            <img src="/img/user.png" class="img-fluid" alt="">
+                            <span>Brandon</span>
+                        </div>
+
                     <div class="trainer-rank d-flex align-items-center">
                         <i class="bx bx-user"></i>&nbsp;20
                         &nbsp;&nbsp;
                         <i class="bx bx-heart"></i>&nbsp;85
                     </div>
+
                     </div>
                 </div>
                 </div>
-            </div> <!-- End Course Item-->
-
             </div>
-
+            <!-- End Course Item-->
+            
+            </div>
+            <!-- <div class="mt-3 d-flex flex-row-reverse p-2 bd-highlight"> -->
+            <div class="mt-3 d-flex flex-row-reverse p-2 bd-highlight">
+                    <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="get-started-btn">Berita Lainnya</a>
+            </div>
+            <!-- </div> -->
         </div>
         </section><!-- End Popular Courses Section -->
-
-        <!-- ======= Trainers Section ======= -->
-        <section id="galeri" class="trainers">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <p>Galeri</p>
-                <h2></h2>
+        
+        <!-- Gallery Start -->
+    <div id="galeri" class="trainers container-xxl py-5">
+    <br><br>
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-title">
+                    <p>Galeri Muhasa</p>
+                    <h2></h2>
+                </div>
             </div>
 
-            <div class="row" data-aos="zoom-in" data-aos-delay="100">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                <div class="member">
-                <img src="/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                <div class="member-content">
-                    <h4>Walter White</h4>
-                    <span>Web Development</span>
-                    <p>
-                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                    </p>
-                    <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/galeri/guru.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Landscaping</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                <div class="member">
-                <img src="/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-                <div class="member-content">
-                    <h4>Sarah Jhinson</h4>
-                    <span>Marketing</span>
-                    <p>
-                    Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                    </p>
-                    <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/galeri/guru1.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Pruning plants</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                <div class="member">
-                <img src="/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-                <div class="member-content">
-                    <h4>William Anderson</h4>
-                    <span>Content</span>
-                    <p>
-                    Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                    </p>
-                    <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/galeri/guru2.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Irrigation & Drainage</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/galeri/guru3.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Garden Maintenance</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/galeri/guru4.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Green Technology</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/galeri/guru5.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Urban Gardening</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            </div>
-
         </div>
-        </section>
-        <!-- End Trainers Section -->
+    </div>
+    <!-- Gallery End -->
 
                 <!-- ======= Trainers Section ======= -->
                 <section id="trainers" class="trainers">
@@ -471,12 +473,12 @@
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                <img src="/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                <img src="/img/testimoni/rayhan.jpeg" class="img-fluid" alt="">
                 <div class="member-content">
-                    <h4>Walter White</h4>
-                    <span>Web Development</span>
+                    <h4>Rayhan Rezanabil Risadi</h4>
+                    <span>S1 Desain Produk, STT</span>
                     <p>
-                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                    Dulu waktu di Muhasa saya adalah pribadi yang tidak begitu paham dengan ajaran agama, di Muhasa saya mempelajari banyak pengetahuan tentang agama sehingga saat ini sangat membantu. dari situ pribadi dan akhlak saya terbentuk , terimakasih Muhasa.
                     </p>
                     <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -490,12 +492,12 @@
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                <img src="/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+                <img src="/img/testimoni/haqqi.jpeg" class="img-fluid" alt="">
                 <div class="member-content">
-                    <h4>Sarah Jhinson</h4>
-                    <span>Marketing</span>
+                    <h4>M. Haqqi Mustofa Kamil</h4>
+                    <span>D3 Teknik Sipil, Polinema</span>
                     <p>
-                    Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                    Selama sekolah di Muhasa saya merasa nyaman dan senang karena gurunya baik-baik dan sabar kalo mengajar. Dan nilai nilai Islam di SMP ini sangat dijunjung tinggi sehingga keimanan siswa akan semakin kuat dan bertambah
                     </p>
                     <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -509,12 +511,12 @@
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                <img src="/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+                <img src="/img/testimoni/riven.jpeg" class="img-fluid" alt="">
                 <div class="member-content">
-                    <h4>William Anderson</h4>
-                    <span>Content</span>
+                    <h4>Riven Ayudita</h4>
+                    <span>S1 Pend Matematika, UMM</span>
                     <p>
-                    Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                    Bersekolah di Muhasa selama tiga tahun saya didik oleh guru-guru yang sangat profesional pada bidangnya masing-masing. Disini saya dididik untuk bisa menjadi pribadi maju, kreatif dan tentunya berakhlak yang sampai saat ini saya ingat pesan itu.
                     </p>
                     <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -525,14 +527,58 @@
                 </div>
                 </div>
             </div>
-
             </div>
 
         </div>
         </section>
         <!-- End Trainers Section -->
-
     </main><!-- End #main -->
+
+    <section class="venue section-padding" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <h2 class="mb-5">Here you go <u class="text-info">Venue</u></h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.091461689997!2d-73.9866630916883!3d40.758001294831736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855a96da09d%3A0x860bf5a5e1a00a68!2sTimes%20Square%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2ssg!4v1643035529098!5m2!1sen!2ssg" width="100%" height="371.59" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                            <div class="venue-thumb bg-white shadow-lg">
+                                
+                                <div class="venue-info-title">
+                                    <h2 class="text-white mb-0">Times Square</h2>
+                                </div>
+
+                                <div class="venue-info-body">
+                                    <h4 class="d-flex">
+                                        <i class="bi-geo-alt me-2"></i> 
+                                        <span>102 South. 7th Street, New York, NY 10036, USA</span>
+                                    </h4>
+
+                                    <h5 class="mt-4 mb-3">
+                                        <a href="mailto:hello@yourgmail.com">
+                                            <i class="bi-envelope me-2"></i>
+                                            hi@company.com
+                                        </a>
+                                    </h5>
+
+                                    <h5 class="mb-0">
+                                        <a href="tel: 305-240-9671">
+                                            <i class="bi-telephone me-2"></i>
+                                            010-020-0340
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -542,11 +588,10 @@
             <div class="row">
 
             <div class="col-lg-3 col-md-6 footer-contact">
-                <h3>Mentor</h3>
+                <h3>SMP MUHAMMADIYAH 1 MALANG</h3>
                 <p>
-                A108 Adam Street <br>
-                New York, NY 535022<br>
-                United States <br><br>
+                Jl. Brigjend Slamet Riadi No.134, <br>
+                Oro-oro Dowo, Kec. Klojen, Kota Malang <br><br>
                 <strong>Phone:</strong> +1 5589 55488 55<br>
                 <strong>Email:</strong> info@example.com<br>
                 </p>
