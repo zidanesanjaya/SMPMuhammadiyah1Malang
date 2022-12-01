@@ -30,6 +30,11 @@
         <link rel="stylesheet" href="admin/assets/css/icons.css" type="text/css">
         <link rel="stylesheet" href="admin/assets/css/style.css" type="text/css">
 
+        <link href="admin/assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
+
+
+        <script src="admin/assets/js/jquery.min.js"></script>
+
     </head>
 
 
@@ -65,7 +70,7 @@
                         <ul>
                             @if(Auth::user()->role == 'siswa')
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="{{route('dashboard')}}" class="waves-effect">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Dashboard</span>
                                 </a>
@@ -79,14 +84,14 @@
                             </li>
 
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="{{route('form_wajib')}}" class="waves-effect">
                                     <i class="mdi mdi-cards"></i>
                                     <span> Form Wajib <span class="text-danger">*</span></span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="{{route('profile')}}" class="waves-effect">
                                     <i class="mdi mdi-account"></i>
                                     <span> Profile</span>
                                 </a>
@@ -173,7 +178,6 @@
 
 
         <!-- jQuery  -->
-        <script src="admin/assets/js/jquery.min.js"></script>
         <script src="admin/assets/js/popper.min.js"></script>
         <script src="admin/assets/js/bootstrap-material-design.js"></script>
         <script src="admin/assets/js/modernizr.min.js"></script>
@@ -197,10 +201,13 @@
         <script src="admin/assets/plugins/raphael/raphael.min.js"></script>
         <script src="admin/assets/plugins/morris/morris.min.js"></script>
         <script src="admin/assets/pages/dashborad.js"></script>
+        <script src="admin/assets/plugins/select2/select2.min.js"></script>
 
         <!-- Dropzone js -->
         <script src="admin/assets/plugins/dropify/js/dropify.min.js"></script>
         <script src="admin/assets/pages/upload-init.js"></script>
+        <!-- Plugins Init js -->
+        <script src="admin/assets/pages/form-advanced.js"></script>
         <!-- App js -->
         <script src="admin/assets/js/app.js"></script>
        

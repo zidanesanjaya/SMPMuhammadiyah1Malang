@@ -18,13 +18,13 @@
             <form action="#" method="post" enctype="multipart/form-data">
                 @csrf
                 <h6 class="text-muted">ID PENDAFTARAN</h6>
-                <input type="text" class="form-control" value="{{ Auth::user()->id }}" disabled>
+                <input type="text" class="form-control pl-2" value="{{ Auth::user()->id }}" disabled>
                 
                 <h6 class="text-muted mt-3">GELOMBANG PENDAFTARAN</h6>
-                <input type="text" class="form-control" value="1" disabled>
+                <input type="text" class="form-control pl-2" value="1" disabled>
 
                 <h6 class="text-muted">BIAYA</h6>
-                <input class="form-control" value="3.000.000" disabled>
+                <input class="form-control pl-2" value="3.000.000" disabled>
                 
                 <h6 class="text-muted mt-5">JUMLAH PEMBAYARAN ANDA</h6>
                 <input type="text" class="form-control" placeholder="Masukan Jumlah Pembayaran" required> 
