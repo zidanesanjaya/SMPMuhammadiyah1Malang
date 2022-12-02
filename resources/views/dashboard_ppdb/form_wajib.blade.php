@@ -115,13 +115,13 @@
             <div class="row">
                 <div class="col">
                     <h6 class="text-muted">Provinsi</h6>
-                    <select class="form-control select2" name="provinsi" id="provinsi">
+                    <select class="form-control select2" name="provinsi" id="provinsi" onchange="kotaSelected();">
                     
                     </select>
                 </div>
                 <div class="col">
                     <h6 class="text-muted">kota / Kabupaten</h6>
-                    <select class="form-control" name="kota" id="kota">
+                    <select class="form-control" name="kota" id="kota" onchange="kecamatanSelected();">
                        
                     </select>
                 </div>
@@ -129,13 +129,13 @@
             <div class="row">
                 <div class="col">
                     <h6 class="text-muted">Kecamatan</h6>
-                    <select class="form-control" name="Kecamatan" id="kecamatan">
+                    <select class="form-control" name="Kecamatan" id="kecamatan" onchange="desaSelected();">
                        
                     </select>
                 </div>
                 <div class="col">
                     <h6 class="text-muted">Desa / Kelurahan</h6>
-                    <select class="form-control" name="keluarahan" id="desa">
+                    <select class="form-control" name="keluarahan" id="kelurahan" >
                        
                     </select>
                 </div>
@@ -151,6 +151,78 @@
     $(document).ready(function() {
         tampil_provinsi();
     });  
+    function kotaSelected(){
+        let type = $('#provinsi').children(":selected").data('type');
+
+        if(type != '-'){
+            $.ajax({
+            type  : 'GET',
+            url   : 'https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi='+type,
+            async : false,
+            dataType : 'json',
+            success : function(data){
+                var html = '';
+                var i;
+                html += '<option data-type="-">- Silahkan Pilih Kota / Kabupaten -</option>';
+                for(i=0; i<data.kota_kabupaten.length; i++){
+                    html += '<option value="'+data.kota_kabupaten[i].nama+'" data-type="'+data.kota_kabupaten[i].id+'">'+data.kota_kabupaten[i].nama+'</option>';
+                }
+                $('#kota').html(html);
+            }
+            });    
+        }else{
+            $("#kelurahan").find("option").remove().end();
+            $("#kota").find("option").remove().end();
+            $("#kecamatan").find("option").remove().end();
+        }   
+    }
+    function kecamatanSelected(){
+        let type = $('#kota').children(":selected").data('type');
+       
+        if(type != '-'){
+            $.ajax({
+            type  : 'GET',
+            url   : 'https://dev.farizdotid.com/api/daerahindonesia/kecamatan?id_kota='+type,
+            async : false,
+            dataType : 'json',
+            success : function(data){
+                var html = '';
+                var i;
+                html += '<option data-type="-">- Silahkan Pilih Kecamatan -</option>';
+                for(i=0; i<data.kecamatan.length; i++){
+                    html += '<option value="'+data.kecamatan[i].nama+'" data-type="'+data.kecamatan[i].id+'">'+data.kecamatan[i].nama+'</option>';
+                }
+                $('#kecamatan').html(html);
+            }
+        }); 
+        }else{
+            $("#kelurahan").find("option").remove().end();
+            $("#kecamatan").find("option").remove().end();
+        }   
+    }
+    function desaSelected(){
+        let type = $('#kecamatan').children(":selected").data('type');
+
+        if(type != '-'){
+            $.ajax({
+            type  : 'GET',
+            url   : 'https://dev.farizdotid.com/api/daerahindonesia/kelurahan?id_kecamatan='+type,
+            async : false,
+            dataType : 'json',
+            success : function(data){
+                var html = '';
+                var i;
+                html += '<option data-type="-">- Silahkan Pilih Keluarahan / Desa -</option>';
+                for(i=0; i<data.kelurahan.length; i++){
+                    html += '<option value="'+data.kelurahan[i].nama+'" data-type="'+data.kelurahan[i].id+'">'+data.kelurahan[i].nama+'</option>';
+                }
+                $('#kelurahan').html(html);
+            }
+        }); 
+        }else{
+            $("#kelurahan").find("option").remove().end();
+        }   
+    }
     function tampil_provinsi() {
             $.ajax({
             type  : 'GET',
@@ -160,8 +232,9 @@
             success : function(data){
                 var html = '';
                 var i;
+                html += '<option data-type="-">- Silahkan Pilih Provinsi -</option>';
                 for(i=0; i<data.provinsi.length; i++){
-                    html += '<option value="'+data.provinsi[i].id+'">'+data.provinsi[i].nama+'</option>';
+                    html += '<option value="'+data.provinsi[i].nama+'" data-type="'+data.provinsi[i].id+'">'+data.provinsi[i].nama+'</option>';
                 }
                 $('#provinsi').html(html);
             }
