@@ -170,6 +170,8 @@
                 $('#kota').html(html);
             }
             });    
+            $("#kecamatan").find("option").remove().end();
+            $("#kelurahan").find("option").remove().end();
         }else{
             $("#kelurahan").find("option").remove().end();
             $("#kota").find("option").remove().end();
@@ -194,7 +196,8 @@
                 }
                 $('#kecamatan').html(html);
             }
-        }); 
+        });
+        $("#kelurahan").find("option").remove().end(); 
         }else{
             $("#kelurahan").find("option").remove().end();
             $("#kecamatan").find("option").remove().end();
