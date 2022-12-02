@@ -9,7 +9,7 @@
     </div>
     <div class="col-sm-6 text-right">
         <div class="page-title-box">
-            <h4 class="page-title">Dashboard PPDB</h4>
+            <h4 class="page-title">Dashboard Admin</h4>
         </div>
     </div>
     <div class="clearfix"></div>

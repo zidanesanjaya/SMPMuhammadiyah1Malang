@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,6 @@ Route::get('/aksi', function () {
 });
 
 // Login And Register Page
-Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin']); 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::get('login_admin', [AuthController::class, 'login_admin'])->name('login_admin');
 Route::get('register', [AuthController::class, 'registration'])->name('register');
@@ -56,4 +56,12 @@ Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard')
 Route::get('pembayaran', [SiswaController::class, 'pembayaran_page'])->name('pembayaran'); 
 Route::get('form_wajib', [SiswaController::class, 'form_wajib_page'])->name('form_wajib'); 
 Route::get('profile', [SiswaController::class, 'profile_page'])->name('profile'); 
+
+//Dashboard Admin
+Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin'])->name('dashboard_admin'); 
+Route::get('gelombang', [AdminController::class, 'index'])->name('gelombang'); 
+Route::post('store_gelombang', [AdminController::class, 'store_gelombang'])->name('store.gelombang'); 
+Route::get('update_gelombang/{id}', [AdminController::class, 'update_gelombang'])->name('update.gelombang'); 
+Route::delete('destroy_gelombang/{id}', [AdminController::class, 'destroy_gelombang'])->name('gelombang.destroy'); 
+
 

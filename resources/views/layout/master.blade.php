@@ -98,7 +98,60 @@
                             </li>
                             @elseif(Auth::user()->role == 'user')
                             @elseif(Auth::user()->role == 'admin')
-
+                                <li>
+                                    <a href="{{route('dashboard_admin')}}" class="waves-effect">
+                                        <i class="mdi mdi-view-dashboard"></i>
+                                        <span> Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-animation"></i>
+                                        <span> Informasi </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">Cerita Muhasa</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Galeri</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-animation"></i>
+                                        <span> Pembayaran </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="{{route('gelombang')}}">Gelombang</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">List Pembayaran</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-animation"></i>
+                                        <span> Siswa </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">List User</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             @endif  
                         </ul>
                     </div>

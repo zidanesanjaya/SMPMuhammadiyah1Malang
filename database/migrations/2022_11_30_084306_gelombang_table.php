@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama_gelombang')->unique();
             $table->string('biaya');
+            $table->date('mulai');
+            $table->date('akhir');
             $table->timestamps();
         });
     }
