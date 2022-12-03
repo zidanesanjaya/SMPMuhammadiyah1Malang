@@ -60,8 +60,12 @@ Route::get('profile', [SiswaController::class, 'profile_page'])->name('profile')
 //Dashboard Admin
 Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin'])->name('dashboard_admin'); 
 Route::get('gelombang', [AdminController::class, 'index'])->name('gelombang'); 
+Route::get('gelombang_edit/{id}', [AdminController::class, 'gelombang_update_page'])->name('gelombang_update'); 
 Route::post('store_gelombang', [AdminController::class, 'store_gelombang'])->name('store.gelombang'); 
-Route::get('update_gelombang/{id}', [AdminController::class, 'update_gelombang'])->name('update.gelombang'); 
-Route::delete('destroy_gelombang/{id}', [AdminController::class, 'destroy_gelombang'])->name('gelombang.destroy'); 
+Route::put('update_gelombang', [AdminController::class, 'update_gelombang'])->name('update.gelombang'); 
+Route::delete('destroy_gelombang/{id}', [AdminController::class, 'destroy_gelombang'])->name('gelombang.destroy');
+
+Route::get('sosial_media', [AdminController::class, 'sosial_media_page'])->name('sosial_media.page'); 
+
 
 

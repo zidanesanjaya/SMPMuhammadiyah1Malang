@@ -10,30 +10,30 @@
         <meta content="Mannatthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="admin/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="/admin/assets/images/favicon.ico">
 
         <!-- Dropzone css -->
-        <link href="admin/assets/plugins/dropify/css/dropify.min.css" rel="stylesheet"> 
+        <link href="/admin/assets/plugins/dropify/css/dropify.min.css" rel="stylesheet"> 
         
         <!--Morris Chart CSS -->
-        <link rel="stylesheet" href="admin/assets/plugins/fullcalendar/vanillaCalendar.css"/>
-        <link rel="stylesheet" href="admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css">
-        <link rel="stylesheet" href="admin/assets/plugins/chartist/css/chartist.min.css">
-        <link rel="stylesheet" href="admin/assets/plugins/morris/morris.css">
-        <link rel="stylesheet" href="admin/assets/plugins/metro/MetroJs.min.css">
+        <link rel="stylesheet" href="/admin/assets/plugins/fullcalendar/vanillaCalendar.css"/>
+        <link rel="stylesheet" href="/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css">
+        <link rel="stylesheet" href="/admin/assets/plugins/chartist/css/chartist.min.css">
+        <link rel="stylesheet" href="/admin/assets/plugins/morris/morris.css">
+        <link rel="stylesheet" href="/admin/assets/plugins/metro/MetroJs.min.css">
 
-        <link rel="stylesheet" href="admin/assets/plugins/carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="admin/assets/plugins/carousel/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/admin/assets/plugins/carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="/admin/assets/plugins/carousel/owl.theme.default.min.css">
 
-        <link rel="stylesheet" href="admin/assets/plugins/animate/animate.css" type="text/css">
-        <link rel="stylesheet" href="admin/assets/css/bootstrap-material-design.min.css" type="text/css">
-        <link rel="stylesheet" href="admin/assets/css/icons.css" type="text/css">
-        <link rel="stylesheet" href="admin/assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="/admin/assets/plugins/animate/animate.css" type="text/css">
+        <link rel="stylesheet" href="/admin/assets/css/bootstrap-material-design.min.css" type="text/css">
+        <link rel="stylesheet" href="/admin/assets/css/icons.css" type="text/css">
+        <link rel="stylesheet" href="/admin/assets/css/style.css" type="text/css">
 
-        <link href="admin/assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="/admin/assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
 
 
-        <script src="admin/assets/js/jquery.min.js"></script>
+        <script src="/admin/assets/js/jquery.min.js"></script>
 
     </head>
 
@@ -60,7 +60,7 @@
                 <div class="topbar-left">
                     <div class="text-center">
                         <a href="index.html" class="logo">
-                            <img src="admin/assets/images/logo-lg.png" alt="" class="logo-large">
+                            <img src="/admin/assets/images/logo-lg.png" alt="" class="logo-large">
                         </a>
                     </div>
                 </div>
@@ -119,11 +119,14 @@
                                         <li>
                                             <a href="#">Galeri</a>
                                         </li>
+                                        <li>
+                                            <a href="{{route('sosial_media.page')}}">Sosial Media</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
-                                        <i class="mdi mdi-animation"></i>
+                                        <i class="mdi mdi-cash-multiple"></i>
                                         <span> Pembayaran </span>
                                         <span class="float-right">
                                             <i class="mdi mdi-chevron-right"></i>
@@ -140,7 +143,7 @@
                                 </li>
                                 <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
-                                        <i class="mdi mdi-animation"></i>
+                                        <i class="mdi mdi-account-circle"></i>
                                         <span> Siswa </span>
                                         <span class="float-right">
                                             <i class="mdi mdi-chevron-right"></i>
@@ -175,7 +178,7 @@
                                 <li class="list-inline-item dropdown notification-list">
                                     <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                                         aria-expanded="false">
-                                        <img src="admin/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle img-thumbnail">
+                                        <img src="/admin/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle img-thumbnail">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                         <!-- item-->
@@ -231,38 +234,38 @@
 
 
         <!-- jQuery  -->
-        <script src="admin/assets/js/popper.min.js"></script>
-        <script src="admin/assets/js/bootstrap-material-design.js"></script>
-        <script src="admin/assets/js/modernizr.min.js"></script>
-        <script src="admin/assets/js/detect.js"></script>
-        <script src="admin/assets/js/fastclick.js"></script>
-        <script src="admin/assets/js/jquery.slimscroll.js"></script>
-        <script src="admin/assets/js/jquery.blockUI.js"></script>
-        <script src="admin/assets/js/waves.js"></script>
-        <script src="admin/assets/js/jquery.nicescroll.js"></script>
-        <script src="admin/assets/js/jquery.scrollTo.min.js"></script>
+        <script src="/admin/assets/js/popper.min.js"></script>
+        <script src="/admin/assets/js/bootstrap-material-design.js"></script>
+        <script src="/admin/assets/js/modernizr.min.js"></script>
+        <script src="/admin/assets/js/detect.js"></script>
+        <script src="/admin/assets/js/fastclick.js"></script>
+        <script src="/admin/assets/js/jquery.slimscroll.js"></script>
+        <script src="/admin/assets/js/jquery.blockUI.js"></script>
+        <script src="/admin/assets/js/waves.js"></script>
+        <script src="/admin/assets/js/jquery.nicescroll.js"></script>
+        <script src="/admin/assets/js/jquery.scrollTo.min.js"></script>
 
 
-        <script src="admin/assets/plugins/carousel/owl.carousel.min.js"></script>
-        <script src="admin/assets/plugins/fullcalendar/vanillaCalendar.js"></script>
-        <script src="admin/assets/plugins/peity/jquery.peity.min.js"></script>
-        <script src="admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-        <script src="admin/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-        <script src="admin/assets/plugins/chartist/js/chartist.min.js"></script>
-        <script src="admin/assets/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
-        <script src="admin/assets/plugins/metro/MetroJs.min.js"></script>
-        <script src="admin/assets/plugins/raphael/raphael.min.js"></script>
-        <script src="admin/assets/plugins/morris/morris.min.js"></script>
-        <script src="admin/assets/pages/dashborad.js"></script>
-        <script src="admin/assets/plugins/select2/select2.min.js"></script>
+        <script src="/admin/assets/plugins/carousel/owl.carousel.min.js"></script>
+        <script src="/admin/assets/plugins/fullcalendar/vanillaCalendar.js"></script>
+        <script src="/admin/assets/plugins/peity/jquery.peity.min.js"></script>
+        <script src="/admin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="/admin/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="/admin/assets/plugins/chartist/js/chartist.min.js"></script>
+        <script src="/admin/assets/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
+        <script src="/admin/assets/plugins/metro/MetroJs.min.js"></script>
+        <script src="/admin/assets/plugins/raphael/raphael.min.js"></script>
+        <script src="/admin/assets/plugins/morris/morris.min.js"></script>
+        <script src="/admin/assets/pages/dashborad.js"></script>
+        <script src="/admin/assets/plugins/select2/select2.min.js"></script>
 
         <!-- Dropzone js -->
-        <script src="admin/assets/plugins/dropify/js/dropify.min.js"></script>
-        <script src="admin/assets/pages/upload-init.js"></script>
+        <script src="/admin/assets/plugins/dropify/js/dropify.min.js"></script>
+        <script src="/admin/assets/pages/upload-init.js"></script>
         <!-- Plugins Init js -->
-        <script src="admin/assets/pages/form-advanced.js"></script>
+        <script src="/admin/assets/pages/form-advanced.js"></script>
         <!-- App js -->
-        <script src="admin/assets/js/app.js"></script>
+        <script src="/admin/assets/js/app.js"></script>
        
     </body>
 

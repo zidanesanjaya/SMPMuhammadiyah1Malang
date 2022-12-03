@@ -6,7 +6,7 @@ use Hash;
 use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
+use DB;
 class AuthController extends Controller
 {
     public function index()
@@ -70,7 +70,9 @@ class AuthController extends Controller
     public function dashboard_admin()
     {
         if(Auth::check()){
-            return view('dashboard_admin.dashboard');
+            $sizeUsers= sizeOf(DB::table('users')->where('role','siswa')->get());
+            $sizeadmin= sizeOf(DB::table('users')->where('role','admin')->get());
+            return view('dashboard_admin.dashboard',['sizeUsers'=> $sizeUsers,'sizeAdmin'=> $sizeadmin]);
         }
   
         return redirect("login")->withSuccess('You are not allowed to access');
