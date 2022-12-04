@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Gelombang_Model;
 use App\Models\Sosial_Media_Model;
+use App\Models\User;
+// use App\Models\User;
 use Illuminate\Http\Request;
-
+use DB;
+use Hash;
 class AdminController extends Controller
 {
     public function index(){
@@ -16,9 +19,38 @@ class AdminController extends Controller
         $sosmed = Sosial_Media_Model::paginate(5); 
         return view('dashboard_admin.sosial_media',compact('sosmed'));
     }
+    public function user_siswa_page(){
+        $listUser = DB::table('vw_user')->where('role','siswa')->get();
+        return view('dashboard_admin.user_siswa',compact('listUser'));
+    }
+    public function user_admin_page(){
+        $listUser = DB::table('vw_user')->where('role','admin')->orWhere('role','user')->get();
+        return view('dashboard_admin.admin.list_user_admin',compact('listUser'));
+    }
     public function gelombang_update_page($id){
         $gelombang= Gelombang_Model::findOrFail($id);
         return view('dashboard_admin.gelombang_update',compact('gelombang'));
+    }
+    public function store_admin(Request $request)
+    {  
+        try{
+            $this->validate($request,[
+                'name' => 'required',
+                'email' => 'required|email|unique:users',
+                'role' => 'required',
+                'password' => 'required|min:6',
+            ]);
+    
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'role' => $request->role,
+                'password' => Hash::make($request->password)
+            ]); 
+        }catch(Exception $e){
+            echo 'berhasil';
+        }
+        return redirect()->route('user_admin.page');
     }
     public function store_gelombang(Request $request){
         $this->validate($request, [

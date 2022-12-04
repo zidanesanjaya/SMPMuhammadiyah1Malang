@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\AdminController;
+use App\Http\Middleware\CheckRoleAdmin;
+use App\Http\Middleware\CheckRoleUser;
+use App\Http\Middleware\CheckRoleSiswa;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,21 +54,44 @@ Route::post('login_admin_auth', [AuthController::class, 'login_admin_auth'])->na
 Route::post('registration_ppdb', [AuthController::class, 'Registration_Ppdb'])->name('register.register_ppdb'); 
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
-//Dashboard Siswa
-Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard'); 
-Route::get('pembayaran', [SiswaController::class, 'pembayaran_page'])->name('pembayaran'); 
-Route::get('form_wajib', [SiswaController::class, 'form_wajib_page'])->name('form_wajib'); 
-Route::get('profile', [SiswaController::class, 'profile_page'])->name('profile'); 
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin'])->name('dashboard_admin'); 
 
-//Dashboard Admin
-Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin'])->name('dashboard_admin'); 
-Route::get('gelombang', [AdminController::class, 'index'])->name('gelombang'); 
-Route::get('gelombang_edit/{id}', [AdminController::class, 'gelombang_update_page'])->name('gelombang_update'); 
-Route::post('store_gelombang', [AdminController::class, 'store_gelombang'])->name('store.gelombang'); 
-Route::put('update_gelombang', [AdminController::class, 'update_gelombang'])->name('update.gelombang'); 
-Route::delete('destroy_gelombang/{id}', [AdminController::class, 'destroy_gelombang'])->name('gelombang.destroy');
+    Route::middleware([CheckRoleAdmin::class])->group(function(){
+        //Gelombang
+        Route::get('gelombang', [AdminController::class, 'index'])->name('gelombang'); 
+        Route::get('gelombang_edit/{id}', [AdminController::class, 'gelombang_update_page'])->name('gelombang_update'); 
+            Route::post('store_gelombang', [AdminController::class, 'store_gelombang'])->name('store.gelombang'); 
+            Route::put('update_gelombang', [AdminController::class, 'update_gelombang'])->name('update.gelombang'); 
+            Route::delete('destroy_gelombang/{id}', [AdminController::class, 'destroy_gelombang'])->name('gelombang.destroy');
+    
+        //Sosial Media
+        Route::get('sosial_media', [AdminController::class, 'sosial_media_page'])->name('sosial_media.page'); 
 
-Route::get('sosial_media', [AdminController::class, 'sosial_media_page'])->name('sosial_media.page'); 
+        //Siswa
+        Route::get('user_siswa', [AdminController::class, 'user_siswa_page'])->name('user_siswa.page'); 
+
+        //Admin
+        Route::get('user_admin', [AdminController::class, 'user_admin_page'])->name('user_admin.page'); 
+            Route::post('store_admin', [AdminController::class, 'store_admin'])->name('admin.add_user'); 
+    });
+
+
+    Route::middleware([CheckRoleUser::class])->group(function(){
+        
+    });
+
+    Route::middleware([CheckRoleSiswa::class])->group(function(){
+        //Dashboard Siswa
+        Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard'); 
+        Route::get('pembayaran', [SiswaController::class, 'pembayaran_page'])->name('pembayaran'); 
+        Route::get('form_wajib', [SiswaController::class, 'form_wajib_page'])->name('form_wajib'); 
+        Route::get('profile', [SiswaController::class, 'profile_page'])->name('profile');     
+    });
+});
+
+
+
 
 
 

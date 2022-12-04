@@ -151,7 +151,21 @@
                                     </a>
                                     <ul class="list-unstyled">
                                         <li>
-                                            <a href="#">List User</a>
+                                            <a href="{{route('user_siswa.page')}}">List User</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-account-key"></i>
+                                        <span> Admin </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="{{route('user_admin.page')}}">List User & Admin</a>
                                         </li>
                                     </ul>
                                 </li>
