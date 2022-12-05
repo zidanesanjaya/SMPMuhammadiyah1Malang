@@ -27,7 +27,12 @@
 
     <!-- Template Main CSS File -->
     <link href="/css/style.css" rel="stylesheet">
-    <!-- <link href="/css/templatemo-leadership-event.css" rel="stylesheet"> -->
+    <!-- =======================================================
+  * Template Name: Mentor - v4.9.1
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -51,7 +56,7 @@
             <li><a href="#cermus">Cerita Muhasa</a></li>
             <li><a href="#galeri">Galeri</a></li>
             <!-- <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li> -->
-            <li><a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}">PPDB</a></li>
+            <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
             <li><a href="{{ url ('https://aksi.smpmuhasa.sch.id/') }}">AKSI</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -96,7 +101,7 @@
     <div class="container" data-aos="fade-up">
         <div class="row">
         <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-            <img src="/img/about.jpg" class="img-fluid" alt="">
+            <img src="img/galeri/guru1.jpg" class="img-fluid" alt="">
         </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <div class="section-title">
@@ -288,15 +293,10 @@
                 <h3><a href="course-details.html">Website Design</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                <div class="trainer-profile d-flex align-items-center">
-                    <img src="/img/user.png" class="img-fluid" alt="">
-                    <span>Antonio</span>
-                </div>
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
-                </div>
+                    <div class="trainer-profile d-flex align-items-center">
+                        <img src="/img/user.png" class="img-fluid" alt="">
+                        <span>Antonio</span>
+                    </div>
                 </div>
             </div>
             </div>
@@ -314,15 +314,10 @@
                 <h3><a href="course-details.html">Search Engine Optimization</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                <div class="trainer-profile d-flex align-items-center">
-                    <img src="/img/user.png" class="img-fluid" alt="">
-                    <span>Lana</span>
-                </div>
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                </div>
+                    <div class="trainer-profile d-flex align-items-center">
+                        <img src="/img/user.png" class="img-fluid" alt="">
+                        <span>Lana</span>
+                    </div>
                 </div>
             </div>
             </div>
@@ -345,13 +340,6 @@
                         <img src="/img/user.png" class="img-fluid" alt="">
                         <span>Brandon</span>
                     </div>
-
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
-                </div>
-
                 </div>
             </div>
             </div>
@@ -474,12 +462,6 @@
                 <p>
                 Dulu waktu di Muhasa saya adalah pribadi yang tidak begitu paham dengan ajaran agama, di Muhasa saya mempelajari banyak pengetahuan tentang agama sehingga saat ini sangat membantu. dari situ pribadi dan akhlak saya terbentuk , terimakasih Muhasa.
                 </p>
-                <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
             </div>
             </div>
         </div>
@@ -493,12 +475,6 @@
                 <p>
                 Selama sekolah di Muhasa saya merasa nyaman dan senang karena gurunya baik-baik dan sabar kalo mengajar. Dan nilai nilai Islam di SMP ini sangat dijunjung tinggi sehingga keimanan siswa akan semakin kuat dan bertambah
                 </p>
-                <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
             </div>
             </div>
         </div>
@@ -512,12 +488,6 @@
                 <p>
                 Bersekolah di Muhasa selama tiga tahun saya didik oleh guru-guru yang sangat profesional pada bidangnya masing-masing. Disini saya dididik untuk bisa menjadi pribadi maju, kreatif dan tentunya berakhlak yang sampai saat ini saya ingat pesan itu.
                 </p>
-                <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
             </div>
             </div>
         </div>

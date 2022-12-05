@@ -39,7 +39,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="{{ url ('http://127.0.0.1:8000/') }}">Home</a></li>
-          <li><a class="active" href="{{ url ('http://127.0.0.1:8000/cermus') }}">Cermus</a></li>
+          <li><a class="active" href="{{ url ('http://127.0.0.1:8000/cermus') }}">Cerita Muhasa</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -75,15 +75,10 @@
                 <h3><a href="course-details.html">Website Design</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                <div class="trainer-profile d-flex align-items-center">
-                    <img src="/img/user.png" class="img-fluid" alt="">
-                    <span>Antonio</span>
-                </div>
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
-                </div>
+                    <div class="trainer-profile d-flex align-items-center">
+                        <img src="/img/user.png" class="img-fluid" alt="">
+                        <span>Antonio</span>
+                    </div>
                 </div>
             </div>
             </div>
@@ -101,15 +96,10 @@
                 <h3><a href="course-details.html">Search Engine Optimization</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                <div class="trainer-profile d-flex align-items-center">
-                    <img src="/img/user.png" class="img-fluid" alt="">
-                    <span>Lana</span>
-                </div>
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                </div>
+                    <div class="trainer-profile d-flex align-items-center">
+                        <img src="/img/user.png" class="img-fluid" alt="">
+                        <span>Lana</span>
+                    </div>
                 </div>
             </div>
             </div>
@@ -128,17 +118,10 @@
                 <h3><a href="course-details.html">Copywriting</a></h3>
                     <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/user.png" class="img-fluid" alt="">
-                        <span>Brandon</span>
-                    </div>
-
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
-                </div>
-
+                        <div class="trainer-profile d-flex align-items-center">
+                            <img src="/img/user.png" class="img-fluid" alt="">
+                            <span>Brandon</span>
+                        </div>
                 </div>
             </div>
             </div>
@@ -159,15 +142,10 @@
                 <h3><a href="course-details.html">Website Design</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                <div class="trainer-profile d-flex align-items-center">
-                    <img src="/img/user.png" class="img-fluid" alt="">
-                    <span>Antonio</span>
-                </div>
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
-                </div>
+                    <div class="trainer-profile d-flex align-items-center">
+                        <img src="/img/user.png" class="img-fluid" alt="">
+                        <span>Antonio</span>
+                    </div>
                 </div>
             </div>
             </div>
@@ -185,15 +163,10 @@
                 <h3><a href="course-details.html">Search Engine Optimization</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
-                <div class="trainer-profile d-flex align-items-center">
-                    <img src="/img/user.png" class="img-fluid" alt="">
-                    <span>Lana</span>
-                </div>
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                </div>
+                    <div class="trainer-profile d-flex align-items-center">
+                        <img src="/img/user.png" class="img-fluid" alt="">
+                        <span>Lana</span>
+                    </div>
                 </div>
             </div>
             </div>
@@ -216,13 +189,6 @@
                         <img src="/img/user.png" class="img-fluid" alt="">
                         <span>Brandon</span>
                     </div>
-
-                <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
-                </div>
-
                 </div>
             </div>
             </div>
