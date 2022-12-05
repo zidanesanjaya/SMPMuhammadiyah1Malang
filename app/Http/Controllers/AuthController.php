@@ -6,7 +6,7 @@ use Hash;
 use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
+use DB;
 class AuthController extends Controller
 {
     public function index()
@@ -53,6 +53,9 @@ class AuthController extends Controller
             if($user->role == 'admin'){
                 return redirect()->intended('dashboard_admin')
                 ->withSuccess('Signed in');
+            }else if($user->role == 'user'){
+                return redirect()->intended('dashboard_admin')
+                ->withSuccess('Signed in');
             }else{
                 return redirect("login_admin")->withErrors(['auth' => ['Halaman Ini Hanya Login Khusus Admin Dan User(Karyawan)']]);
             }
@@ -61,17 +64,14 @@ class AuthController extends Controller
     }
     public function dashboard()
     {
-        if(Auth::check()){
-            return view('dashboard_ppdb.dashboard');
-        }
-  
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return view('dashboard_ppdb.dashboard');  
     }
     public function dashboard_admin()
     {
-        if(Auth::check()){
-            return view('dashboard_admin.dashboard');
-        }
+        $sizeUsers= sizeOf(DB::table('users')->where('role','siswa')->get());
+        $sizeadmin= sizeOf(DB::table('users')->where('role','admin')->get());
+        $sizeuser= sizeOf(DB::table('users')->where('role','user')->get());
+        return view('dashboard_admin.dashboard',['sizeUsers'=> $sizeUsers,'sizeAdmin'=> $sizeadmin , 'sizeUser'=> $sizeuser]);
   
         return redirect("login")->withSuccess('You are not allowed to access');
     }
@@ -96,7 +96,7 @@ class AuthController extends Controller
         $check = $this->create($data);
          
         return redirect("login")->withSuccess('You have signed-in');
-    }
+    }   
     public function signOut() {
         Session::flush();
         Auth::logout();

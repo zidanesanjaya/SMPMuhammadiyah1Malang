@@ -42,48 +42,14 @@
                         <td>{{ date_format(date_create($gelombang->mulai),"d-M-Y") }}</td>
                         <td>{{ date_format(date_create($gelombang->akhir),"d-M-Y") }}</td>
                         <td>
-                            <form action="{{ route('gelombang.destroy',$gelombang->id) }}" method="POST">
-                            <a class="btn btn-warning btn-raised" data-toggle="modal" data-target="#editGelombang{{$no}}"><i class="mdi mdi-pencil-box"></i> Edit</a>
+                            <form action="{{ route('gelombang.destroy', $gelombang->id) }}" method="POST">
+                            <a class="btn btn-warning btn-raised" href="{{route('gelombang_update' , $gelombang->id)}}"><i class="mdi mdi-pencil-box"></i> Edit</a>
                                 @csrf
                                 {{ method_field('delete')}}
                                 <button class="btn btn-danger btn-raised" type="submit"><i class="mdi mdi-delete"></i> Hapus</button>
                             </form>
                         </td>
                     </tr>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="editGelombang{{$no}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Edit {{$gelombang->nama_gelombang}}</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <form action="{{route('update.gelombang', $gelombang->id)}}" method="post" >
-                                @csrf
-                                @method('PATCH')
-                                <div class="modal-body">
-                                    <h6 class="text-muted mt-3">Nama Gelombang</h6>
-                                    <input type="text" class="form-control pl-2" name="nama_gelombang" value="{{$gelombang->nama_gelombang}}">
-
-                                    <h6 class="text-muted">Biaya Gelombang</h6>
-                                    <input class="form-control pl-2 mb-4" type="number" name="biaya" value="{{$gelombang->biaya}}">
-
-                                    <h6 class="text-muted">Mulai Gelombang</h6>
-                                    <input class="form-control pl-2 mb-4" type="date" name="mulai" value="{{$gelombang->mulai}}">
-
-                                    <h6 class="text-muted">Akhir Gelombang</h6>
-                                    <input class="form-control pl-2 mb-4" type="date" name="akhir" value="{{$gelombang->akhir}}">
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" type="submit">Simpan</button>
-                                </div>
-                            </form>
-                            </div>
-                        </div>
-                    </div>
                     <?php
                         $no++;
                     ?>
@@ -127,4 +93,15 @@
   </div>
 </div>
 
+
+
+<script>
+// $(".btnUpdate").click(function () {
+//     $("#id_gelombang").val($(this).attr('data-id'));
+//     $("#nama").val($(this).attr('data-nama'));
+//     $("#biaya").val($(this).attr('data-biaya'));
+//     $("#mulai").val($(this).attr('data-mulai'));
+//     $("#akhir").val($(this).attr('data-akhir'));
+// });
+</script>
 @endsection
