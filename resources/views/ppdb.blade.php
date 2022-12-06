@@ -1,420 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
     <title>PPDB</title>
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <!-- Favicons -->
-    <link href="/img/logohead.png" rel="icon">
-    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
 
-    <!-- Vendor CSS Files -->
-    <link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/ppdbbootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
     <link href="/css/ppdbstyle.css" rel="stylesheet">
-    <!-- =======================================================
-  * Template Name: Mentor - v4.9.1
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
-<!-- <div class="zpreloaderBg" id="preloader" onload="zpreloader()">
-    <div class="zpreloader"></div>
-    <div class="zpreloader2"></div>
-</div> -->
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
 
-    <h1 class="logo me-auto"><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">Penerimaan Peserta Didik Baru</a></h1>
-    <!-- Uncomment below if you prefer to use an image logo -->
-    <!-- <a href="index.html" class="logo me-auto"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-            <li><a class="active" href="#hero">HOME</a></li>
-            <li><a href="#main">PROFILE</a></li>
-            <li><a href="#cermus">KEGIATAN KAMI</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light px-0 py-2">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <span class="fa fa-phone-alt me-2"></span>
+                    <a href="https://api.whatsapp.com/send?phone=6281330951615&text=Saya%20Berminat%20Mendaftar%20di%20SMP%20MUHASA">
+                        <span class="pointer-events: none;">+62-8133-0951-615</span>
+                    </a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <span class="far fa-envelope me-2"></span>
+                    <a href="mailto:hello@yourgmail.com">
+                        <span>smpm1.mlg@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <span>Follow Us:</span>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0">SMP MUHASA</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">HOME</a>
+                <a href="about.html" class="nav-item nav-link">PROFILE</a>
+                <a href="service.html" class="nav-item nav-link">KEGIATAN KAMI</a>
+                <a href="project.html" class="nav-item nav-link">PENGUMUMAN</a>
+                <a href="project.html" class="nav-item nav-link">DAFTAR PPDB</a>
+            </div>
+            <a href="{{ url ('http://127.0.0.1:8000/register') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">DAFTAR<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="{{ url ('http://127.0.0.1:8000/login') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">MASUK<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
     </nav>
-    <!-- .navbar -->
+    <!-- Navbar End -->
 
-    <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="get-started-btn">MASUK</a>
 
-    </div>
-</header><!-- End Header -->
-
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>SMP MUHAMMADIYAH 1 MALANG</h1>
-      <h2>Berjiwa Kepemimpinan - dan - Berakhlak Islami</h2>
-      <h2>PPDB SMP MUHASA TELAH DIBUKA, Mari bergabung dengan kami.</h2>
-      <a href="courses.html" class="btn-get-started">Daftar Sekarang</a>
-    </div>
-  </section>
-<!-- End Hero -->
-
-<main id="main">
-    <!-- ======= About Section ======= -->
-    <br>
-    <br>
-    <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
-        <div class="row">
-        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-            <img src="img/galeri/guru1.jpg" class="img-fluid" alt="">
-        </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <div class="section-title">
-                <h2>Kepala Sekolah</h2>
-                <p>Yanur Setyaningrum, M.Pd</p>
-            </div>
-                    <!-- <summary>Sambutan Kepala Sekolah</summary> -->
-                    <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
-                    <p class="fst-italic">
-                    Saya ucapkan selamat datang di Laman Website Resmi SMP Muhammadiyah 1 Malang.
-                    </p>
-                <details>
-                    <summary id="bsambutan" style="margin-left: 22px; background: #5fcf80; color: #fff; border-radius: 50px; padding: 8px 25px; white-space: nowrap; transition: 0.3s; font-size: 14px; display: inline-block;">
-                        Baca Selengkapnya
-                    </summary>
-                    <p id="sambutan">
-                    Seraya memanjatkan puji syukur kehadirat Allah SWT, disertai perasaan bangga saya menuliskan kata Sambutan Kepala sekolah, setelah dilakukan update, baik dari sisi pengelolaan maupun isinya. 
-                    Di era global dan pesatnya Teknologi Informasi ini, tidak dipungkiri bahwa keberadaan sebuah website untuk suatu organisasi, termasuk SMP Muhammadiyah 1 Malang, sangatlah penting. 
-                    Website dapat digunakan sebagai media berbagi informasi - informasi dari sekolah, yang memang harus diketahui oleh masyarakat secara luas. 
-                    Disamping itu, website ini juga nantinya akan menjadi wadah kreasi siswa-siswi SMP Muhammadiyah 1 Malang. 
-                    Oleh karena itu, saya sangat berharap, melalui website ini, SMP Muhammadiyah 1 Malang akan semakin berkembang, sehingga pada waktunya nanti dapat memberikan kontribusi bagai kemajuan masyarakat secara luas dan SMP Muhammadiyah 1 Malang sendiri khususnya, Terima kasih.
-                    </p>
-                    <h3>Wassalamu’alaikum Warahmatullahi Wabarakatuh</h3>
-                    <p style="text-align: right;">
-                        Kepala Sekolah SMP Muhammadiyah 1 Malang
-                    </p>
-                </details>
-            </div>
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h1 style="font-size: 65px;" class="text-white mb-5 animated slideInDown">SMP MUHAMMADIYAH 1 MALANG</h1>
+                                    <h2 style="color: #FED049;" class="mb-5 animated slideInDown">Berjiwa Kepemimpinan - dan - Berakhlak Islami</h2>
+                                    <h3 class="text-white mb-5 animated slideInDown">PPDB SMP MUHASA TELAH DIBUKA, Mari bergabung dengan kami.</h3>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">JOIN NOW</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
-    </section>
-    <!-- End About Section -->
-    
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
+    <!-- Carousel End -->
+
+
+    <!-- Top Feature Start -->
+    <div class="container-fluid top-feature py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <div class="col wow fadeIn" data-wow-delay="0.1s">
+                    <div style="text-align: center;" class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-times text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Sholat Berjamaah</h4>
+                                <span>
+                                    Pembiasaan sholat berjamaah merupakan salah satu upaya sekolah untuk membentuk karakter islami peserta didik.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col wow fadeIn" data-wow-delay="0.3s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-users text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Target Hafalan Alqur'an</h4>
+                                <span>
+                                    Siswa mempunyai target hafalan minimal juz ke-30 dengan harapan setiap lulusan SMP Muhasa minimal hafal juz ke-30.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-phone text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Program Tahfidz</h4>
+                                <span>
+                                    Program ini untuk memfasilitasi siswa yang sudah hafal juz ke-30 di jenjang studi sebelumnya, sehingga di SMP Muhasa ditingkatkan lagi hafalannya untuk juz berikutnya.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                                <i class="fa fa-phone text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h4>Program Olimpiade</h4>
+                                <span>
+                                    Program sekolah dalam upaya mengembangkan kemampuan siswa dalam bidang akademik sehingga siswa mampu bersaing dalam kompetisi tingkat kota, propinsi, nasional maupun internasional.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Feature End -->
+
+<!-- Features Start -->
+<div class="container-xxl py-5">
     <div class="container">
-
-        <div class="row counters">
-            <div class="col-lg-6 col-12 text-center">
-                <span>Visi</span>
-                <p>TERBENTUKNYA PRIBADI BERJIWA KEPEMIMPINAN ISLAMI, PEDULI DAN BERWAWASAN KEUNGGULAN
-                </p>
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-5 fw-bold text-primary">Why Choosing Us!</p>
+                <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
             </div>
-
-            <div class="col-lg-6 col-12 text-center">
-                <span>Misi</span>
-                <ul>
-                    <li><i class="bi bi-check-circle"></i> Meningkatkan profesionalisme tenaga pendidik dan kependidikan</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap dan karakter islami di lingkungan sekolah</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap dan karakter islami di lingkungan sekolah.</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap peduli terhadap sesama</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap peduli terhadap sesama</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    </section>
-    <!-- End Counts Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
-
-        <div class="row">
-        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-left" data-aos-delay="100">
-            <img src="/img/depanSekolah.jpg" class="img-fluid" alt="" style="height: 480px; width: 450px;">
-        </div>
-        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Profile Sekolah</h3>
-            <p class="fst-italic">
-            SMP Muhammadiyah 1 Malang (Muhasa)
-            </p>
-            <p style="text-align: justify;">
-            Berdiri setahun setelah Indonesia Merdeka, tepatnya pada tanggal 18 Agustus 1946 atas prakarsa para tokoh Muhammadiyah Kota Malang. 
-            Muhasa adalah cikal bakal pendidikan naungan Muhammadiyah Kota Malang yang dirintis oleh KH. M. Bedjo Dermalaksono, bersama Djoko Raharjo, Suryawiyana, dan Abdul Rahman. 
-            Pada awal perintisannya sempat beberapa kali berpindah tempat, yang akhirnya menetap sejak tahun 1951 hingga sekarang di Jalan Bridjen Slamet Riyadi No. 134 (dulu Oroo-oro Dowo 134) yang tidak lain adalah kediaman Kh. M. Bedjo Dermolaksono.
-            </p>
-
-        </div>
-        </div>
-
-    </div>
-    </section>
-    <!-- End About Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
-    <div class="container" data-aos="fade-up">
-
-        <div class="row">
-        <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-            <h3 style="text-align: center; font-size: 250%;-webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #3C4048;">SMP MUHAMMADIYAH 1 MALANG</h3>
-            <hr>
-            <h3>Kenapa Harus Muhasa?</h3>
-            </div>
-        </div>
-        <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-            <div class="row">
-
-                <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
-                    <!-- <i class="bx bx-receipt"></i> -->
-                    <img src="/img/icon/sabe.png" style="width: height; height: 50px; margin-bottom: 50px;">
-                    <h4>Salat Berjamaah</h4>
-                    <p>Membiasakan siswa untuk melakukan sholat sunnah dhuha sebelum memulai kegiatan belajar dan juga membiasakan siswa untuk sholat berjamaah tepat waktu</p>
-                </div>
-                </div>
-
-                <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
-                    <!-- <i class="bx bx-receipt"></i> -->
-                    <img src="/img/icon/taqu.png" style="width: height; height: 50px; margin-bottom: 50px;">
-                    <h4>Tahfidz Qur'an</h4>
-                    <p>Program Hafalan Juz 30 bagi Setiap Siswa dan Program Tahfidz Lanjutan untuk Siswa yang Sudah Hafal Juz 30</p>
-                </div>
-                </div>
-
-                <div class="col-xl-4 d-flex align-items-stretch">
-                <div class="icon-box mt-4 mt-xl-0">
-                    <!-- <i class="bx bx-receipt"></i> -->
-                    <img src="/img/icon/olim.png" style="width: height; height: 50px; margin-bottom: 50px;">
-                    <h4>Olimpiade</h4>
-                    <p>Program Pendampingan Siswa untuk Mengembangkan Kemampuannya dalam Bidang Akademik maupun Non-akademik serta Mengikutsertakan Siswa dalam Pelbagai Lomba Lokal, Nasional hingga Internasional</p>
-                </div>
-                </div>
-            </div>
-            </div>
-            <!-- End .content-->
-        </div>
-        </div>
-
-    </div>
-    </section>
-    <!-- End Why Us Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
-    <div class="container">
-
-        <div class="row counters">
-
-        <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Siswa</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Mata Pelajaran</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Guru</p>
-        </div>
-
-        <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Ekstrakulikuler</p>
-        </div>
-        </div>
-    </div>
-    </section>
-    <!-- End Counts Section -->
-
-    <!-- ======= Popular Courses Section ======= -->
-    <section id="cermus" class="courses">
-    <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-            <h2>CERMUS</h2>
-            <p>Cerita Muhasa</p>
-        </div>
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-            <img src="/img/course-1.jpg" class="img-fluid" alt="...">
-            <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4>Web Development</h4>
-                <p class="price">$169</p>
-                </div>
-
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/user.png" class="img-fluid" alt="">
-                        <span>Antonio</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div> <!-- End Course Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-            <img src="/img/course-2.jpg" class="img-fluid" alt="...">
-            <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4>Marketing</h4>
-                <p class="price">$250</p>
-                </div>
-
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/user.png" class="img-fluid" alt="">
-                        <span>Lana</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div> <!-- End Course Item-->
-
-        
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-            <img src="/img/course-3.jpg" class="img-fluid" alt="...">
-            <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4>Content</h4>
-                    <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                    <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/user.png" class="img-fluid" alt="">
-                        <span>Brandon</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <!-- End Course Item-->
-        
-        </div>
-        <!-- <div class="mt-3 d-flex flex-row-reverse p-2 bd-highlight"> -->
-        <div class="mt-3 d-flex flex-row-reverse p-2 bd-highlight">
-                <a href="{{ url ('http://127.0.0.1:8000/cermus') }}" class="get-started-btn">Berita Lainnya</a>
-        </div>
-        <!-- </div> -->
-    </div>
-    </section><!-- End Popular Courses Section -->
-    
-    <!-- Gallery Start -->
-<div id="galeri" class="trainers container-xxl py-5">
-<br><br>
-    <div class="container" data-aos="fade-up">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="section-title">
-                <p>Galeri Muhasa</p>
-                <h2></h2>
-            </div>
-        </div>
-
-        <div class="row g-4 portfolio-container">
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+            <div class="col-lg-6">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                    <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                        <i class="fa fa-check fa-3x text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-0">100% Satisfaction</h4>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                    <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                        <i class="fa fa-users fa-3x text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-0">Dedicated Team</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Pruning plants</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru2.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Irrigation & Drainage</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru3.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Garden Maintenance</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru4.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Green Technology</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru5.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Urban Gardening</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                <i class="fa fa-tools fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="mb-0">Modern Equipment</h4>
                         </div>
                     </div>
                 </div>
@@ -422,166 +231,538 @@
         </div>
     </div>
 </div>
-<!-- Gallery End -->
+<!-- Features End -->
 
-            <!-- ======= Trainers Section ======= -->
-            <section id="trainers" class="trainers">
-    <div class="container" data-aos="fade-up">
-    <div class="section-title">
-        <h2>Testimoni</h2>
-        <p>Testimoni Alumni</p>
-    </div>
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-            <img src="/img/testimoni/rayhan.jpeg" class="img-fluid" alt="">
-            <div class="member-content">
-                <h4>Rayhan Rezanabil Risadi</h4>
-                <span>S1 Desain Produk, STT</span>
-                <p>
-                Dulu waktu di Muhasa saya adalah pribadi yang tidak begitu paham dengan ajaran agama, di Muhasa saya mempelajari banyak pengetahuan tentang agama sehingga saat ini sangat membantu. dari situ pribadi dan akhlak saya terbentuk , terimakasih Muhasa.
-                </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-            <img src="/img/testimoni/haqqi.jpeg" class="img-fluid" alt="">
-            <div class="member-content">
-                <h4>M. Haqqi Mustofa Kamil</h4>
-                <span>D3 Teknik Sipil, Polinema</span>
-                <p>
-                Selama sekolah di Muhasa saya merasa nyaman dan senang karena gurunya baik-baik dan sabar kalo mengajar. Dan nilai nilai Islam di SMP ini sangat dijunjung tinggi sehingga keimanan siswa akan semakin kuat dan bertambah
-                </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-            <img src="/img/testimoni/riven.jpeg" class="img-fluid" alt="">
-            <div class="member-content">
-                <h4>Riven Ayudita</h4>
-                <span>S1 Pend Matematika, UMM</span>
-                <p>
-                Bersekolah di Muhasa selama tiga tahun saya didik oleh guru-guru yang sangat profesional pada bidangnya masing-masing. Disini saya dididik untuk bisa menjadi pribadi maju, kreatif dan tentunya berakhlak yang sampai saat ini saya ingat pesan itu.
-                </p>
-            </div>
-            </div>
-        </div>
-        </div>
-
-    </div>
-    </section>
-    <!-- End Trainers Section -->
-
-    <section class="venue section-padding" id="section_6">
-            <div class="container" data-aos="fade-up">
-                <div class="row">
-                <div class="section-title">
-                    <h2>Lokasi</h2>
-                    <p>Lokasi SMP MUHASA</p>
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-end">
+                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg">
                 </div>
-
-                    <div class="col-lg-6 col-12">
-                        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3951.3262140828665!2d112.62717!3d-7.965200000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8670066f016a7940!2sSchool%20SMP%20Muhammadiyah%201%20Malang!5e0!3m2!1sen!2sus!4v1669865562112!5m2!1sen!2sus" width="100%" height="371.59" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="venue-thumb bg-white shadow-lg">
-                            
-                            <div class="venue-info-title">
-                                <h2 class="text-white mb-0">SMP Muhammadiyah 1 Malang</h2>
+                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="display-1 text-primary mb-0">25</h1>
+                    <p class="text-primary mb-4">Year of Experience</p>
+                    <h1 class="display-5 mb-4">We Make Your Home Like A Garden</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
+                </div>
+                <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-5">
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="border-start ps-4">
+                                <i class="fa fa-award fa-3x text-primary mb-3"></i>
+                                <h4 class="mb-3">Award Winning</h4>
+                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</span>
                             </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="border-start ps-4">
+                                <i class="fa fa-users fa-3x text-primary mb-3"></i>
+                                <h4 class="mb-3">Dedicated Team</h4>
+                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 
-                            <div class="venue-info-body">
-                                <h4 class="d-flex">
-                                    <i class="bi-geo-alt me-2"></i> 
-                                    <span>Jl. Brigjend Slamet Riadi No.134, Oro-oro Dowo, Kec. Klojen, Kota Malang</span>
-                                </h4>
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Garden Complated</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Dedicated Staff</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Awards Achieved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
 
 
-                                <div class="row">
-                                    <div class="col">
-                                    <h5 class="mt-4 mb-3">
-                                        <a href="https://www.instagram.com/smpmuhammadiyahsatu/">
-                                            <i class="bi bi-instagram me-2"></i>
-                                            Instagram
-                                        </a>
-                                    </h5>
-                                    <h5 class="mt-4 mb-3">
-                                        <a href="mailto:hello@yourgmail.com">
-                                            <i class="bi bi-whatsapp me-2"></i>
-                                            Whatsapp
-                                        </a>
-                                    </h5>
+    <!-- Features Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="fs-5 fw-bold text-primary">Why Choosing Us!</p>
+                    <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="row g-4">
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                            <i class="fa fa-check fa-3x text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-0">100% Satisfaction</h4>
                                     </div>
-
-                                    <div class="col">
-                                    <h5 class="mt-4 mb-3">
-                                        <a href="mailto:hello@yourgmail.com">
-                                            <i class="bi bi-youtube me-2"></i>
-                                            Youtube
-                                        </a>
-                                    </h5>
-                                    <h5 class="mt-4 mb-3">
-                                        <a href="mailto:hello@yourgmail.com">
-                                            <i class="bi bi-facebook me-2"></i>
-                                            Facebook
-                                        </a>
-                                    </h5>
+                                </div>
+                                <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                    <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                            <i class="fa fa-users fa-3x text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-0">Dedicated Team</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                            <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                    <i class="fa fa-tools fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="mb-0">Modern Equipment</h4>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
-        </section>
-
-</main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container d-md-flex py-4">
-
-    <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-        &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
     </div>
+    <!-- Features End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-bold text-primary">Our Services</p>
+                <h1 class="display-5 mb-5">Services That We Offer For You</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Landscaping</h4>
+                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Pruning plants</h4>
+                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Irrigation & Drainage</h4>
+                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="img/service-4.jpg" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Garden Maintenance </h4>
+                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="img/service-5.jpg" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Green Technology</h4>
+                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded d-flex h-100">
+                        <div class="service-img rounded">
+                            <img class="img-fluid" src="img/service-6.jpg" alt="">
+                        </div>
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                                <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
+                            </div>
+                            <h4 class="mb-3">Urban Gardening</h4>
+                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</footer><!-- End Footer -->
+    <!-- Service End -->
 
-<!-- <div id="preloader"></div> -->
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
-<script src="/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="/vendor/aos/aos.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="/vendor/php-email-form/validate.js"></script>
+    <!-- Quote Start -->
+    <div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="display-5 text-center mb-5">Get A Free Quote</h1>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-light border-0" id="gname" placeholder="Gurdian Name">
+                                    <label for="gname">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-light border-0" id="gmail" placeholder="Gurdian Email">
+                                    <label for="gmail">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-light border-0" id="cname" placeholder="Child Name">
+                                    <label for="cname">Your Mobile</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-light border-0" id="cage" placeholder="Child Age">
+                                    <label for="cage">Service Type</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
 
-<!-- Template Main JS File -->
-<script src="/js/main.js"></script>
-<script>
-    btn.addEventListener('click', () => {
-    // 👇️ hide button
-    btn.style.display = 'none';
 
-    // 👇️ show div
-    const box = document.getElementById('sambutan');
-    box.style.display = 'block';
-    });
-</script>
+    <!-- Projects Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-bold text-primary">Our Projects</p>
+                <h1 class="display-5 mb-5">Some Of Our Wonderful Projects</h1>
+            </div>
+            <div class="row wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline rounded mb-5" id="portfolio-flters">
+                        <li class="mx-2 active" data-filter="*">All</li>
+                        <li class="mx-2" data-filter=".first">Complete Projects</li>
+                        <li class="mx-2" data-filter=".second">Ongoing Projects</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-1.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Landscaping</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Pruning plants</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Irrigation & Drainage</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-4.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Garden Maintenance</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-5.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Green Technology</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-6.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Urban Gardening</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
 
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-bold text-primary">Our Team</p>
+                <h1 class="display-5 mb-5">Dedicated & Experienced Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        <div class="team-text">
+                            <h4 class="mb-0">Doris Jordan</h4>
+                            <p class="text-primary">Landscape Designer</p>
+                            <div class="team-social d-flex">
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        <div class="team-text">
+                            <h4 class="mb-0">Johnny Ramirez</h4>
+                            <p class="text-primary">Garden Designer</p>
+                            <div class="team-social d-flex">
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        <div class="team-text">
+                            <h4 class="mb-0">Diana Wagner</h4>
+                            <p class="text-primary">Senior Gardener</p>
+                            <div class="team-social d-flex">
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="fs-5 fw-bold text-primary">Testimonial</p>
+                    <h1 class="display-5 mb-5">What Our Clients Say About Us!</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
+                    <a class="btn btn-primary py-3 px-4" href="">See More</a>
+                </div>
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item">
+                            <img class="img-fluid rounded mb-3" src="img/testimonial-1.jpg" alt="">
+                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <h4>Client Name</h4>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item">
+                            <img class="img-fluid rounded mb-3" src="img/testimonial-2.jpg" alt="">
+                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <h4>Client Name</h4>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Services</h4>
+                    <a class="btn btn-link" href="">Landscaping</a>
+                    <a class="btn btn-link" href="">Pruning plants</a>
+                    <a class="btn btn-link" href="">Urban Gardening</a>
+                    <a class="btn btn-link" href="">Garden Maintenance</a>
+                    <a class="btn btn-link" href="">Green Technology</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative w-100">
+                        <input class="form-control bg-light border-light w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/counterup/counterup.min.js"></script>
+    <script src="/lib/parallax/parallax.min.js"></script>
+    <script src="/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/ppdbmain.js"></script>
 </body>
 
 </html>

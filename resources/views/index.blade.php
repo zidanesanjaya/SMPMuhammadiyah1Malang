@@ -532,7 +532,7 @@
                                         </a>
                                     </h5>
                                     <h5 class="mt-4 mb-3">
-                                        <a href="mailto:hello@yourgmail.com">
+                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=6281330951615&text=Saya%20Berminat%20Mendaftar%20di%20SMP%20MUHASA">
                                             <i class="bi bi-whatsapp me-2"></i>
                                             Whatsapp
                                         </a>
@@ -541,13 +541,13 @@
 
                                     <div class="col">
                                     <h5 class="mt-4 mb-3">
-                                        <a href="mailto:hello@yourgmail.com">
+                                        <a href="https://www.youtube.com/@smpmuhammadiyahsatu3906">
                                             <i class="bi bi-youtube me-2"></i>
                                             Youtube
                                         </a>
                                     </h5>
                                     <h5 class="mt-4 mb-3">
-                                        <a href="mailto:hello@yourgmail.com">
+                                        <a target="_blank" href="https://web.facebook.com/SmpMuhammadiyah1Malang">
                                             <i class="bi bi-facebook me-2"></i>
                                             Facebook
                                         </a>
