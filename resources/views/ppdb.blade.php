@@ -118,72 +118,72 @@
 
 
     <!-- Top Feature Start -->
-    <div class="container-fluid top-feature py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-                <div class="col wow fadeIn" data-wow-delay="0.1s">
-                    <div style="text-align: center;" class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-times text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>Sholat Berjamaah</h4>
-                                <span>
-                                    Pembiasaan sholat berjamaah merupakan salah satu upaya sekolah untuk membentuk karakter islami peserta didik.
-                                </span>
-                            </div>
+<!-- <div class="container-fluid top-feature py-5 pt-lg-0">
+    <div class="container py-5 pt-lg-0">
+        <div class="row gx-0">
+            <div class="col wow fadeIn" data-wow-delay="0.1s">
+                <div style="text-align: center;" class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                            <i class="fa fa-times text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h4>Sholat Berjamaah</h4>
+                            <span>
+                                Pembiasaan sholat berjamaah merupakan salah satu upaya sekolah untuk membentuk karakter islami peserta didik.
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="col wow fadeIn" data-wow-delay="0.3s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-users text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>Target Hafalan Alqur'an</h4>
-                                <span>
-                                    Siswa mempunyai target hafalan minimal juz ke-30 dengan harapan setiap lulusan SMP Muhasa minimal hafal juz ke-30.
-                                </span>
-                            </div>
+            </div>
+            <div class="col wow fadeIn" data-wow-delay="0.3s">
+                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                            <i class="fa fa-users text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h4>Target Hafalan Alqur'an</h4>
+                            <span>
+                                Siswa mempunyai target hafalan minimal juz ke-30 dengan harapan setiap lulusan SMP Muhasa minimal hafal juz ke-30.
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="col wow fadeIn" data-wow-delay="0.5s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-phone text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>Program Tahfidz</h4>
-                                <span>
-                                    Program ini untuk memfasilitasi siswa yang sudah hafal juz ke-30 di jenjang studi sebelumnya, sehingga di SMP Muhasa ditingkatkan lagi hafalannya untuk juz berikutnya.
-                                </span>
-                            </div>
+            </div>
+            <div class="col wow fadeIn" data-wow-delay="0.5s">
+                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                            <i class="fa fa-phone text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h4>Program Tahfidz</h4>
+                            <span>
+                                Program ini untuk memfasilitasi siswa yang sudah hafal juz ke-30 di jenjang studi sebelumnya, sehingga di SMP Muhasa ditingkatkan lagi hafalannya untuk juz berikutnya.
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="col wow fadeIn" data-wow-delay="0.5s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-phone text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>Program Olimpiade</h4>
-                                <span>
-                                    Program sekolah dalam upaya mengembangkan kemampuan siswa dalam bidang akademik sehingga siswa mampu bersaing dalam kompetisi tingkat kota, propinsi, nasional maupun internasional.
-                                </span>
-                            </div>
+            </div>
+            <div class="col wow fadeIn" data-wow-delay="0.5s">
+                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
+                            <i class="fa fa-phone text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h4>Program Olimpiade</h4>
+                            <span>
+                                Program sekolah dalam upaya mengembangkan kemampuan siswa dalam bidang akademik sehingga siswa mampu bersaing dalam kompetisi tingkat kota, propinsi, nasional maupun internasional.
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div> -->
     <!-- Top Feature End -->
 
 <!-- Features Start -->
@@ -191,9 +191,9 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p class="fs-5 fw-bold text-primary">Why Choosing Us!</p>
-                <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <p class="fs-5 fw-bold text-primary">TENTANG</p>
+                <h1 class="display-5 mb-4">SMP MUHAMMADIYAH 1 MALANG</h1>
+                <p class="mb-4">SMP MUHASA merupakan sekolah yang berfokus pada pengembangan karakter Islami.</p>
                 <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
             </div>
             <div class="col-lg-6">
@@ -203,27 +203,43 @@
                             <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
                                     <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                        <i class="fa fa-check fa-3x text-primary"></i>
+                                        <img style="width: 55px; height: width;" class="text-primary" src="/img/ppdb/icon/shalatbersama.png">
                                     </div>
-                                    <h4 class="mb-0">100% Satisfaction</h4>
+                                    <h4 class="mb-0">Sholat Berjamaah</h4>
+                                    <h5 class="mb-0">Pembiasaan sholat berjamaah merupakan salah satu upaya sekolah untuk membentuk karakter islami peserta didik.</h5>
                                 </div>
                             </div>
                             <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                 <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
                                     <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                        <i class="fa fa-users fa-3x text-primary"></i>
+                                    <img style="width: 55px; height: width;" class="text-primary" src="/img/ppdb/icon/hafalan.png">
                                     </div>
-                                    <h4 class="mb-0">Dedicated Team</h4>
+                                    <h4 class="mb-0">Target Hafalan Alqur'an</h4>
+                                    <h5 class="mb-0">Siswa mempunyai target hafalan minimal juz ke-30 dengan harapan setiap lulusan SMP Muhasa minimal hafal juz ke-30.</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
-                        <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
-                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                <i class="fa fa-tools fa-3x text-primary"></i>
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                    <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                    <img style="width: 55px; height: width;" class="text-primary" src="/img/ppdb/icon/tahfidz.png">
+                                    </div>
+                                    <h4 class="mb-0">Program Tahfidz</h4>
+                                    <h5 class="mb-0">Program ini untuk memfasilitasi siswa yang sudah hafal juz ke-30 di jenjang studi sebelumnya, sehingga di SMP Muhasa ditingkatkan lagi hafalannya untuk juz berikutnya.</h5>
+                                </div>
                             </div>
-                            <h4 class="mb-0">Modern Equipment</h4>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
+                                    <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                                    <img style="width: 55px; height: width;" class="text-primary" src="/img/ppdb/icon/polim.png">
+                                    </div>
+                                    <h4 class="mb-0">Program Olimpiade</h4>
+                                    <h5 class="mb-0">Program sekolah dalam upaya mengembangkan kemampuan siswa dalam bidang akademik sehingga siswa mampu bersaing dalam kompetisi tingkat kota, propinsi, nasional maupun internasional.</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
