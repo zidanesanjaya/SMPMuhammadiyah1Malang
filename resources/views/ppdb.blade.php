@@ -292,8 +292,10 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
+                    <a href="https://web.facebook.com/SmpMuhammadiyah1Malang">
+                        <i class="fa-brands fa-facebook text-white"></i><br>
+                        <span class="fs-5 fw-semi-bold text-light">Facebook</span>
+                    </a>
                 </div>
                 <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
                     <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
@@ -776,6 +778,7 @@
     <script src="/lib/parallax/parallax.min.js"></script>
     <script src="/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
 
     <!-- Template Javascript -->
     <script src="/js/ppdbmain.js"></script>
