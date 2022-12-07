@@ -58,13 +58,17 @@
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
+                <!-- <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <div class="cleanslate w24tz-current-time w24tz-small" style="display: inline-block !important; visibility: hidden !important; min-width:200px !important; min-height:100px !important;">
+                        <p>
+                            <a href="//24timezones.com/Malang/time" style="text-decoration: none" class="clock24" id="tz24-1670388052-c1554-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2MzkwMTk1NGM2YzBiIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="clock Malang" target="_blank" rel="nofollow">
+                            </a>
+                        </p>
+
+                        <div id="clock_block_cb63901954c6c0b">
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -81,14 +85,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">HOME</a>
-                <a href="about.html" class="nav-item nav-link">PROFILE</a>
-                <a href="service.html" class="nav-item nav-link">KEGIATAN KAMI</a>
-                <a href="project.html" class="nav-item nav-link">PENGUMUMAN</a>
-                <a href="project.html" class="nav-item nav-link">DAFTAR PPDB</a>
+                <a href="{{ url ('http://127.0.0.1:8000/ppdb') }}" class="nav-item nav-link active">HOME</a>
+                <a href="#about" class="nav-item nav-link">TENTANG KAMI</a>
+                <a href="#kegiatan" class="nav-item nav-link">KEGIATAN KAMI</a>
+                <a href="#" class="nav-item nav-link">PENGUMUMAN</a>
+                <a href="{{ url ('http://127.0.0.1:8000/register') }}" class="nav-item nav-link">DAFTAR PPDB</a>
+                <a href="{{ url ('http://127.0.0.1:8000/login') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">MASUK<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
-            <a href="{{ url ('http://127.0.0.1:8000/register') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">DAFTAR<i class="fa fa-arrow-right ms-3"></i></a>
-            <a href="{{ url ('http://127.0.0.1:8000/login') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">MASUK<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -116,85 +119,14 @@
     </div>
     <!-- Carousel End -->
 
-
-    <!-- Top Feature Start -->
-<!-- <div class="container-fluid top-feature py-5 pt-lg-0">
-    <div class="container py-5 pt-lg-0">
-        <div class="row gx-0">
-            <div class="col wow fadeIn" data-wow-delay="0.1s">
-                <div style="text-align: center;" class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                    <div class="d-flex">
-                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-times text-primary"></i>
-                        </div>
-                        <div class="ps-3">
-                            <h4>Sholat Berjamaah</h4>
-                            <span>
-                                Pembiasaan sholat berjamaah merupakan salah satu upaya sekolah untuk membentuk karakter islami peserta didik.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col wow fadeIn" data-wow-delay="0.3s">
-                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                    <div class="d-flex">
-                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-users text-primary"></i>
-                        </div>
-                        <div class="ps-3">
-                            <h4>Target Hafalan Alqur'an</h4>
-                            <span>
-                                Siswa mempunyai target hafalan minimal juz ke-30 dengan harapan setiap lulusan SMP Muhasa minimal hafal juz ke-30.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col wow fadeIn" data-wow-delay="0.5s">
-                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                    <div class="d-flex">
-                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-phone text-primary"></i>
-                        </div>
-                        <div class="ps-3">
-                            <h4>Program Tahfidz</h4>
-                            <span>
-                                Program ini untuk memfasilitasi siswa yang sudah hafal juz ke-30 di jenjang studi sebelumnya, sehingga di SMP Muhasa ditingkatkan lagi hafalannya untuk juz berikutnya.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col wow fadeIn" data-wow-delay="0.5s">
-                <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                    <div class="d-flex">
-                        <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-phone text-primary"></i>
-                        </div>
-                        <div class="ps-3">
-                            <h4>Program Olimpiade</h4>
-                            <span>
-                                Program sekolah dalam upaya mengembangkan kemampuan siswa dalam bidang akademik sehingga siswa mampu bersaing dalam kompetisi tingkat kota, propinsi, nasional maupun internasional.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-    <!-- Top Feature End -->
-
 <!-- Features Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="about">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <p class="fs-5 fw-bold text-primary">TENTANG</p>
                 <h1 class="display-5 mb-4">SMP MUHAMMADIYAH 1 MALANG</h1>
                 <p class="mb-4">SMP MUHASA merupakan sekolah yang berfokus pada pengembangan karakter Islami.</p>
-                <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
             </div>
             <div class="col-lg-6">
                 <div class="row g-4 align-items-center">
@@ -283,8 +215,9 @@
 <!-- Facts End -->
 
 <!-- Projects Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="kegiatan">
     <div class="container">
+    <br><br>
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-bold text-primary">Ektrakuliker</p>
             <h1 class="display-5 mb-5">Kegiatan Kami</h1>
@@ -468,6 +401,7 @@
     <script src="/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="/lib/lightbox/js/lightbox.min.js"></script>
     <script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
     <!-- Template Javascript -->
     <script src="/js/ppdbmain.js"></script>
