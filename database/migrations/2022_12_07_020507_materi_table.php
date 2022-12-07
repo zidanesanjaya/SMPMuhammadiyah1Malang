@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sosial_media', function (Blueprint $table) {
+        Schema::create('materi', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('deskripsi')->nullable();
-            $table->string('link');
-            $table->string('logo');
-            $table->string('status');
+            $table->string('nama_materi'); 
+            $table->string('link_materi');
+            $table->unsignedBigInteger('id_kelas'); // FK
             $table->timestamps();
         });
     }

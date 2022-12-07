@@ -32,7 +32,7 @@
                     </div>
                     /
                     <div class="col">
-                        <input type="text" class="form-control" id="mdate">
+                        <input type="date" class="form-control" name="tanggal_lahir">
                     </div>
                 </div>
 

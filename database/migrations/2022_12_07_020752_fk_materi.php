@@ -13,15 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sosial_media', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('deskripsi')->nullable();
-            $table->string('link');
-            $table->string('logo');
-            $table->string('status');
-            $table->timestamps();
-        });
+        Schema::table('materi', function (Blueprint $table) {
+            $table->foreign('id_kelas')->references('id')->on('kelas')->onDelete('cascade');
+       });
     }
 
     /**

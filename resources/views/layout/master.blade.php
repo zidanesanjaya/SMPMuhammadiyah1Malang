@@ -25,13 +25,19 @@
         <link rel="stylesheet" href="/admin/assets/plugins/carousel/owl.carousel.min.css">
         <link rel="stylesheet" href="/admin/assets/plugins/carousel/owl.theme.default.min.css">
 
-        <link rel="stylesheet" href="/admin/assets/plugins/animate/animate.css" type="text/css">
-        <link rel="stylesheet" href="/admin/assets/css/bootstrap-material-design.min.css" type="text/css">
-        <link rel="stylesheet" href="/admin/assets/css/icons.css" type="text/css">
-        <link rel="stylesheet" href="/admin/assets/css/style.css" type="text/css">
-
+        <link href="/admin/assets/plugins/timepicker/tempusdominus-bootstrap-4.css" rel="stylesheet" />
+        <link href="/admin/assets/plugins/timepicker/bootstrap-material-datetimepicker.css" rel="stylesheet">
+        <link href="/admin/assets/plugins/clockpicker/jquery-clockpicker.min.css" rel="stylesheet" />
+        <link href="/admin/assets/plugins/colorpicker/asColorPicker.min.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
+  
+        
+        <link href="/admin/assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" /> 
 
+        <link href="/admin/assets/plugins/animate/animate.css" rel="stylesheet" type="text/css">
+        <link href="/admin/assets/css/bootstrap-material-design.min.css" rel="stylesheet" type="text/css">
+        <link href="/admin/assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="/admin/assets/css/style.css" rel="stylesheet" type="text/css">
 
         <script src="/admin/assets/js/jquery.min.js"></script>
 
@@ -169,6 +175,12 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li>
+                                    <a href="{{route('kelas.page')}}" class="waves-effect">
+                                        <i class="mdi mdi-book-open-page-variant"></i>
+                                        <span> Pelajaran </span>
+                                    </a>
+                                </li>
                             @endif  
                         </ul>
                     </div>
@@ -276,6 +288,9 @@
         <!-- Dropzone js -->
         <script src="/admin/assets/plugins/dropify/js/dropify.min.js"></script>
         <script src="/admin/assets/pages/upload-init.js"></script>
+        <script src="/admin/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+        <script src="/admin/assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
         <!-- Plugins Init js -->
         <script src="/admin/assets/pages/form-advanced.js"></script>
         <!-- App js -->

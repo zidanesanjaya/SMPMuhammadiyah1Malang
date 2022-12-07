@@ -9,6 +9,9 @@
     </div>
 </div>
 <div class="container bg-white border p-3">
+@if (session()->has('status'))
+    <span class="badge badge-success">{{ session()->get('status') }}</span>
+@endif
     <div class="row">
         <div class="col">
             <h5>List Admin & User Terdaftar</h5>
@@ -40,7 +43,7 @@
                         <td>{{ $listUser->email }}</td>
                         <td>{{ $listUser->role}}</td>
                         <td>
-                            <a class="btn btn-warning btn-raised" href="#"><i class="mdi mdi-pencil-box"></i> Edit</a>                               
+                            <a class="btn btn-warning btn-raised" href="{{route('admin.edit' , $listUser->id)}}"><i class="mdi mdi-pencil-box"></i> Edit</a>                               
                         </td>
                     </tr>
                     <?php

@@ -74,6 +74,13 @@ Route::group(['middleware' => ['auth']], function() {
         //Admin
         Route::get('user_admin', [AdminController::class, 'user_admin_page'])->name('user_admin.page'); 
             Route::post('store_admin', [AdminController::class, 'store_admin'])->name('admin.add_user'); 
+            Route::put('update_admin', [AdminController::class, 'update_admin'])->name('update.admin'); 
+
+        //Pelajaran
+        Route::get('list_kelas', [AdminController::class, 'kelas_page'])->name('kelas.page'); 
+        Route::get('admin_edit/{id}', [AdminController::class, 'admin_update_page'])->name('admin.edit'); 
+            Route::delete('destroy_kelas/{id}', [AdminController::class, 'destroy_kelas'])->name('kelas.destroy');
+            Route::post('store_kelas', [AdminController::class, 'store_kelas'])->name('store.kelas'); 
     });
 
 

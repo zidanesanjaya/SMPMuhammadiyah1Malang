@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Gelombang_Model;
 use App\Models\Sosial_Media_Model;
 use App\Models\User;
+use App\Models\Kelas_Model;
+
 // use App\Models\User;
 use Illuminate\Http\Request;
 use DB;
@@ -13,23 +15,31 @@ class AdminController extends Controller
 {
     public function index(){
         $gelombang = Gelombang_Model::paginate(5); 
-        return view('dashboard_admin.gelombang',compact('gelombang'));
+        return view('dashboard_admin.gelombang.gelombang',compact('gelombang'));
     }
     public function sosial_media_page(){
         $sosmed = Sosial_Media_Model::paginate(5); 
-        return view('dashboard_admin.sosial_media',compact('sosmed'));
+        return view('dashboard_admin.sosial_media.sosial_media',compact('sosmed'));
     }
     public function user_siswa_page(){
         $listUser = DB::table('vw_user')->where('role','siswa')->get();
-        return view('dashboard_admin.user_siswa',compact('listUser'));
+        return view('dashboard_admin.siswa.user_siswa',compact('listUser'));
     }
     public function user_admin_page(){
         $listUser = DB::table('vw_user')->where('role','admin')->orWhere('role','user')->get();
         return view('dashboard_admin.admin.list_user_admin',compact('listUser'));
     }
+    public function kelas_page(){
+        $listKelas = DB::table('kelas')->get();
+        return view('dashboard_admin.pelajaran.list_kelas',compact('listKelas'));
+    }
     public function gelombang_update_page($id){
         $gelombang= Gelombang_Model::findOrFail($id);
-        return view('dashboard_admin.gelombang_update',compact('gelombang'));
+        return view('dashboard_admin.gelombang.gelombang_update',compact('gelombang'));
+    }
+    public function admin_update_page($id){
+        $admin= User::findOrFail($id);
+        return view('dashboard_admin.admin.edit_admin',compact('admin'));
     }
     public function store_admin(Request $request)
     {  
@@ -66,7 +76,7 @@ class AdminController extends Controller
             'akhir'=> $request->akhir
         ]);
 
-        return redirect()->route('gelombang')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('gelombang')->with(['msg' => 'Data Berhasil Disimpan!']);
     }
     public function update_gelombang(Request $request){
         
@@ -85,11 +95,44 @@ class AdminController extends Controller
             'akhir'=> $request->akhir
         ]);
 
-        return redirect()->route('gelombang')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('gelombang')->with(['msg' => 'Data Berhasil Di Update!']);
+    }
+    public function update_admin(Request $request){
+        
+        $this->validate($request, [
+            'role' => 'required',
+        ]);   
+        $user = User::findOrFail($request->id);
+     
+        if($request->password == null){
+            $user->update([
+                'role'=> $request->role,
+            ]);
+        }else{
+            $user->update([
+                'role'=> $request->role,
+                'password'=> Hash::make($request->password)
+            ]);
+        }
+        return redirect()->route('user_admin.page')->with('status', 'Data Berhasil Di Update');;
     }
 
     public function destroy_gelombang($id){
         Gelombang_Model::destroy($id);
-        return redirect()->route('gelombang')->with('success','Gelombang deleted successfully');    
+        return redirect()->route('gelombang')->with('msg','Gelombang deleted successfully');    
+    }
+    public function destroy_kelas($id){
+        Kelas_Model::destroy($id);
+        return redirect()->route('kelas.page')->with('msg','Kelas deleted successfully');    
+    }
+    public function store_kelas(Request $request){
+        $this->validate($request, [
+            'nama_kelas' => 'required',
+        ]);        
+        Kelas_Model::create([
+            'nama_kelas'=> $request->nama_kelas,
+        ]);
+
+        return redirect()->route('kelas.page')->with(['msg' => 'Data Berhasil Disimpan!']);
     }
 }
