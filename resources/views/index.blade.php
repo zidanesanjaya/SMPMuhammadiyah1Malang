@@ -526,7 +526,7 @@
                                 <div class="row">
                                     <div class="col">
                                     <h5 class="mt-4 mb-3">
-                                        <a href="https://www.instagram.com/smpmuhammadiyahsatu/">
+                                        <a target="_blank" href="https://www.instagram.com/smpmuhammadiyahsatu/">
                                             <i class="bi bi-instagram me-2"></i>
                                             Instagram
                                         </a>
@@ -541,7 +541,7 @@
 
                                     <div class="col">
                                     <h5 class="mt-4 mb-3">
-                                        <a href="https://www.youtube.com/@smpmuhammadiyahsatu3906">
+                                        <a target="_blank" href="https://www.youtube.com/@smpmuhammadiyahsatu3906">
                                             <i class="bi bi-youtube me-2"></i>
                                             Youtube
                                         </a>
