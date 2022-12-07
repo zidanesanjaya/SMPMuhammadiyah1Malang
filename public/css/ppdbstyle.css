@@ -14,6 +14,33 @@
     z-index: 99;
 }
 
+/*---------------------------------------
+  LOCATION
+-----------------------------------------*/
+.venue {
+    background: #f6f7f6;
+  }
+  
+.venue-thumb {
+border-radius: 20px;
+position: relative;
+overflow: hidden;
+}
+
+.venue-info-title,
+.venue-info-body {
+padding: 40px;
+}
+
+.venue-info-title {
+background: #5fcf80;
+padding: 20px 40px;
+}
+
+.google-map {
+border-radius: 20px;
+}
+
 h1,
 .h1,
 h2,

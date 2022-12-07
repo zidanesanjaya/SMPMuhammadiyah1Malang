@@ -73,7 +73,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="{{ url ('http://127.0.0.1:8000/') }}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0">SMP MUHASA</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -349,404 +349,107 @@
 </div>
 <!-- Projects End -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-bold text-primary">Our Services</p>
-                <h1 class="display-5 mb-5">Services That We Offer For You</h1>
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-5 fw-bold text-primary">Testimonial</p>
+                <h1 class="display-5 mb-5">Testimoni Alumni Kami</h1>
+                <p class="mb-4">Kami memiliki lulusan yang terbaik, berikut beberapa alumni dari sekolah kami.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Landscaping</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
-                        </div>
+            <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item">
+                        <img class="img-fluid rounded mb-3" src="/img/testimoni/rayhan.jpeg" alt="">
+                        <p class="fs-5">Dulu waktu di MUHASA saya adalah pribadi yang tidak begitu paham dengan ajaran agama, di muhasa saya mempelajari banyak pengetahuan tentang agama sehingga saat ini sangat membantu. dari situ pribadi dan akhlak  saya terbentuk, terimakasih muhasa, very cool...</p>
+                        <h4>Rayhan Rezanabil Risadi</h4>
+                        <span>S1 Desain Produk STT</span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Pruning plants</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
-                        </div>
+                    <div class="testimonial-item">
+                        <img class="img-fluid rounded mb-3" src="/img/testimoni/haqqi.jpeg" alt="">
+                        <p class="fs-5">Alhamdulillah sekali dulu pas SMP saya sekolah di SMP MuHUSA, saya merasa nyaman dan senang karena guru"nya baik-baik dan sabar kalo mengajar. Dan nilai nilai Islam di SMP ini sangat dijunjung tinggi sehingga keimanan siswa akan semakin kuat dan bertambah</p>
+                        <h4>Muhammad Haqqi Musthafa Kamil</h4>
+                        <span>D3 Jurusan Teknik Sipil Polinema</span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Irrigation & Drainage</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
-                        </div>
+                    <div class="testimonial-item">
+                        <img class="img-fluid rounded mb-3" src="/img/testimoni/riven.jpeg" alt="">
+                        <p class="fs-5">Sebelum itu saya pernah bersekolah di SMP Muhammadiyah 1 Malang  selama tiga tahun saya didik  oleh guru-guru yang sangat profesional pada bidangnya masing-masing, beliau sangat telaten dalam mengajari saya ketika saya belum mampu memahami yang diajarkan. Disini didiik untuk bisa menjadi pribadi maju,kreatif dan tentunya berakhlak yang sampai saat ingat pesan ini.</p>
+                        <h4>Riven Ayudita</h4>
+                        <span>S1 Pendidkan Matematika UMM</span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/service-4.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Garden Maintenance </h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
-                        </div>
+                    <div class="testimonial-item">
+                        <img class="img-fluid rounded mb-3" src="/img/testimoni/user.png" alt="">
+                        <p class="fs-5">Selama saya belajar di SMP Muhammadiyah 1 Malang. Saya merasa mudah memahami pelajaran karena sistem mengajar belajarnya yang baik dan guru-gurunya yang ramah. Saya juga jadi bisa mengenal banyak teman dari beragam latar belakang. Yang paling saya suka dari kenangan di sana adalah dibudayakannya sholat fardhu berjamaah di Masjid.</p>
+                        <h4>Anggara Mahatma Wicaksono</h4>
+                        <span>D4 Teknik Sipil Politeknik Negeri Malang</span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/service-5.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Green Technology</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/service-6.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Urban Gardening</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
-                        </div>
+                    <div class="testimonial-item">
+                        <img class="img-fluid rounded mb-3" src="/img/testimoni/user.png" alt="">
+                        <p class="fs-5">Saya bangga dan bersyukur bisa menempuh penddidikan di SMP Muhammadiyah 1 Malang karena selain membangun akademik siswa, akhlak dan daya pikir siswa pun ikut diasah.</p>
+                        <h4>Ageng Maulana</h4>
+                        <span>D4 Teknik Sipil Kelas Internasional Politeknik Negeri Malang</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Testimonial End -->
 
+<!-- Quote Start -->
+<div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="container" data-aos="fade-up">
+                <div class="row">
 
-    <!-- Quote Start -->
-    <div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="display-5 text-center mb-5">Get A Free Quote</h1>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="gname" placeholder="Gurdian Name">
-                                    <label for="gname">Your Name</label>
+                    <div class="col-lg-6 col-12">
+                        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3951.3262140828665!2d112.62717!3d-7.965200000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8670066f016a7940!2sSchool%20SMP%20Muhammadiyah%201%20Malang!5e0!3m2!1sen!2sus!4v1669865562112!5m2!1sen!2sus" width="100%" height="371.59" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-5 mt-lg-0 align-center">
+                        <div class="venue-thumb bg-white shadow-lg">
+
+                            <div class="venue-info-body">
+                                <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+                                    <h1 class="">LOKASI KAMI</h1>
+                                    <p>SMP MUHAMMADIYAH 1 MALANG</p>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control bg-light border-0" id="gmail" placeholder="Gurdian Email">
-                                    <label for="gmail">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="cname" placeholder="Child Name">
-                                    <label for="cname">Your Mobile</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="cage" placeholder="Child Age">
-                                    <label for="cage">Service Type</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
+                                <h4 class="d-flex text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+                                    <i class="bi-geo-alt me-2"></i> 
+                                    <span>Jl. Brigjend Slamet Riadi No.134, Oro-oro Dowo, Kec. Klojen, Kota Malang</span>
+                                </h4>
                             </div>
                         </div>
                     </div>
+
+                </div>
+            </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Quote End -->
+</div>
+<!-- Quote End -->
 
-
-    <!-- Projects Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-bold text-primary">Our Projects</p>
-                <h1 class="display-5 mb-5">Some Of Our Wonderful Projects</h1>
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
             </div>
-            <div class="row wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline rounded mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">Complete Projects</li>
-                        <li class="mx-2" data-filter=".second">Ongoing Projects</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Landscaping</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Pruning plants</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Irrigation & Drainage</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-4.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Garden Maintenance</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-5.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Green Technology</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-6.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Urban Gardening</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6 text-center text-md-end">
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
             </div>
         </div>
     </div>
-    <!-- Projects End -->
-
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-bold text-primary">Our Team</p>
-                <h1 class="display-5 mb-5">Dedicated & Experienced Team Members</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        <div class="team-text">
-                            <h4 class="mb-0">Doris Jordan</h4>
-                            <p class="text-primary">Landscape Designer</p>
-                            <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        <div class="team-text">
-                            <h4 class="mb-0">Johnny Ramirez</h4>
-                            <p class="text-primary">Garden Designer</p>
-                            <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        <div class="team-text">
-                            <h4 class="mb-0">Diana Wagner</h4>
-                            <p class="text-primary">Senior Gardener</p>
-                            <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-bold text-primary">Testimonial</p>
-                    <h1 class="display-5 mb-5">What Our Clients Say About Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                    <a class="btn btn-primary py-3 px-4" href="">See More</a>
-                </div>
-                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item">
-                            <img class="img-fluid rounded mb-3" src="img/testimonial-1.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
-                        </div>
-                        <div class="testimonial-item">
-                            <img class="img-fluid rounded mb-3" src="img/testimonial-2.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Landscaping</a>
-                    <a class="btn btn-link" href="">Pruning plants</a>
-                    <a class="btn btn-link" href="">Urban Gardening</a>
-                    <a class="btn btn-link" href="">Garden Maintenance</a>
-                    <a class="btn btn-link" href="">Green Technology</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-light border-light w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
+</div>
+<!-- Copyright End -->
 
 
     <!-- Back to Top -->
