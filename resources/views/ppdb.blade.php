@@ -402,34 +402,29 @@
 </div>
 <!-- Copyright End -->
 
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/lib/wow/wow.min.js"></script>
+<script src="/lib/easing/easing.min.js"></script>
+<script src="/lib/waypoints/waypoints.min.js"></script>
+<script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="/lib/counterup/counterup.min.js"></script>
+<script src="/lib/parallax/parallax.min.js"></script>
+<script src="/lib/isotope/isotope.pkgd.min.js"></script>
+<script src="/lib/lightbox/js/lightbox.min.js"></script>
+<script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+<script src="/crousel/lib/wow/wow.min.js"></script>
+<script src="/crousel/lib/easing/easing.min.js"></script>
+<script src="/crousel/lib/waypoints/waypoints.min.js"></script>
+<script src="/crousel/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="/crousel/lib/counterup/counterup.min.js"></script>
 
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/lib/wow/wow.min.js"></script>
-    <script src="/lib/easing/easing.min.js"></script>
-    <script src="/lib/waypoints/waypoints.min.js"></script>
-    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/lib/counterup/counterup.min.js"></script>
-    <script src="/lib/parallax/parallax.min.js"></script>
-    <script src="/lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
-
-    <script src="/crousel/lib/wow/wow.min.js"></script>
-    <script src="/crousel/lib/easing/easing.min.js"></script>
-    <script src="/crousel/lib/waypoints/waypoints.min.js"></script>
-    <script src="/crousel/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/crousel/lib/counterup/counterup.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="/js/ppdbmain.js"></script>
-    <script src="/carousel/js/main.js"></script>
+<!-- Template Javascript -->
+<script src="/js/ppdbmain.js"></script>
+<script src="/carousel/js/main.js"></script>
 </body>
 
 </html>
