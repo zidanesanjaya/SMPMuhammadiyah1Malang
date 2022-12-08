@@ -14,6 +14,114 @@
     z-index: 99;
 }
 
+/*** Project ***/
+.project-item,
+.project-item .project-img {
+    position: relative;
+}
+
+.project-item .project-img a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.project-item:hover .project-img a {
+    opacity: 1;
+}
+
+.project-item .project-title {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    bottom: 0;
+    left: 3rem;
+    border: 1px solid var(--light);
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+    z-index: -1;
+    transition: .5s;
+}
+
+.project-item:hover .project-title {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.project-item .project-title h4 {
+    transition: .5s;
+}
+
+.project-item:hover .project-title h4 {
+    color: #FFFFFF;
+}
+
+.project-carousel .owl-nav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-carousel .owl-nav .owl-prev,
+.project-carousel .owl-nav .owl-next {
+    margin: 0 12px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--light);
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.project-carousel .owl-nav .owl-prev:hover,
+.project-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+/* announcementppdb */
+.badge1{
+    display:inline-block;
+    padding:.35em .65em;
+    font-size:.75em;
+    font-weight:700;
+    line-height:1;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:baseline;
+    border-radius:4px;
+}
+.badge1:empty{
+    display:none;
+}
+.btn .badge1{
+    position:relative;
+    top:-1px;
+}
+
+/* Clock */
+.clock {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+
 /*---------------------------------------
   LOCATION
 -----------------------------------------*/

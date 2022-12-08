@@ -58,17 +58,9 @@
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
-                <!-- <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <div class="cleanslate w24tz-current-time w24tz-small" style="display: inline-block !important; visibility: hidden !important; min-width:200px !important; min-height:100px !important;">
-                        <p>
-                            <a href="//24timezones.com/Malang/time" style="text-decoration: none" class="clock24" id="tz24-1670388052-c1554-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2MzkwMTk1NGM2YzBiIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="clock Malang" target="_blank" rel="nofollow">
-                            </a>
-                        </p>
-
-                        <div id="clock_block_cb63901954c6c0b">
-                        </div>
-                    </div>
-                </div> -->
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -88,7 +80,7 @@
                 <a href="{{ url ('http://127.0.0.1:8000/ppdb') }}" class="nav-item nav-link active">HOME</a>
                 <a href="#about" class="nav-item nav-link">TENTANG KAMI</a>
                 <a href="#kegiatan" class="nav-item nav-link">KEGIATAN KAMI</a>
-                <a href="#" class="nav-item nav-link">PENGUMUMAN</a>
+                <a href="{{ url ('http://127.0.0.1:8000/pengumumanppdb') }}" class="nav-item nav-link">PENGUMUMAN</a>
                 <a href="{{ url ('http://127.0.0.1:8000/register') }}" class="nav-item nav-link">DAFTAR PPDB</a>
                 <a href="{{ url ('http://127.0.0.1:8000/login') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">MASUK<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
@@ -216,71 +208,97 @@
 
 <!-- Projects Start -->
 <div class="container-xxl py-5" id="kegiatan">
-    <div class="container">
     <br><br>
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="fs-5 fw-bold text-primary">Ektrakuliker</p>
-            <h1 class="display-5 mb-5">Kegiatan Kami</h1>
-        </div>
-        <div class="row g-4 portfolio-container">
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
-                        <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Kegiatan</p>
+                <h1 class="display-5 mb-5">Ektrakulikuler</h1>
+            </div>
+            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-1.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Hisbul Watan</h4>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
-                        <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-2.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Tapak Suci</h4>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
-                        <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">English Club</h4>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
-                        <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Konten Kreator</h4>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
-                        <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">E-Sport</h4>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
-                        <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Tari</h4>
+                    </div>
+                </div>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Drumband</h4>
+                    </div>
+                </div>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Bina Vokal</h4>
+                    </div>
+                </div>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Band</h4>
+                    </div>
+                </div>
+                <div class="project-item pe-5 pb-5">
+                    <div class="project-img mb-3">
+                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                    </div>
+                    <div class="project-title">
+                        <h4 class="mb-0">Futsal</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Projects End -->
+    <!-- Projects End -->
 
 <!-- Testimonial Start -->
 <div class="container-xxl py-5">
@@ -403,8 +421,15 @@
     <script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
+    <script src="/crousel/lib/wow/wow.min.js"></script>
+    <script src="/crousel/lib/easing/easing.min.js"></script>
+    <script src="/crousel/lib/waypoints/waypoints.min.js"></script>
+    <script src="/crousel/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/crousel/lib/counterup/counterup.min.js"></script>
+
     <!-- Template Javascript -->
     <script src="/js/ppdbmain.js"></script>
+    <script src="/carousel/js/main.js"></script>
 </body>
 
 </html>
