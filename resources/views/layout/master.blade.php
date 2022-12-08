@@ -204,7 +204,7 @@
                                 <li class="list-inline-item dropdown notification-list">
                                     <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                                         aria-expanded="false">
-                                        <img src="/admin/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle img-thumbnail">
+                                        <img src="/storage/avatars/{{Auth::user()->path_foto}}" alt="user" class="rounded-circle img-thumbnail">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                         <!-- item-->

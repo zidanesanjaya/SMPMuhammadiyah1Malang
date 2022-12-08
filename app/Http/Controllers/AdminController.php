@@ -13,30 +13,11 @@ use DB;
 use Hash;
 class AdminController extends Controller
 {
-    public function index(){
-        $gelombang = Gelombang_Model::paginate(5); 
-        return view('dashboard_admin.gelombang.gelombang',compact('gelombang'));
-    }
-    public function sosial_media_page(){
-        $sosmed = Sosial_Media_Model::paginate(5); 
-        return view('dashboard_admin.sosial_media.sosial_media',compact('sosmed'));
-    }
-    public function user_siswa_page(){
-        $listUser = DB::table('vw_user')->where('role','siswa')->get();
-        return view('dashboard_admin.siswa.user_siswa',compact('listUser'));
-    }
     public function user_admin_page(){
         $listUser = DB::table('vw_user')->where('role','admin')->orWhere('role','user')->get();
         return view('dashboard_admin.admin.list_user_admin',compact('listUser'));
     }
-    public function kelas_page(){
-        $listKelas = DB::table('kelas')->get();
-        return view('dashboard_admin.pelajaran.list_kelas',compact('listKelas'));
-    }
-    public function gelombang_update_page($id){
-        $gelombang= Gelombang_Model::findOrFail($id);
-        return view('dashboard_admin.gelombang.gelombang_update',compact('gelombang'));
-    }
+    
     public function admin_update_page($id){
         $admin= User::findOrFail($id);
         return view('dashboard_admin.admin.edit_admin',compact('admin'));
@@ -62,41 +43,7 @@ class AdminController extends Controller
         }
         return redirect()->route('user_admin.page');
     }
-    public function store_gelombang(Request $request){
-        $this->validate($request, [
-            'nama_gelombang' => 'required',
-            'biaya' => 'required',
-            'mulai' => 'required',
-            'akhir' => 'required',
-        ]);        
-        Gelombang_Model::create([
-            'nama_gelombang'=> $request->nama_gelombang,
-            'biaya'=> str_replace("Rp", "", str_replace(".", "", $request->biaya)),
-            'mulai'=> $request->mulai,
-            'akhir'=> $request->akhir
-        ]);
-
-        return redirect()->route('gelombang')->with(['msg' => 'Data Berhasil Disimpan!']);
-    }
-    public function update_gelombang(Request $request){
-        
-        $this->validate($request, [
-            'nama_gelombang' => 'required',
-            'biaya' => 'required',
-            'mulai' => 'required',
-            'akhir' => 'required',
-        ]);   
-        $gelombang= Gelombang_Model::findOrFail($request->id);
-     
-        $gelombang->update([
-            'nama_gelombang'=> $request->nama_gelombang,
-            'biaya'=> str_replace("Rp", "", str_replace(".", "", $request->biaya)),
-            'mulai'=> $request->mulai,
-            'akhir'=> $request->akhir
-        ]);
-
-        return redirect()->route('gelombang')->with(['msg' => 'Data Berhasil Di Update!']);
-    }
+    
     public function update_admin(Request $request){
         
         $this->validate($request, [
@@ -115,24 +62,5 @@ class AdminController extends Controller
             ]);
         }
         return redirect()->route('user_admin.page')->with('status', 'Data Berhasil Di Update');;
-    }
-
-    public function destroy_gelombang($id){
-        Gelombang_Model::destroy($id);
-        return redirect()->route('gelombang')->with('msg','Gelombang deleted successfully');    
-    }
-    public function destroy_kelas($id){
-        Kelas_Model::destroy($id);
-        return redirect()->route('kelas.page')->with('msg','Kelas deleted successfully');    
-    }
-    public function store_kelas(Request $request){
-        $this->validate($request, [
-            'nama_kelas' => 'required',
-        ]);        
-        Kelas_Model::create([
-            'nama_kelas'=> $request->nama_kelas,
-        ]);
-
-        return redirect()->route('kelas.page')->with(['msg' => 'Data Berhasil Disimpan!']);
     }
 }

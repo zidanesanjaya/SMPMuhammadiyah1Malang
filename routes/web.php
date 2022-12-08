@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GelombangController;
+use App\Http\Controllers\PelajaranController;
+use App\Http\Controllers\SosialMediaController;
+use App\Http\Controllers\KelasController;
+
 use App\Http\Middleware\CheckRoleAdmin;
 use App\Http\Middleware\CheckRoleUser;
 use App\Http\Middleware\CheckRoleSiswa;
@@ -47,6 +52,10 @@ Route::get('/aksi', function () {
     return view('aksi');
 });
 
+Route::get('wizard', function () {
+    return view('default');
+});
+
 // Login And Register Page
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::get('login_admin', [AuthController::class, 'login_admin'])->name('login_admin');
@@ -63,28 +72,28 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::middleware([CheckRoleAdmin::class])->group(function(){
         //Gelombang
-        Route::get('gelombang', [AdminController::class, 'index'])->name('gelombang'); 
-        Route::get('gelombang_edit/{id}', [AdminController::class, 'gelombang_update_page'])->name('gelombang_update'); 
-            Route::post('store_gelombang', [AdminController::class, 'store_gelombang'])->name('store.gelombang'); 
-            Route::put('update_gelombang', [AdminController::class, 'update_gelombang'])->name('update.gelombang'); 
-            Route::delete('destroy_gelombang/{id}', [AdminController::class, 'destroy_gelombang'])->name('gelombang.destroy');
+        Route::get('gelombang', [GelombangController::class, 'index'])->name('gelombang'); 
+        Route::get('gelombang_edit/{id}', [GelombangController::class, 'gelombang_update_page'])->name('gelombang_update'); 
+            Route::post('store_gelombang', [GelombangController::class, 'store_gelombang'])->name('store.gelombang'); 
+            Route::put('update_gelombang', [GelombangController::class, 'update_gelombang'])->name('update.gelombang'); 
+            Route::delete('destroy_gelombang/{id}', [GelombangController::class, 'destroy_gelombang'])->name('gelombang.destroy');
     
         //Sosial Media
-        Route::get('sosial_media', [AdminController::class, 'sosial_media_page'])->name('sosial_media.page'); 
+        Route::get('sosial_media', [SosialMediaController::class, 'sosial_media_page'])->name('sosial_media.page'); 
 
         //Siswa
-        Route::get('user_siswa', [AdminController::class, 'user_siswa_page'])->name('user_siswa.page'); 
+        Route::get('user_siswa', [SiswaController::class, 'user_siswa_page'])->name('user_siswa.page'); 
 
         //Admin
         Route::get('user_admin', [AdminController::class, 'user_admin_page'])->name('user_admin.page'); 
+        Route::get('admin_edit/{id}', [AdminController::class, 'admin_update_page'])->name('admin.edit'); 
             Route::post('store_admin', [AdminController::class, 'store_admin'])->name('admin.add_user'); 
             Route::put('update_admin', [AdminController::class, 'update_admin'])->name('update.admin'); 
 
         //Pelajaran
-        Route::get('list_kelas', [AdminController::class, 'kelas_page'])->name('kelas.page'); 
-        Route::get('admin_edit/{id}', [AdminController::class, 'admin_update_page'])->name('admin.edit'); 
-            Route::delete('destroy_kelas/{id}', [AdminController::class, 'destroy_kelas'])->name('kelas.destroy');
-            Route::post('store_kelas', [AdminController::class, 'store_kelas'])->name('store.kelas'); 
+        Route::get('list_kelas', [KelasController::class, 'kelas_page'])->name('kelas.page'); 
+            Route::delete('destroy_kelas/{id}', [KelasController::class, 'destroy_kelas'])->name('kelas.destroy');
+            Route::post('store_kelas', [KelasController::class, 'store_kelas'])->name('store.kelas'); 
     });
 
 
@@ -98,6 +107,8 @@ Route::group(['middleware' => ['auth']], function() {
         Route::get('pembayaran', [SiswaController::class, 'pembayaran_page'])->name('pembayaran'); 
         Route::get('form_wajib', [SiswaController::class, 'form_wajib_page'])->name('form_wajib'); 
         Route::get('profile', [SiswaController::class, 'profile_page'])->name('profile');     
+            Route::put('update_siswa', [SiswaController::class, 'update_profile'])->name('update.profile'); 
+            Route::put('update_password_siswa/{id}', [SiswaController::class, 'update_password_siswa'])->name('update.password_siswa'); 
     });
 });
 

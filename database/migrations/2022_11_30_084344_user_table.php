@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('role');
+            $table->string('nama_lengkap')->nullable();
+            $table->string('path_foto')->nullable();
+            $table->string('telepon')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

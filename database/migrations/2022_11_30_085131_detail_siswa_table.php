@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_user'); // FK
             $table->unsignedBigInteger('id_gelombang'); // FK
-            $table->string('nama_lengkap');
             $table->string('tempat_lahir');
             $table->string('tanggal_lahir');
             $table->string('jenis_kelamin');
@@ -30,7 +29,6 @@ return new class extends Migration
             $table->integer('jumlah_saudara');
             $table->integer('anak_ke');
             $table->string('berat_badan');
-            $table->string('telepon');
             $table->string('bakat');
             $table->string('sekolah_asal');
             $table->timestamps();

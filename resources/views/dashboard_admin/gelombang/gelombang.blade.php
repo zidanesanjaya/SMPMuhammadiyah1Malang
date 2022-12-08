@@ -94,14 +94,4 @@
 </div>
 
 
-
-<script>
-// $(".btnUpdate").click(function () {
-//     $("#id_gelombang").val($(this).attr('data-id'));
-//     $("#nama").val($(this).attr('data-nama'));
-//     $("#biaya").val($(this).attr('data-biaya'));
-//     $("#mulai").val($(this).attr('data-mulai'));
-//     $("#akhir").val($(this).attr('data-akhir'));
-// });
-</script>
 @endsection
