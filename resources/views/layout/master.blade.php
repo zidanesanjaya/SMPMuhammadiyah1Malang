@@ -89,11 +89,22 @@
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="{{route('form_wajib')}}" class="waves-effect">
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect">
                                     <i class="mdi mdi-cards"></i>
                                     <span> Form Wajib <span class="text-danger">*</span></span>
+                                    <span class="float-right">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
                                 </a>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="{{route('form_wajib')}}">Siswa</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('form_wajib_orang_tua')}}">Orang Tua</a>
+                                    </li>
+                                </ul>
                             </li>
 
                             <li>
@@ -204,7 +215,11 @@
                                 <li class="list-inline-item dropdown notification-list">
                                     <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                                         aria-expanded="false">
+                                        @if(Auth::user()->path_foto != null)
                                         <img src="/storage/avatars/{{Auth::user()->path_foto}}" alt="user" class="rounded-circle img-thumbnail">
+                                        @else
+                                        <img src="/admin/assets/images/logo-lg.png" alt="user" class="rounded-circle img-thumbnail">
+                                        @endif
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                         <!-- item-->

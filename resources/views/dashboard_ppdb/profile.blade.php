@@ -40,7 +40,7 @@
                 <h6 class="text-muted">TELEPON <span class="text-danger">*</span></h6>
                 <input class="form-control pl-2" name="telepon" value="{{Auth::user()->telepon}}" required>
 
-                <h6 class="text-muted mt-3">FOTO <span class="text-danger">*</span></h6>
+                <h6 class="text-muted mt-3">FOTO </h6>
                 <div class="card-body">
                     <input type="file" id="input-file-now-custom-1" class="dropify"  name="foto" data-default-file="/storage/avatars/{{Auth::user()->path_foto}}"/>
                 </div>

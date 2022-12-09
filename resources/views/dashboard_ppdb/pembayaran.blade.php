@@ -21,10 +21,10 @@
                 <input type="text" class="form-control pl-2" value="{{ Auth::user()->id }}" disabled>
                 
                 <h6 class="text-muted mt-3">GELOMBANG PENDAFTARAN</h6>
-                <input type="text" class="form-control pl-2" value="1" disabled>
+                <input type="text" class="form-control pl-2" value="{{$listUser->nama_gelombang}}" disabled>
 
                 <h6 class="text-muted">BIAYA</h6>
-                <input class="form-control pl-2" value="3.000.000" disabled>
+                <input class="form-control pl-2" value="Rp. {{ number_format($listUser->biaya,2,',','.')}}" disabled>
                 
                 <h6 class="text-muted mt-5">JUMLAH PEMBAYARAN ANDA</h6>
                 <input type="text" class="form-control" placeholder="Masukan Jumlah Pembayaran" required> 
@@ -34,8 +34,12 @@
                     <!-- <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="assets/plugins/dropify/images/test-image-1.jpg" /> -->
                     <input type="file" id="input-file-now-custom-1" class="dropify" required/>
                 </div>
-
-                <button type="submit" class="btn btn-success btn-raised btn-block">Simpan</button>
+                @if($listUser->id_gelombang != null)
+                    <button type="submit" class="btn btn-success btn-raised btn-block">Simpan</button>
+                @else
+                    <p class="text-danger">Silahkan Hubungi Admin Jika Gelombang Pendaftaran Belum Terdaftar Pada Akun</p>
+                    <button class="btn btn-secondary btn-raised btn-block" disabled>Simpan</button>
+                @endif
             </form>
         </div>
     </div>

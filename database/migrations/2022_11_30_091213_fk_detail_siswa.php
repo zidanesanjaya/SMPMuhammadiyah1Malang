@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::table('detail_siswa', function (Blueprint $table) {
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_gelombang')->references('id')->on('gelombang')->onDelete('cascade');;
        });
     }
 

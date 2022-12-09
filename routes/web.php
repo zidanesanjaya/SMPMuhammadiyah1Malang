@@ -102,10 +102,15 @@ Route::group(['middleware' => ['auth']], function() {
     });
 
     Route::middleware([CheckRoleSiswa::class])->group(function(){
+        //json data
+        Route::get('json_detail_siswa', [SiswaController::class, 'detail_siswa'])->name('detail_siswa_auth');
         //Dashboard Siswa
         Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard'); 
         Route::get('pembayaran', [SiswaController::class, 'pembayaran_page'])->name('pembayaran'); 
-        Route::get('form_wajib', [SiswaController::class, 'form_wajib_page'])->name('form_wajib'); 
+        Route::get('form_wajib', [SiswaController::class, 'form_wajib_page'])->name('form_wajib');
+        Route::get('form_wajib_orang_tua', [SiswaController::class, 'form_wajib_orang_tua_page'])->name('form_wajib_orang_tua');
+            Route::post('insert_detail_siswa', [SiswaController::class, 'insert_detail'])->name('insert.detail_siswa'); 
+            Route::post('insert_detail_orang_tua', [SiswaController::class, 'insert_orang_tua'])->name('insert.detail_orang_tua');   
         Route::get('profile', [SiswaController::class, 'profile_page'])->name('profile');     
             Route::put('update_siswa', [SiswaController::class, 'update_profile'])->name('update.profile'); 
             Route::put('update_password_siswa/{id}', [SiswaController::class, 'update_password_siswa'])->name('update.password_siswa'); 

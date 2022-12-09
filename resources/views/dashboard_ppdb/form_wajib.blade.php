@@ -62,26 +62,10 @@
                 <a href="#step-1" type="button" class="btn btn-success btn-raised btn-circle">1</a>
                 <p><small>Detail Siswa</small></p>
             </div>
-            <div class="stepwizard-step col-xs-4"> 
-                <a href="#step-2" type="button" class="btn btn-default btn-raised btn-circle" disabled="disabled">2</a>
-                <p><small>Alamat Orang Tua</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-3" type="button" class="btn btn-default btn-raised btn-circle" disabled="disabled">3</a>
-                <p><small>Form Detail Orang Tua</small></p>
-            </div>
-            <!-- <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-4" type="button" class="btn btn-default btn-raised btn-circle" disabled="disabled">4</a>
-                <p><small>Form ibu</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-5" type="button" class="btn btn-default btn-raised btn-circle" disabled="disabled">5</a>
-                <p><small>Form Wali</small></p>
-            </div> -->
         </div>
     </div>
     
-    <form action="#" method="post" enctype="multipart/form-data">
+    <form action="{{route('insert.detail_siswa')}}" method="post" enctype="multipart/form-data">
         <div class="panel panel-primary setup-content" id="step-1">
             <div class="panel-heading">
                  <h3 class="panel-title">Form Wajib (data Diri)</h3>
@@ -89,521 +73,177 @@
             @csrf
 
             <div class="panel-body">
-            <label class="text-muted">ID Pendaftaran</label>
+            <label class="">ID Pendaftaran</label>
                 <input type="text" class="form-control pl-2" value="{{ Auth::user()->id }}" disabled>
                 
-                <label class="text-muted mt-4">Nama Lengkap</label>
+                <label class=" mt-4">Nama Lengkap</label>
                 <input type="text" class="form-control pl-2" value="{{Auth::user()->nama_lengkap}}" disabled>
 
                 <div class="msg">
                     <label class="mt-4">Nama Panggilan <span class="text-danger"> *</span></label>
-                    <input class="form-control" required="required" type="text" name="nama_panggilan" required="required" onchange>
+                    <input class="form-control" required="required" type="text" id="nama_panggilan" name="nama_panggilan" required="required" onchange>
                 </div>
                 
                 <div class="msg">
                     <label class="mt-4">Tempat / Tanggal Lahir <span class="text-danger"> *</span></label>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" name="tempat_lahir_siswa" required="required"> 
+                            <input type="text" class="form-control" name="tempat_lahir_siswa" id="tempat_lahir" required="required"> 
                         </div>
                         /
                         <div class="col">
-                            <input type="date" class="form-control" name="tanggal_lahir_siswa">
+                            <input type="date" class="form-control" name="tanggal_lahir_siswa" id="tanggal_lahir" required>
                         </div>
                     </div>
                 </div>
 
-
-                <label class="text-muted mt-4">Jenis Kelamin / Agama <span class="text-danger"> *</span></label>
-                <div class="row">
-                    <div class="col">
-                        <label class="radio-inline mr-2">
-                            <input type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-Laki"> Laki-Laki
-                        </label>
-                        <label class="radio-inline mr-2">
-                            <input type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan"> Perempuan
-                        </label>
-                    </div>
-                    /
-                    <div class="col">
-                        <select class="form-control" name="agama" required>
-                            <option value="Islam">Islam</option>
-                            <option value="Kristen">Kristen</option>
-                            <option value="Hindu">Hindu</option>
-                            <option value="Budha">Budha</option>
-                            <option value="Konghucu">Konghucu</option>
-                        </select>
-                    </div>
-                </div>
-
-                <label class="text-muted mt-4">Cita-Cita / Hobi <span class="text-danger"> *</span></label>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" name="cita_cita" required > 
-                    </div>
-                    /
-                    <div class="col">
-                        <input type="text" class="form-control" id="mdate" name="hobi" required>
+                <div class="msg">
+                    <label class=" mt-4">Jenis Kelamin / Agama <span class="text-danger"> *</span></label>
+                    <div class="row">
+                        <div class="col">
+                            <label class="radio-inline mr-2">
+                                <input type="radio" name="jenis_kelamin" id="inlineRadio1" checked value="Laki-Laki"> Laki-Laki
+                            </label>
+                            <label class="radio-inline mr-2">
+                                <input type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan"> Perempuan
+                            </label>
+                        </div>
+                        /
+                        <div class="col">
+                            <select class="form-control" name="agama" id="agama" required>
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Budha">Budha</option>
+                                <option value="Konghucu">Konghucu</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
-                <label class="text-muted mt-4">Alamat <span class="text-danger"> *</span></label>
-                <textarea class="form-control pl-2" name="alamat"></textarea>
-                <div class="row bg-white">         
-                    <div class="col">
-                        <label class="text-muted mt-4">Tinggal Dengan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="tinggal_dengan" required>
-                            <option value="Orang Tua">Orang Tua</option>
-                            <option value="Wali">Wali</option>
-                        </select>
-                        <label class="text-muted mt-4">Gol Darah</label>
-                        <input class="form-control" type="text" name="gol_darah">
-
-                        <label class="text-muted mt-4">Jumlah Saudara <span class="text-danger"> *</span></label>
-                        <input class="form-control" type="number" name="jumlah_saudara" required>
-
-                        <label class="text-muted mt-4">Anak Ke- <span class="text-danger"> *</span></label>
-                        <input class="form-control" type="number" name="anak_ke" required>
-                    </div>
-                    <div class="col">
-                        <label class="text-muted mt-4">Berat Badan</label>
-                        <input class="form-control" type="text" name="berat_badan">
-
-                        <label class="text-muted mt-4">Telepon <span class="text-danger"> *</span></label>
-                        <input class="form-control" type="text" name="telepon" required>
-
-                        <label class="text-muted mt-4">Bakat</label>
-                        <input class="form-control" type="text" name="bakat">
-
-                        <label class="text-muted mt-4">Sekolah Asal <span class="text-danger"> *</span></label>
-                        <input class="form-control" type="text" name="sekolah_asal" required>
+                <div class="msg">
+                    <label class=" mt-4">Cita-Cita / Hobi <span class="text-danger"> *</span></label>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="cita_cita" id="cita_cita" required > 
+                        </div>
+                        /
+                        <div class="col">
+                            <input type="text" class="form-control" id="hobi" name="hobi" required>
+                        </div>
                     </div>
                 </div>
-                <button class="btn btn-primary nextBtn pull-right btn-block mt-3" type="button">Next</button>
+
+                <div class="msg">
+                    <label class="mt-4">Alamat <span class="text-danger"> *</span></label>
+                    <textarea class="form-control pl-2" name="alamat" id="alamat" required></textarea>
+                </div>
+                
+                <div class="msg">
+                    <div class="row bg-white">         
+                        <div class="col">
+                            <label class="text-muted mt-4">Tinggal Dengan <span class="text-danger"> *</span></label>
+                            <select class="form-control" name="tinggal_dengan" id="tinggal_dengan">
+                                <option value="Orang Tua">Orang Tua</option>
+                                <option value="Wali">Wali</option>
+                            </select>
+                            <label class="text-muted mt-4">Gol Darah</label>
+                            <input class="form-control" type="text" name="gol_darah" id="gol_darah">
+
+                            <label class=" mt-4">Jumlah Saudara <span class="text-danger"> *</span></label>
+                            <input class="form-control" type="number" name="jumlah_saudara" id="jumlah_saudara" required>
+
+                            <label class=" mt-4">Anak Ke- <span class="text-danger"> *</span></label>
+                            <input class="form-control" type="number" name="anak_ke" id="anak_ke" required>
+                        </div>
+                        <div class="col">
+                            <label class=" mt-4">Berat Badan</label>
+                            <input class="form-control" type="text" name="berat_badan" id = "berat_badan">
+
+                            <label class=" mt-4">Telepon <span class="text-danger"> *</span></label>
+                            <input class="form-control" type="text" name="telepon"id="telepon" required>
+
+                            <label class="text-muted mt-4">Bakat</label>
+                            <input class="form-control" type="text" name="bakat" id="bakat">
+
+                            <label class=" mt-4">Sekolah Asal <span class="text-danger"> *</span></label>
+                            <input class="form-control" type="text" name="sekolah_asal" id="sekolah_asal" required>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-success pull-right btn-block btn-raised mt-4" id="btn" type="submit">Simpan</button>
             </div>
         </div>
         
-        <div class="panel panel-primary setup-content" id="step-2">
-            <div class="panel-heading">
-                 <h3 class="panel-title">Form Wajib (Orang Tua / Wali)</h3>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Provinsi <span class="text-danger"> *</span></label>
-                        <select class="form-control select2" name="provinsi" id="provinsi" onchange="kotaSelected();" required>
-                        
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">kota / Kabupaten <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="kota" id="kota" onchange="kecamatanSelected();" required>
-                        
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Kecamatan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="Kecamatan" id="kecamatan" onchange="desaSelected();" required>
-                        
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Desa / Kelurahan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="keluarahan" id="kelurahan" required>
-                        
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Telepon <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="telepon_orang_tua" type="number" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Alamat <span class="text-danger"> *</span></label>
-                        <textarea class="form-control" name="alamat_orang_tua" required></textarea>
-                    </div>
-                </div>
-                <button class="btn btn-primary nextBtn pull-right btn-block mt-3" type="button">Next</button>
             </div>
         </div>
-        
-        <div class="panel panel-primary setup-content" id="step-3">
-            <div class="panel-heading">
-                 <h3 class="panel-title">Form Orang Tua / Wali</h3>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">NIK Ayah <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="nik_ayah" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Nama Ayah <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="nama_ayah" type="text" required>   
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Pendidikan Ayah <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="pendidikan_ayah" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Pekerjaan Ayah <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="pekerjaan_ayah" type="text" required>   
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Tempat Lahir <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="tempat_lahir_ayah" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Tanggal Lahir <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="tanggal_lahir_ayah" type="date" required>   
-                    </div>
-                </div>
-                <label class="text-muted">Penghasilan <span class="text-danger"> *</span></label>
-                <select class="form-control" name="penghasilan_ayah" required>
-                    <option value="100.000 - 500.000">100.000 - 500.000</option>
-                    <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
-                    <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
-                    <option value="1.500.000 - 2.500.000">1.500.000 - 2.500.000</option>
-                    <option value="2.500.000 - 5.000.000">2.500.000 - 5.000.000</option>
-                    <option value="5.000.000 - 10.000.000">5.000.000 - 10.000.000</option>
-                    <option value="Lebih Dari 10.000.000">Lebih Dari 10.000.000</option>
-                </select>
-
-
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">NIK Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="nik_ibu" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Nama Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="nama_ibu" type="text" required>   
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Pendidikan Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="pendidikan_ibu" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Pekerjaan Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="pekerjaan_ibu" type="text" required>   
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Tempat Lahir <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="tempat_lahir_ibu" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Tanggal Lahir <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="tanggal_lahir_ibu" type="date" required>   
-                    </div>
-                </div>
-                <label class="text-muted">Penghasilan <span class="text-danger"> *</span></label>
-                <select class="form-control" name="penghasilan_ibu" required>
-                    <option value="100.000 - 500.000">100.000 - 500.000</option>
-                    <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
-                    <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
-                    <option value="1.500.000 - 2.500.000">1.500.000 - 2.500.000</option>
-                    <option value="2.500.000 - 5.000.000">2.500.000 - 5.000.000</option>
-                    <option value="5.000.000 - 10.000.000">5.000.000 - 10.000.000</option>
-                    <option value="Lebih Dari 10.000.000">Lebih Dari 10.000.000</option>
-                </select>
-
-                <div class="row">
-                <div class="col">
-                    <label class="text-muted">NIK Wali</label>
-                    <input class="form-control" name="nik_wali" type="text">   
-                </div>
-                <div class="col">
-                    <label class="text-muted">Nama Wali</label>
-                    <input class="form-control" name="nama_wali" type="text">   
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label class="text-muted">Pendidikan Wali</label>
-                    <input class="form-control" name="pendidikan_wali" type="text">   
-                </div>
-                <div class="col">
-                    <label class="text-muted">Pekerjaan Wali</label>
-                    <input class="form-control" name="pekerjaan_wali" type="text">   
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label class="text-muted">Tempat Lahir</label>
-                    <input class="form-control" name="tempat_lahir_wali" type="text">   
-                </div>
-                <div class="col">
-                    <label class="text-muted">Tanggal Lahir</label>
-                    <input class="form-control" name="tanggal_lahir_wali" type="date">   
-                </div>
-            </div>
-                <label class="text-muted">Penghasilan</label>
-                <select class="form-control" name="penghasilan_wali>
-                    <option value="100.000 - 500.000">100.000 - 500.000</option>
-                    <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
-                    <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
-                    <option value="1.500.000 - 2.500.000">1.500.000 - 2.500.000</option>
-                    <option value="2.500.000 - 5.000.000">2.500.000 - 5.000.000</option>
-                    <option value="5.000.000 - 10.000.000">5.000.000 - 10.000.000</option>
-                    <option value="Lebih Dari 10.000.000">Lebih Dari 10.000.000</option>
-                </select>
-
-                <button class="btn btn-success pull-right btn-block" type="submit">Simpan</button>
-
-            </div>
-        </div>
-        
-        <!-- <div class="panel panel-primary setup-content" id="step-4">
-            <div class="panel-heading">
-                 <h3 class="panel-title">Form Ibu</h3>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">NIK Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="nik_ibu" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Nama Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="nama_ibu" type="text" required>   
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Pendidikan Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="pendidikan_ibu" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Pekerjaan Ibu <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="pekerjaan_ibu" type="text" required>   
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="text-muted">Tempat Lahir <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="tempat_lahir_ibu" type="text" required>   
-                    </div>
-                    <div class="col">
-                        <label class="text-muted">Tanggal Lahir <span class="text-danger"> *</span></label>
-                        <input class="form-control" name="tanggal_lahir_ibu" type="date" required>   
-                    </div>
-                </div>
-                <label class="text-muted">Penghasilan <span class="text-danger"> *</span></label>
-                <select class="form-control" name="penghasilan_ibu" required>
-                    <option value="100.000 - 500.000">100.000 - 500.000</option>
-                    <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
-                    <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
-                    <option value="1.500.000 - 2.500.000">1.500.000 - 2.500.000</option>
-                    <option value="2.500.000 - 5.000.000">2.500.000 - 5.000.000</option>
-                    <option value="5.000.000 - 10.000.000">5.000.000 - 10.000.000</option>
-                    <option value="Lebih Dari 10.000.000">Lebih Dari 10.000.000</option>
-                </select>
-                <button class="btn btn-primary nextBtn pull-right btn-block mt-3" type="button">Next</button>
-            </div>
-        </div>
-
-        <div class="panel panel-primary setup-content" id="step-5">
-            <div class="panel-heading">
-                 <h3 class="panel-title">Form Wali</h3>
-            </div>
-            <div class="panel-body">
-            <div class="row">
-                <div class="col">
-                    <label class="text-muted">NIK Wali</label>
-                    <input class="form-control" name="nik_wali" type="text">   
-                </div>
-                <div class="col">
-                    <label class="text-muted">Nama Wali</label>
-                    <input class="form-control" name="nama_wali" type="text">   
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label class="text-muted">Pendidikan Wali</label>
-                    <input class="form-control" name="pendidikan_wali" type="text">   
-                </div>
-                <div class="col">
-                    <label class="text-muted">Pekerjaan Wali</label>
-                    <input class="form-control" name="pekerjaan_wali" type="text">   
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label class="text-muted">Tempat Lahir</label>
-                    <input class="form-control" name="tempat_lahir_wali" type="text">   
-                </div>
-                <div class="col">
-                    <label class="text-muted">Tanggal Lahir</label>
-                    <input class="form-control" name="tanggal_lahir_wali" type="date">   
-                </div>
-            </div>
-                <label class="text-muted">Penghasilan</label>
-                <select class="form-control" name="penghasilan_wali>
-                    <option value="100.000 - 500.000">100.000 - 500.000</option>
-                    <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
-                    <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
-                    <option value="1.500.000 - 2.500.000">1.500.000 - 2.500.000</option>
-                    <option value="2.500.000 - 5.000.000">2.500.000 - 5.000.000</option>
-                    <option value="5.000.000 - 10.000.000">5.000.000 - 10.000.000</option>
-                    <option value="Lebih Dari 10.000.000">Lebih Dari 10.000.000</option>
-                </select>
-                <button class="btn btn-success pull-right btn-block" type="submit">Simpan</button>
-            </div>
-        </div> -->
     </form>
 </div>
 
 <script>
     $(document).ready(function () {
-
-        tampil_provinsi();
-
-        var navListItems = $('div.setup-panel div a'),
-            allWells = $('.setup-content'),
-            allNextBtn = $('.nextBtn');
-
-        allWells.hide();
-
-        navListItems.click(function (e) {
-            e.preventDefault();
-            var $target = $($(this).attr('href')),
-                $item = $(this);
-
-            if (!$item.hasClass('disabled')) {
-                navListItems.removeClass('btn-success').addClass('btn-default');
-                $item.addClass('btn-success');
-                allWells.hide();
-                $target.show();
-                $target.find('input:eq(0)').focus();
-            }
-        });
-
-        allNextBtn.click(function () {
-            var curStep = $(this).closest(".setup-content"),
-                curStepBtn = curStep.attr("id"),
-                nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-                curInputs = curStep.find("input[type='text'],input[type='url']"),
-                isValid = true;
-
-            $(".msg").removeClass("has-error");
-            for (var i = 0; i < curInputs.length; i++) {
-                if (!curInputs[i].validity.valid) {
-                    isValid = false;
-                    $(curInputs[i]).closest(".msg").addClass("has-error");
-                }
-            }
-
-            if (isValid) nextStepWizard.removeAttr('disabled').trigger('click');
-        });
-
-        $('div.setup-panel div a.btn-success').trigger('click');
+        tampil_detail();
     });
 
+    function tampil_detail() {
+        $.ajax({
+        type  : 'GET',
+        url   : '{{route('detail_siswa_auth') }}',
+        async : false,
+        dataType : 'json',
+        success : function(data){
+            if(data != null){
+                $("#nama_panggilan").val(data.nama_panggilan);
+                $("#nama_panggilan").attr('disabled','disabled');
 
-function kotaSelected(){
-    let type = $('#provinsi').children(":selected").data('type');
+                $("#tempat_lahir").val(data.tempat_lahir);
+                $("#tempat_lahir").attr('disabled','disabled');
 
-    if(type != '-'){
-        $.ajax({
-        type  : 'GET',
-        url   : 'https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi='+type,
-        async : false,
-        dataType : 'json',
-        success : function(data){
-            var html = '';
-            var i;
-            html += '<option data-type="-">- Silahkan Pilih Kota / Kabupaten -</option>';
-            for(i=0; i<data.kota_kabupaten.length; i++){
-                html += '<option value="'+data.kota_kabupaten[i].nama+'" data-type="'+data.kota_kabupaten[i].id+'">'+data.kota_kabupaten[i].nama+'</option>';
-            }
-            $('#kota').html(html);
-        }
-        });    
-        $("#kecamatan").find("option").remove().end();
-        $("#kelurahan").find("option").remove().end();
-    }else{
-        $("#kelurahan").find("option").remove().end();
-        $("#kota").find("option").remove().end();
-        $("#kecamatan").find("option").remove().end();
-    }   
-}
-function kecamatanSelected(){
-    let type = $('#kota').children(":selected").data('type');
-    
-    if(type != '-'){
-        $.ajax({
-        type  : 'GET',
-        url   : 'https://dev.farizdotid.com/api/daerahindonesia/kecamatan?id_kota='+type,
-        async : false,
-        dataType : 'json',
-        success : function(data){
-            var html = '';
-            var i;
-            html += '<option data-type="-">- Silahkan Pilih Kecamatan -</option>';
-            for(i=0; i<data.kecamatan.length; i++){
-                html += '<option value="'+data.kecamatan[i].nama+'" data-type="'+data.kecamatan[i].id+'">'+data.kecamatan[i].nama+'</option>';
-            }
-            $('#kecamatan').html(html);
-        }
-    });
-    $("#kelurahan").find("option").remove().end(); 
-    }else{
-        $("#kelurahan").find("option").remove().end();
-        $("#kecamatan").find("option").remove().end();
-    }   
-}
-function desaSelected(){
-    let type = $('#kecamatan').children(":selected").data('type');
+                $("#tanggal_lahir").val(data.tanggal_lahir);
+                $("#tanggal_lahir").attr('disabled','disabled');
 
-    if(type != '-'){
-        $.ajax({
-        type  : 'GET',
-        url   : 'https://dev.farizdotid.com/api/daerahindonesia/kelurahan?id_kecamatan='+type,
-        async : false,
-        dataType : 'json',
-        success : function(data){
-            var html = '';
-            var i;
-            html += '<option data-type="-">- Silahkan Pilih Keluarahan / Desa -</option>';
-            for(i=0; i<data.kelurahan.length; i++){
-                html += '<option value="'+data.kelurahan[i].nama+'" data-type="'+data.kelurahan[i].id+'">'+data.kelurahan[i].nama+'</option>';
+                $("#agama").val(data.agama);
+                $("#agama").attr('disabled','disabled');
+
+                $("#cita_cita").val(data.cita_cita);
+                $("#cita_cita").attr('disabled','disabled');
+
+                $("#hobi").val(data.hobi);
+                $("#hobi").attr('disabled','disabled');
+
+                $("#alamat").val(data.alamat);
+                $("#alamat").attr('disabled','disabled');
+
+                $("#tinggal_dengan").val(data.tinggal_dengan);
+                $("#tinggal_dengan").attr('disabled','disabled');
+
+                $("#berat_badan").val(data.berat_badan);
+                $("#berat_badan").attr('disabled','disabled');
+
+                $("#gol_darah").val(data.gol_darah);
+                $("#gol_darah").attr('disabled','disabled');
+
+                $("#telepon").val(data.telepon);
+                $("#telepon").attr('disabled','disabled');
+
+                $("#jumlah_saudara").val(data.jumlah_saudara);
+                $("#jumlah_saudara").attr('disabled','disabled');
+
+                $("#bakat").val(data.bakat);
+                $("#bakat").attr('disabled','disabled');
+
+                $("#anak_ke").val(data.anak_ke);
+                $("#anak_ke").attr('disabled','disabled');
+
+                $("#sekolah_asal").val(data.sekolah_asal);
+                $("#sekolah_asal").attr('disabled','disabled');
+
+                document.getElementById("btn").remove();
             }
-            $('#kelurahan').html(html);
-        }
-    }); 
-    }else{
-        $("#kelurahan").find("option").remove().end();
-    }   
-}
-function tampil_provinsi() {
-        $.ajax({
-        type  : 'GET',
-        url   : 'https://dev.farizdotid.com/api/daerahindonesia/provinsi',
-        async : false,
-        dataType : 'json',
-        success : function(data){
-            var html = '';
-            var i;
-            html += '<option data-type="-">- Silahkan Pilih Provinsi -</option>';
-            for(i=0; i<data.provinsi.length; i++){
-                html += '<option value="'+data.provinsi[i].nama+'" data-type="'+data.provinsi[i].id+'">'+data.provinsi[i].nama+'</option>';
-            }
-            $('#provinsi').html(html);
         }
     });
 
-}
+    }
 </script>
 
 @endsection

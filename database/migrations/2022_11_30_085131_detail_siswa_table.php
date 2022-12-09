@@ -15,21 +15,22 @@ return new class extends Migration
     {
         Schema::create('detail_siswa', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user'); // FK
-            $table->unsignedBigInteger('id_gelombang'); // FK
+            $table->unsignedBigInteger('id_user');
+            $table->string('nama_panggilan');    
+            $table->string('telepon');          
             $table->string('tempat_lahir');
             $table->string('tanggal_lahir');
             $table->string('jenis_kelamin');
             $table->string('agama');
             $table->string('alamat');
             $table->string('tinggal_dengan');
-            $table->string('gol_darah');
+            $table->string('gol_darah')->nullable();
             $table->string('cita_cita');
             $table->string('hobi');
             $table->integer('jumlah_saudara');
             $table->integer('anak_ke');
             $table->string('berat_badan');
-            $table->string('bakat');
+            $table->string('bakat')->nullable();
             $table->string('sekolah_asal');
             $table->timestamps();
         });

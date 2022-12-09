@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('nama_lengkap')->nullable();
             $table->string('path_foto')->nullable();
             $table->string('telepon')->nullable();
+            $table->unsignedBigInteger('id_gelombang')->nullable();//FK
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
