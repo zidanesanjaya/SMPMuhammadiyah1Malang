@@ -247,22 +247,22 @@
         <div class="row counters">
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="128" data-purecounter-duration="1" class="purecounter"></span>
             <p>Siswa</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
             <p>Mata Pelajaran</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
             <p>Guru</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
             <p>Ekstrakulikuler</p>
         </div>
         </div>
@@ -347,11 +347,9 @@
         <!-- End Course Item-->
         
         </div>
-        <!-- <div class="mt-3 d-flex flex-row-reverse p-2 bd-highlight"> -->
         <div class="mt-3 d-flex flex-row-reverse p-2 bd-highlight">
                 <a href="{{ url ('http://127.0.0.1:8000/cermus') }}" class="get-started-btn">Berita Lainnya</a>
         </div>
-        <!-- </div> -->
     </div>
     </section><!-- End Popular Courses Section -->
     

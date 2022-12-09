@@ -102,7 +102,7 @@
                                     <h1 style="font-size: 65px;" class="text-white mb-5 animated slideInDown">SMP MUHAMMADIYAH 1 MALANG</h1>
                                     <h2 style="color: #FED049;" class="mb-5 animated slideInDown">Berjiwa Kepemimpinan - dan - Berakhlak Islami</h2>
                                     <h3 class="text-white mb-5 animated slideInDown">PPDB SMP MUHASA TELAH DIBUKA, Mari bergabung dengan kami.</h3>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">JOIN NOW</a>
+                                    <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/register') }}" class="btn btn-primary py-sm-3 px-sm-4">JOIN NOW</a>
                                 </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Kegiatan</p>
-                <h1 class="display-5 mb-5">Ektrakulikuler</h1>
+                <h1 class="display-5 mb-5">Ekstrakulikuler</h1>
             </div>
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
                 <div class="project-item pe-5 pb-5">
