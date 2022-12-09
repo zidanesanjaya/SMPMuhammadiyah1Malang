@@ -39,7 +39,12 @@ class SiswaController extends Controller
         return view('dashboard_ppdb.form_wajib');
     }
     public function form_wajib_orang_tua_page(){
-        return view('dashboard_ppdb.form_wajib_orang_tua');
+        $detail_ortu = DB::table('detail_orang_tua')->where('id_user',Auth::user()->id)->first();
+        $ayah = DB::table('ayah')->where('id_user',Auth::user()->id)->first();
+        $ibu = DB::table('ibu')->where('id_user',Auth::user()->id)->first();
+        $wali = DB::table('wali')->where('id_user',Auth::user()->id)->first();
+
+        return view('dashboard_ppdb.form_wajib_orang_tua',['detail_ortu'=>$detail_ortu , 'ayah'=>$ayah , 'ibu'=>$ibu , 'wali'=>$wali]);
     }
     public function update_profile(Request $request){
         $this->validate($request, [
@@ -100,27 +105,6 @@ class SiswaController extends Controller
             'berat_badan' => 'required',
             'telepon' => 'required',
             'sekolah_asal' => 'required',
-            // 'provinsi' => 'required',
-            // 'kota' => 'required',
-            // 'kecamatan' => 'required',
-            // 'kelurahan' => 'required',
-            // 'telepon_orang_tua' => 'required',
-            // 'alamat_orang_tua' => 'required',
-
-            // 'nik_ayah' => 'required',
-            // 'nama_ayah' => 'required',
-            // 'pendidikan_ayah' => 'required',
-            // 'pekerjaan_ayah' => 'required',
-            // 'tempat_lahir_ayah' => 'required',
-            // 'tanggal_lahir_ayah' => 'required',
-            // 'penghasilan_ayah' => 'required',
-            // 'nik_ibu' => 'required',
-            // 'nama_ibu' => 'required',
-            // 'pendidikan_ibu' => 'required',
-            // 'pekerjaan_ibu' => 'required',
-            // 'tempat_lahir_ibu' => 'required',
-            // 'tanggal_lahir_ibu' => 'required',
-            // 'penghasilan_ibu' => 'required',
         ]);  
 
         $detail_siswa = new detail_siswa();
@@ -153,31 +137,42 @@ class SiswaController extends Controller
     }
 
     public function insert_orang_tua(Request $request){
-        $this->validate($request, [
-            'provinsi' => 'required',
-            'kota' => 'required',
-            'kecamatan' => 'required',
-            'kelurahan' => 'required',
-            'telepon_orang_tua' => 'required',
-            'alamat_orang_tua' => 'required',
-            'nik_ayah' => 'required',
-            'nama_ayah' => 'required',
-            'pendidikan_ayah' => 'required',
-            'pekerjaan_ayah' => 'required',
-            'tempat_lahir_ayah' => 'required',
-            'tanggal_lahir_ayah' => 'required',
-            'penghasilan_ayah' => 'required',
-            'nik_ibu' => 'required',
-            'nama_ibu' => 'required',
-            'pendidikan_ibu' => 'required',
-            'pekerjaan_ibu' => 'required',
-            'tempat_lahir_ibu' => 'required',
-            'tanggal_lahir_ibu' => 'required',
-            'penghasilan_ibu' => 'required',
-        ]); 
+        // $this->validate($request, [
+        //     'provinsi' => 'required',
+        //     'kota' => 'required',
+        //     'kecamatan' => 'required',
+        //     'kelurahan' => 'required',
+        //     'telepon_orang_tua' => 'required',
+        //     'alamat_orang_tua' => 'required',
+        //     'nik_ayah' => 'required',
+        //     'nama_ayah' => 'required',
+        //     'pendidikan_ayah' => 'required',
+        //     'pekerjaan_ayah' => 'required',
+        //     'tempat_lahir_ayah' => 'required',
+        //     'tanggal_lahir_ayah' => 'required',
+        //     'penghasilan_ayah' => 'required',
+        //     'nik_ibu' => 'required',
+        //     'nama_ibu' => 'required',
+        //     'pendidikan_ibu' => 'required',
+        //     'pekerjaan_ibu' => 'required',
+        //     'tempat_lahir_ibu' => 'required',
+        //     'tanggal_lahir_ibu' => 'required',
+        //     'penghasilan_ibu' => 'required',
+        // ]); 
+        $detail_orang_tua = new detail_orang_tua();
+
+        $detail_orang_tua->id_user = Auth::user()->id;
+        $detail_orang_tua->provinsi = $request->provinsi;
+        $detail_orang_tua->kabupaten = $request->kota;
+        $detail_orang_tua->kecamatan = $request->kecamatan;
+        $detail_orang_tua->kelurahan = $request->kelurahan;
+        $detail_orang_tua->telepon_orang_tua = $request->telepon_orang_tua;
+        $detail_orang_tua->alamat = $request->alamat_orang_tua;
+        $detail_orang_tua->save();
 
         $ayah = new ayah();
 
+        $ayah->id_user = Auth::user()->id;
         $ayah->nik = $request->nik_ayah;
         $ayah->nama = $request->nama_ayah;
         $ayah->pendidikan = $request->pendidikan_ayah;
@@ -188,7 +183,8 @@ class SiswaController extends Controller
         $ayah->save();
 
         $ibu = new ibu();
-
+        $ibu->id_user = Auth::user()->id;
+        $ibu->nik = $request->nik_ibu;
         $ibu->nama = $request->nama_ibu;
         $ibu->pendidikan = $request->pendidikan_ibu;
         $ibu->pekerjaan = $request->pekerjaan_ibu;
@@ -198,8 +194,10 @@ class SiswaController extends Controller
         $ibu->save();
 
 
-        if($request->nama_wali == null){
+        if($request->nama_wali != null){
             $wali = new wali();
+            $wali->id_user = Auth::user()->id;
+            $wali->nik = $request->nik_wali;
             $wali->nama = $request->nama_wali;
             $wali->pendidikan = $request->pendidikan_wali;
             $wali->pekerjaan = $request->pekerjaan_wali;
@@ -208,18 +206,6 @@ class SiswaController extends Controller
             $wali->penghasilan = $request->penghasilan_wali;
             $wali->save();
         }
-       
-
-        $detail_orang_tua = new detail_orang_tua();
-
-        $detail_orang_tua->id_user = Auth::user()->id;
-        $detail_orang_tua->provinsi = $request->provinsi;
-        $detail_orang_tua->kabupaten = $request->kabupaten;
-        $detail_orang_tua->kecamatan = $request->kecamatan;
-        $detail_orang_tua->keluarahan = $request->kelurahan;
-        $detail_orang_tua->telepon_orang_tua = $request->telepon_orang_tua;
-        $detail_orang_tua->alamat = $request->alamat_orang_tua;
-        $detail_orang_tua->save();
 
         return redirect('form_wajib_orang_tua');
     }

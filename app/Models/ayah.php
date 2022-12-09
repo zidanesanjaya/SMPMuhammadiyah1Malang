@@ -12,6 +12,7 @@ class ayah extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
+        'id_user',
         'nik',
         'nama',
         'pendidikan',

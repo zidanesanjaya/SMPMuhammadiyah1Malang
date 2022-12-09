@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('wali', function (Blueprint $table) {
             $table->id();
-            $table->integer('nik'); 
+            $table->unsignedBigInteger('id_user');
+            $table->string('nik'); 
             $table->string('nama');
             $table->string('pendidikan');
             $table->string('pekerjaan');

@@ -22,9 +22,6 @@ return new class extends Migration
             $table->string('kelurahan');
             $table->string('telepon_orang_tua');
             $table->string('alamat');
-            $table->unsignedBigInteger('id_ayah'); // FK
-            $table->unsignedBigInteger('id_ibu'); // FK
-            $table->unsignedBigInteger('id_wali'); // FK
             $table->timestamps();
         });
     }

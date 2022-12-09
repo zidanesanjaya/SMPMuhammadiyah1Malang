@@ -56,6 +56,7 @@
 
 
 <div class="container mt-5 p-5 bg-white">
+    @if($detail_ortu == null && $Wali =null && $Wali == null && $wali == null)
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
@@ -73,7 +74,7 @@
     <form action="{{route('insert.detail_orang_tua')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="panel panel-primary setup-content" id="step-1">
-        <div class="panel-heading">
+            <div class="panel-heading mt-5 mb-5">
                  <h3 class="panel-title">Form Wajib (Orang Tua / Wali)</h3>
             </div>
             <div class="panel-body">
@@ -94,13 +95,13 @@
                 <div class="row">
                     <div class="col">
                         <label class="">Kecamatan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="Kecamatan" id="kecamatan" onchange="desaSelected();" required>
+                        <select class="form-control" name="kecamatan" id="kecamatan" onchange="desaSelected();" required>
                         
                         </select>
                     </div>
                     <div class="col">
                         <label class="">Desa / Kelurahan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="keluarahan" id="kelurahan" required>
+                        <select class="form-control" name="kelurahan" id="kelurahan" required>
                         
                         </select>
                     </div>
@@ -120,44 +121,44 @@
         </div>
         
         <div class="panel panel-primary setup-content" id="step-2">
-        <div class="panel-heading">
+        <div class="panel-heading mt-5 mb-5">
                     <h3 class="panel-title">Form Orang Tua / Wali</h3>
                 </div>
                 <div class="panel-body">
                     <div class="p-2">
-                        <h6>Form Ayah</h6>
+                        <h6>Form Wali</h6>
                         <div class="row">
                             <div class="col">
-                                <label class="">NIK Ayah <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nik_ayah" type="text" required>   
+                                <label class="">NIK Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="nik_Wali" type="text" required>   
                             </div>
                             <div class="col">
-                                <label class="">Nama Ayah <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nama_ayah" type="text" required>   
+                                <label class="">Nama Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="nama_Wali" type="text" required>   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="">Pendidikan Ayah <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pendidikan_ayah" type="text" required>   
+                                <label class="">Pendidikan Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="pendidikan_Wali" type="text" required>   
                             </div>
                             <div class="col">
-                                <label class="">Pekerjaan Ayah <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pekerjaan_ayah" type="text" required>   
+                                <label class="">Pekerjaan Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="pekerjaan_Wali" type="text" required>   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label class="">Tempat Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tempat_lahir_ayah" type="text" required>   
+                                <input class="form-control" name="tempat_lahir_Wali" type="text" required>   
                             </div>
                             <div class="col">
                                 <label class="">Tanggal Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tanggal_lahir_ayah" type="date" required>   
+                                <input class="form-control" name="tanggal_lahir_Wali" type="date" required>   
                             </div>
                         </div>
                         <label class="">Penghasilan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="penghasilan_ayah" required>
+                        <select class="form-control" name="penghasilan_Wali" required>
                             <option value="100.000 - 500.000">100.000 - 500.000</option>
                             <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
                             <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
@@ -169,39 +170,39 @@
                     </div>
 
                     <div class="bg-muted-m p-2 mt-5">
-                        <h6>Form Ibu</h6>
+                        <h6>Form Wali</h6>
                         <div class="row">
                             <div class="col">
-                                <label class="">NIK Ibu <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nik_ibu" type="text" required>   
+                                <label class="">NIK Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="nik_Wali" type="text" required>   
                             </div>
                             <div class="col">
-                                <label class="">Nama Ibu <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nama_ibu" type="text" required>   
+                                <label class="">Nama Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="nama_Wali" type="text" required>   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="">Pendidikan Ibu <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pendidikan_ibu" type="text" required>   
+                                <label class="">Pendidikan Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="pendidikan_Wali" type="text" required>   
                             </div>
                             <div class="col">
-                                <label class="">Pekerjaan Ibu <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pekerjaan_ibu" type="text" required>   
+                                <label class="">Pekerjaan Wali <span class="text-danger"> *</span></label>
+                                <input class="form-control" name="pekerjaan_Wali" type="text" required>   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label class="">Tempat Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tempat_lahir_ibu" type="text" required>   
+                                <input class="form-control" name="tempat_lahir_Wali" type="text" required>   
                             </div>
                             <div class="col">
                                 <label class="">Tanggal Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tanggal_lahir_ibu" type="date" required>   
+                                <input class="form-control" name="tanggal_lahir_Wali" type="date" required>   
                             </div>
                         </div>
                         <label class="">Penghasilan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="penghasilan_ibu" required>
+                        <select class="form-control" name="penghasilan_Wali" required>
                             <option value="100.000 - 500.000">100.000 - 500.000</option>
                             <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
                             <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
@@ -245,8 +246,8 @@
                         </div>
                     </div>
                     <label class="">Penghasilan</label>
-                    <select class="form-control" name="penghasilan_wali>
-                        <option value="100.000 - 500.000">100.000 - 500.000</option>
+                    <select class="form-control" name="penghasilan_wali">
+                        <option value="100.000 - 500.000" >100.000 - 500.000</option>
                         <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
                         <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
                         <option value="1.500.000 - 2.500.000">1.500.000 - 2.500.000</option>
@@ -260,6 +261,174 @@
         </div>
         </div>
     </form>
+    @else
+    <h6 class="text-white p-2 bg-success mb-3">Anda Sudah Mengisi Biodata Orang Tua !</h6>
+    <h3>Detail Alamat</h3>
+    <hr>
+        <table class="table table-bordered mb-0 mt-2">
+            <thead>
+                <tr>
+                    <th colspan="2">Attr</th>
+                    <th colspan="2">Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><b>Provinsi : </b></td>
+                    <td colspan="2">{{$detail_ortu->provinsi}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Kota : </b></td>
+                    <td colspan="2">{{$detail_ortu->kabupaten}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Kecamatan : </b></td>
+                    <td colspan="2">{{$detail_ortu->kecamatan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Kelurahan : </b></td>
+                    <td colspan="2">{{$detail_ortu->kelurahan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Nomor Telepon : </b></td>
+                    <td colspan="2">{{$detail_ortu->telepon_orang_tua}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Alamat Detail : </b></td>
+                    <td colspan="2">{{$detail_ortu->alamat}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @if($ayah != null)
+        <h3 class="mt-5">Detail Orang Tua (Ayah)</h3>
+        <hr>
+        <table class="table table-bordered mb-0 mt-2">
+            <thead>
+                <tr>
+                    <th colspan="2">Attr</th>
+                    <th colspan="2">Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><b>NIK Ayah : </b></td>
+                    <td colspan="2">{{$ayah->nik}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Nama Ayah : </b></td>
+                    <td colspan="2">{{$ayah->nama}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Pendidikan Ayah : </b></td>
+                    <td colspan="2">{{$ayah->pendidikan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Pekerjaan Ayah : </b></td>
+                    <td colspan="2">{{$ayah->pekerjaan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Tempat Lahir Ayah : </b></td>
+                    <td colspan="2">{{$ayah->tempat_lahir}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Tanggal Lahir Ayah : </b></td>
+                    <td colspan="2">{{$ayah->tanggal_lahir}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Penghasilan Ayah : </b></td>
+                    <td colspan="2">{{$ayah->penghasilan}}</td>
+                </tr>
+            </tbody>
+        </table>
+        @endif
+
+        @if($ibu!=null)
+        <h3 class="mt-5">Detail Orang Tua (Ibu)</h3>
+        <hr>
+        <table class="table table-bordered mb-0 mt-2">
+            <thead>
+                <tr>
+                    <th colspan="2">Attr</th>
+                    <th colspan="2">Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><b>NIK Ibu : </b></td>
+                    <td colspan="2">{{$ibu->nik}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Nama Ibu : </b></td>
+                    <td colspan="2">{{$ibu->nama}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Pendidikan Ibu : </b></td>
+                    <td colspan="2">{{$ibu->pendidikan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Pekerjaan Ibu : </b></td>
+                    <td colspan="2">{{$ibu->pekerjaan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Tempat Lahir Ibu : </b></td>
+                    <td colspan="2">{{$ibu->tempat_lahir}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Tanggal Lahir Ibu : </b></td>
+                    <td colspan="2">{{$ibu->tanggal_lahir}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Penghasilan Ibu : </b></td>
+                    <td colspan="2">{{$ibu->penghasilan}}</td>
+                </tr>
+            </tbody>
+        </table>
+        @endif
+
+        @if($wali != null)
+        <h3 class="mt-5">Detail Wali</h3>
+        <hr>
+        <table class="table table-bordered mb-0 mt-2">
+            <thead>
+                <tr>
+                    <th colspan="2">Attr</th>
+                    <th colspan="2">Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"><b>NIK Wali : </b></td>
+                    <td colspan="2">{{$wali->nik}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Nama Wali : </b></td>
+                    <td colspan="2">{{$wali->nama}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Pendidikan Wali : </b></td>
+                    <td colspan="2">{{$wali->pendidikan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Pekerjaan Wali : </b></td>
+                    <td colspan="2">{{$wali->pekerjaan}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Tempat Lahir Wali : </b></td>
+                    <td colspan="2">{{$wali->tempat_lahir}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Tanggal Lahir Wali : </b></td>
+                    <td colspan="2">{{$wali->tanggal_lahir}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Penghasilan Wali : </b></td>
+                    <td colspan="2">{{$wali->penghasilan}}</td>
+                </tr>
+            </tbody>
+        </table>
+        @endif
+    @endif
 </div>
 
 <script>

@@ -19,9 +19,6 @@ class detail_orang_tua extends Model
         'keluarahan',
         'telepon_orang_tua',
         'alamat',
-        'id_ayah',
-        'id_ibu',
-        'id_wali',
         'created_at',
         'updated_at',
     ];

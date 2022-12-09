@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('detail_orang_tua', function (Blueprint $table) {
+        Schema::table('wali', function (Blueprint $table) {
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');;
        });
     }
