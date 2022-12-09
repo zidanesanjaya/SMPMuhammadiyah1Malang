@@ -56,7 +56,7 @@
 
 
 <div class="container mt-5 p-5 bg-white">
-    @if($detail_ortu == null && $Wali =null && $Wali == null && $wali == null)
+    @if($detail_ortu == null && $wali == null && $ibu == null && $ayah == null)
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
@@ -261,6 +261,7 @@
         </div>
         </div>
     </form>
+
     @else
     <h6 class="text-white p-2 bg-success mb-3">Anda Sudah Mengisi Biodata Orang Tua !</h6>
     <h3>Detail Alamat</h3>
