@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         DB::statement("
-        CREATE VIEW vw_detail_user AS
+        CREATE VIEW vw_detail_siswa AS
         (
             SELECT
                 I.*,

@@ -126,39 +126,39 @@
                 </div>
                 <div class="panel-body">
                     <div class="p-2">
-                        <h6>Form Wali</h6>
+                        <h6>Form Ayah</h6>
                         <div class="row">
                             <div class="col">
-                                <label class="">NIK Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nik_Wali" type="text" required>   
+                                <label class="">NIK Ayah </label>
+                                <input class="form-control" name="nik_ayah" type="number">   
                             </div>
                             <div class="col">
-                                <label class="">Nama Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nama_Wali" type="text" required>   
+                                <label class="">Nama Ayah</label>
+                                <input class="form-control" name="nama_ayah" type="text">   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="">Pendidikan Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pendidikan_Wali" type="text" required>   
+                                <label class="">Pendidikan Ayah</label>
+                                <input class="form-control" name="pendidikan_ayah" type="text">   
                             </div>
                             <div class="col">
-                                <label class="">Pekerjaan Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pekerjaan_Wali" type="text" required>   
+                                <label class="">Pekerjaan Ayah</label>
+                                <input class="form-control" name="pekerjaan_ayah" type="text">   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="">Tempat Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tempat_lahir_Wali" type="text" required>   
+                                <label class="">Tempat Lahir Ayah</label>
+                                <input class="form-control" name="tempat_lahir_ayah" type="text">   
                             </div>
                             <div class="col">
-                                <label class="">Tanggal Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tanggal_lahir_Wali" type="date" required>   
+                                <label class="">Tanggal Lahir Ayah</label>
+                                <input class="form-control" name="tanggal_lahir_ayah" type="date">   
                             </div>
                         </div>
-                        <label class="">Penghasilan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="penghasilan_Wali" required>
+                        <label class="">Penghasilan Ayah</label>
+                        <select class="form-control" name="penghasilan_ayah">
                             <option value="100.000 - 500.000">100.000 - 500.000</option>
                             <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
                             <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
@@ -173,36 +173,36 @@
                         <h6>Form Wali</h6>
                         <div class="row">
                             <div class="col">
-                                <label class="">NIK Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nik_Wali" type="text" required>   
+                                <label class="">NIK Ibu</label>
+                                <input class="form-control" name="nik_ibu" type="number">   
                             </div>
                             <div class="col">
-                                <label class="">Nama Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="nama_Wali" type="text" required>   
+                                <label class="">Nama Ibu </label>
+                                <input class="form-control" name="nama_ibu" type="text">   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="">Pendidikan Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pendidikan_Wali" type="text" required>   
+                                <label class="">Pendidikan Wali </label>
+                                <input class="form-control" name="pendidikan_ibu" type="text">   
                             </div>
                             <div class="col">
-                                <label class="">Pekerjaan Wali <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="pekerjaan_Wali" type="text" required>   
+                                <label class="">Pekerjaan Wali </label>
+                                <input class="form-control" name="pekerjaan_ibu" type="text">   
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="">Tempat Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tempat_lahir_Wali" type="text" required>   
+                                <label class="">Tempat Lahir </label>
+                                <input class="form-control" name="tempat_lahir_ibu" type="text">   
                             </div>
                             <div class="col">
-                                <label class="">Tanggal Lahir <span class="text-danger"> *</span></label>
-                                <input class="form-control" name="tanggal_lahir_Wali" type="date" required>   
+                                <label class="">Tanggal Lahir </label>
+                                <input class="form-control" name="tanggal_lahir_ibu" type="date">   
                             </div>
                         </div>
-                        <label class="">Penghasilan <span class="text-danger"> *</span></label>
-                        <select class="form-control" name="penghasilan_Wali" required>
+                        <label class="">Penghasilan </label>
+                        <select class="form-control" name="penghasilan_ibu">
                             <option value="100.000 - 500.000">100.000 - 500.000</option>
                             <option value="500.000 - 1.000.000">500.000 - 1.000.000</option>
                             <option value="1.000.000 - 1.500.000">1.000.000 - 1.500.000</option>
@@ -218,7 +218,7 @@
                     <div class="row">
                     <div class="col">
                         <label class="">NIK Wali</label>
-                        <input class="form-control" name="nik_wali" type="text">   
+                        <input class="form-control" name="nik_wali" type="number">   
                     </div>
                     <div class="col">
                         <label class="">Nama Wali</label>

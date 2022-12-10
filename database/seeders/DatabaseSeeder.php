@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             sosial_media::class,
+            admin::class,
         ]);
     }
 }

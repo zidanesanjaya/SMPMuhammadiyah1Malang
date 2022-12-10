@@ -121,7 +121,7 @@
                                         <span> Dashboard</span>
                                     </a>
                                 </li>
-                                <li class="has_sub">
+                                <!-- <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
                                         <i class="mdi mdi-animation"></i>
                                         <span> Informasi </span>
@@ -140,7 +140,7 @@
                                             <a href="{{route('sosial_media.page')}}">Sosial Media</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
                                         <i class="mdi mdi-cash-multiple"></i>
@@ -168,7 +168,7 @@
                                     </a>
                                     <ul class="list-unstyled">
                                         <li>
-                                            <a href="{{route('user_siswa.page')}}">List User</a>
+                                            <a href="{{route('user_siswa.page')}}">List Siswa</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -186,12 +186,12 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="{{route('kelas.page')}}" class="waves-effect">
                                         <i class="mdi mdi-book-open-page-variant"></i>
                                         <span> Pelajaran </span>
                                     </a>
-                                </li>
+                                </li> -->
                             @endif  
                         </ul>
                     </div>

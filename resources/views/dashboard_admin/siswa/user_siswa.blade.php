@@ -417,6 +417,7 @@
     </div>
   </div>
 </div>
+
 <script>
    function myFunction(val){
         detail(val);
