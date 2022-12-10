@@ -9,9 +9,28 @@
     </div>
 </div>
 <div class="container bg-white border p-3">
-@if (session()->has('status'))
-    <span class="badge badge-success">{{ session()->get('status') }}</span>
-@endif
+    @if(session()->has('status'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>Berhasil Update!</strong> {{ session()->get('status') }}
+    </div>
+    @elseif(session()->has('new'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>Berhasil Menambahkan!</strong> {{ session()->get('new') }}
+    </div>
+    @elseif(session()->has('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>Gagal Menambahkan!</strong> {{ session()->get('error') }}
+    </div>
+    @endif
     <div class="row">
         <div class="col">
             <h5>List Admin & User Terdaftar</h5>

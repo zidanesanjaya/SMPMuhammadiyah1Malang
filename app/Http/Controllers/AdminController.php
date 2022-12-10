@@ -6,6 +6,11 @@ use App\Models\Gelombang_Model;
 use App\Models\Sosial_Media_Model;
 use App\Models\User;
 use App\Models\Kelas_Model;
+use App\Models\detail_siswa;
+use App\Models\detail_orang_tua;
+use App\Models\ayah;
+use App\Models\ibu;
+use App\Models\wali;
 
 // use App\Models\User;
 use Illuminate\Http\Request;
@@ -22,26 +27,84 @@ class AdminController extends Controller
         $admin= User::findOrFail($id);
         return view('dashboard_admin.admin.edit_admin',compact('admin'));
     }
+    public function get_json_detail_siswa($id){
+        $listUser = DB::table('vw_detail_siswa')->where('id',$id)->where('role','siswa')->first();
+        echo json_encode($listUser);
+    }
+    public function get_json_gelombang(){
+        $gelombang = DB::table('gelombang')->get();
+        echo json_encode($gelombang);
+    }
+    public function reset_password($id){
+        $user =  User::all()->where('id',$id)->first();        
+        $user->password = Hash::make('password1234');
+        $user->save();
+
+        return redirect('user_siswa')->with('reset', 'Berhasil Reset Password');
+    }
+    public function destroy_user($id){
+        $ayah = ayah::all()->where('id_user',$id)->first();
+        if($ayah){
+            $ayah->delete();
+        }
+
+        $ibu = ibu::all()->where('id_user',$id)->first();
+        if($ibu){
+            $ibu->delete();
+        }
+
+        $wali = wali::all()->where('id_user',$id)->first();
+        if($wali){
+            $wali->delete();
+        }
+        $detail_orang_tua = detail_orang_tua::all()->where('id_user',$id)->first();
+        if($detail_orang_tua){
+            $detail_orang_tua->delete();
+        }
+        $detail_siswa = detail_siswa::all()->where('id_user',$id)->first();
+        if($detail_siswa){
+            $detail_siswa->delete();
+        }
+        User::destroy($id);
+
+        return redirect('user_siswa')->with('hapus', 'Berhasil Hapus User');
+    }
+    public function update_gelombang_user(Request $request , $id){
+        $this->validate($request,[
+            'gelombang' => 'required',
+        ]);
+        $user =  User::all()->where('id',$id)->first();
+
+        $user->id_gelombang = $request->gelombang;
+        $user->save();
+
+        return redirect('user_siswa')->with('gelombang', 'Berhasil Edit Gelombang');
+    }
     public function store_admin(Request $request)
     {  
         try{
             $this->validate($request,[
                 'name' => 'required',
-                'email' => 'required|email|unique:users',
+                'email' => 'required|email',
                 'role' => 'required',
                 'password' => 'required|min:6',
             ]);
-    
-            User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'role' => $request->role,
-                'password' => Hash::make($request->password)
-            ]); 
+            $check = User::all()->where('email',$request->email)->first();
+            if($check == null){
+                User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'role' => $request->role,
+                    'password' => Hash::make($request->password)
+                ]); 
+                return redirect()->route('user_admin.page')->with('new', 'Data Baru Ditambahkan');
+            }else{
+                return redirect()->route('user_admin.page')->with('error', 'Email Sudah Terdaftar');
+            }
+           
         }catch(Exception $e){
             echo 'berhasil';
         }
-        return redirect()->route('user_admin.page');
     }
     
     public function update_admin(Request $request){
