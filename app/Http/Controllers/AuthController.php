@@ -88,14 +88,19 @@ class AuthController extends Controller
     {  
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
-           
-        $data = $request->all();
-        $check = $this->create($data);
-         
-        return redirect("login")->withSuccess('You have signed-in');
+
+        $check = User::all()->where('email',$request->email)->first();
+        if($check == null){
+            $data = $request->all();
+            $check = $this->create($data);
+                
+            return redirect("login")->withErrors(['success' => ['Anda Sudah Berhasil Mendaftar']]);
+        }else{
+            return redirect("register")->withErrors(['auth' => ['email sudah terdaftar']]);
+        }
     }   
     public function signOut() {
         Session::flush();

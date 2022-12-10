@@ -21,9 +21,9 @@
             <table id="datatable" class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Nama Lengkap</th>
                         <th>Email</th>
                         <th>Nama Lengkap</th>
+                        <th>Gelombang</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -33,9 +33,9 @@
                 ?>
                 @foreach($listUser as $listUser)
                     <tr>
-                        <td>{{ $listUser->name}}</td>
                         <td>{{ $listUser->email }}</td>
                         <td>{{ $listUser->nama_lengkap }}</td>
+                        <td>{{ $listUser->nama_gelombang == null ? 'Belum Terdaftar' : $listUser->nama_gelombang}}</td>
                         <td>
                             <a class="btn btn-warning btn-raised" href="#"><i class="mdi mdi-pencil-box"></i> Edit</a>                               
                         </td>

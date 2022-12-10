@@ -18,7 +18,15 @@
         </div>
     </div>
     <hr>
-
+   
+    @if(session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <strong>Berhasil Update!</strong> {{ session()->get('success') }}
+    </div>
+    @endif
     <div class="row form-material">
         <div class="col-md-12">
             <form action="{{route('update.profile')}}" method="post" enctype="multipart/form-data">

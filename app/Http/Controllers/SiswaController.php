@@ -72,7 +72,7 @@ class SiswaController extends Controller
 
         $user->save();
 
-        return redirect()->route('profile');
+        return redirect()->route('profile')->with('success', 'Anda Berhasil Update Profile');
     }
 
     public function update_password_siswa(Request $request , $id){
@@ -84,7 +84,7 @@ class SiswaController extends Controller
         $user->password = Hash::make($request->input('password'));
         $user->save();
 
-        return redirect()->route('profile');
+        return redirect()->route('profile')->with('success', 'Anda Berhasil Update Password');
 
     }
 
@@ -128,7 +128,7 @@ class SiswaController extends Controller
         $detail_siswa->sekolah_asal = $request->sekolah_asal;
         $detail_siswa->save();
 
-        return redirect('form_wajib');
+        return redirect('form_wajib')->with('success', 'Anda Berhasil Mengisi Form Siswa');
     }
 
     public function detail_siswa(){
@@ -207,6 +207,6 @@ class SiswaController extends Controller
             $wali->save();
         }
 
-        return redirect('form_wajib_orang_tua');
+        return redirect('form_wajib_orang_tua')->with('success', 'Anda Berhasil Mengisi Form Orang Tua / Wali');;
     }
 }

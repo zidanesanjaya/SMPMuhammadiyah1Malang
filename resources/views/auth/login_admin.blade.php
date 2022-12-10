@@ -34,8 +34,11 @@
                                         <h4>Login Admin / User</h4>
                                     </div>
                                     @if ($errors->has('auth'))
-                                    <div class="text-center">
-                                        <span class="text-danger">{{ $errors->first('auth') }}</span>
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <strong>Gagal Login!</strong> {{ $errors->first('auth') }}
                                     </div>
                                     @endif
                                     <div class="px-3 pb-3">

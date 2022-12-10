@@ -66,7 +66,7 @@
                 <div class="topbar-left">
                     <div class="text-center">
                         <a href="index.html" class="logo">
-                            <img src="/admin/assets/images/logo-lg.png" alt="" class="logo-large">
+                            <img src="/img/logohead.png" alt="" class="logo-large">
                         </a>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                                         @if(Auth::user()->path_foto != null)
                                         <img src="/storage/avatars/{{Auth::user()->path_foto}}" alt="user" class="rounded-circle img-thumbnail">
                                         @else
-                                        <img src="/admin/assets/images/logo-lg.png" alt="user" class="rounded-circle img-thumbnail">
+                                        <img src="/img/user.png" alt="user" class="rounded-circle img-thumbnail">
                                         @endif
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
