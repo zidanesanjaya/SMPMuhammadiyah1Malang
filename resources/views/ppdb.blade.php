@@ -82,7 +82,7 @@
                 <a href="#kegiatan" class="nav-item nav-link">KEGIATAN KAMI</a>
                 <a href="{{ url ('http://127.0.0.1:8000/cermus') }}" class="nav-item nav-link" target="_blank">CERITA MUHASA</a>
                 <a href="{{ url ('http://127.0.0.1:8000/register') }}" class="nav-item nav-link">DAFTAR PPDB</a>
-                <a href="{{ url ('http://127.0.0.1:8000/login') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">MASUK<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="{{ url ('http://127.0.0.1:8000/login') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-lg-block nav-item nav-link">MASUK<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
         </div>
     </nav>
@@ -99,9 +99,9 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-                                    <h1 style="font-size: 65px;" class="text-white mb-5 animated slideInDown">SMP MUHAMMADIYAH 1 MALANG</h1>
-                                    <h2 style="color: #FED049;" class="mb-5 animated slideInDown">Berjiwa Kepemimpinan - dan - Berakhlak Islami</h2>
-                                    <h3 class="text-white mb-5 animated slideInDown">PPDB SMP MUHASA TELAH DIBUKA, Mari bergabung dengan kami.</h3>
+                                    <h2 style="font-size: 40px;" class="text-white mb-4 animated slideInDown">SMP MUHAMMADIYAH 1 MALANG</h2>
+                                    <h2 style="color: #FED049;" class="mb-4 animated slideInDown">Berjiwa Kepemimpinan - dan - Berakhlak Islami</h2>
+                                    <h3 class="text-white mb-4 animated slideInDown">PPDB SMP MUHASA TELAH DIBUKA, Mari bergabung dengan kami.</h3>
                                     <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/register') }}" class="btn btn-primary py-sm-3 px-sm-4">JOIN NOW</a>
                                 </div>
                         </div>

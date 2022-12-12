@@ -36,10 +36,6 @@
 </head>
 
 <body>
-<!-- <div class="zpreloaderBg" id="preloader" onload="zpreloader()">
-    <div class="zpreloader"></div>
-    <div class="zpreloader2"></div>
-</div> -->
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
@@ -55,7 +51,7 @@
             <li><a href="#main">Profile</a></li>
             <li><a href="#cermus">Cerita Muhasa</a></li>
             <li><a href="#galeri">Galeri</a></li>
-            <!-- <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li> -->
+            <li><a href="{{ url ('http://127.0.0.1:8000/matapelajaran') }}">Mata Pelajaran</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
             <li><a href="{{ url ('https://aksi.smpmuhasa.sch.id/') }}">AKSI</a></li>
         </ul>

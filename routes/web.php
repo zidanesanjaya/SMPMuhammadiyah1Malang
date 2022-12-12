@@ -40,6 +40,10 @@ Route::get('/galeri', function () {
     return view('galeri');
 });
 
+Route::get('/matapelajaran', function () {
+    return view('matpel');
+});
+
 Route::get('/ppdb', function () {
     return view('ppdb');
 });
