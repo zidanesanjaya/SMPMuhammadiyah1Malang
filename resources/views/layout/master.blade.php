@@ -229,7 +229,7 @@
                                         <a class="dropdown-item" href="#">
                                             <i class="mdi mdi-account-circle m-r-5 text-muted"></i> {{ Auth::user()->name }}</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href={{config('app.url').'/signout'}}>
+                                        <a class="dropdown-item" href="{{ route('signout') }}">
                                             <i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
                                     </div>
                                 </li>

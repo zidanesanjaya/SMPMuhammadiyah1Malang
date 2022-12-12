@@ -44,10 +44,6 @@ Route::get('/ppdb', function () {
     return view('ppdb');
 });
 
-Route::get('/pengumumanppdb', function () {
-    return view('announcementppdb');
-});
-
 Route::get('/aksi', function () {
     return view('aksi');
 });
