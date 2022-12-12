@@ -87,25 +87,15 @@ https://templatemo.com/tm-569-edu-meeting
             </div>
             <div class="col-lg-12">
               <div class="row grid">
+                <!-- kelas 7 -->
                 <div class="col-lg-4 templatemo-item-col all kelas7">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>12</span></h6>
+                        <h6>Kelas <span>7</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 templatemo-item-col all kelas8">
-                  <div class="meeting-item">
-                    <div class="down-content">
-                      <div class="date">
-                        <h6>Kelas <span>14</span></h6>
-                      </div>
-                      <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                      <a href="meeting-details.html"><h4>PPKN</h4></a>
+                      <p>ARTARI FEBRIANTI, S.Pd</p>
                     </div>
                   </div>
                 </div>
@@ -113,32 +103,154 @@ https://templatemo.com/tm-569-edu-meeting
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>16</span></h6>
+                        <h6>Kelas <span>7</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>Network Teaching Concept</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                      <a href="meeting-details.html"><h4>PPKN</h4></a>
+                      <p>YULI WACHYUNINGTYAS, S.Pd</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 templatemo-item-col all kelas9">
+                <div class="col-lg-4 templatemo-item-col all kelas7">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>18</span></h6>
+                        <h6>Kelas <span>7</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>Online Teaching Tools</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                      <a href="meeting-details.html"><h4>Bahasa Indonesia</h4></a>
+                      <p>MAWADDAH, S.Pd</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 templatemo-item-col all kelas9">
+                <div class="col-lg-4 templatemo-item-col all kelas7">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>22</span></h6>
+                        <h6>Kelas <span>7</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>New Teaching Techniques</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                      <a href="meeting-details.html"><h4>Al - Islam</h4></a>
+                      <p>PUDJIJANTO, S.Ag</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Arab</h4></a>
+                      <p>PUDJIJANTO, S.Ag</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Prakarya</h4></a>
+                      <p>PUDJIJANTO, S.Ag</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Kemuhammadiyahan</h4></a>
+                      <p>SHOLIKHUL ATMAM, S.PdI</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>IPA</h4></a>
+                      <p>MASRUDI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Seni Budaya</h4></a>
+                      <p>SARBINI KUSWANTONO, SP., M.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>PJOK</h4></a>
+                      <p>MUHAMMAD MAUFALDO MAULANA</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Matematika</h4></a>
+                      <p>FARIDA ULFA NURHIDAYATI, S.Si., M.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Inggris</h4></a>
+                      <p>NOSA SETIABUDI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Informatika</h4></a>
+                      <p>VATQI NUR ROCHMAN KAHASTO</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas7">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>7</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Jawa</h4></a>
+                      <p>VATQI NUR ROCHMAN KAHASTO</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Kelas 8 -->
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>PPKN</h4></a>
+                      <p>YULI WACHYUNINGTYAS, S.Pd</p>
                     </div>
                   </div>
                 </div>
@@ -146,43 +258,297 @@ https://templatemo.com/tm-569-edu-meeting
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>24</span></h6>
+                        <h6>Kelas <span>8</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>Technology Conference</h4></a>
-                      <p>TemplateMo is the best website<br>when it comes to Free CSS.</p>
+                      <a href="meeting-details.html"><h4>Bahasa Indonesia</h4></a>
+                      <p>MAWADDAH, S.Pd</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 templatemo-item-col all kelas8 kelas9">
+                <div class="col-lg-4 templatemo-item-col all kelas8">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>27</span></h6>
+                        <h6>Kelas <span>8</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                      <a href="meeting-details.html"><h4>IPS</h4></a>
+                      <p>DRA. TRI SULAWESININGSIH</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 templatemo-item-col all kelas7 kelas8">
+                <div class="col-lg-4 templatemo-item-col all kelas8">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>28</span></h6>
+                        <h6>Kelas <span>8</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>Instant Lecture Design</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                      <a href="meeting-details.html"><h4>Al - Islam</h4></a>
+                      <p>PUDJIJANTO, S.Ag</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 templatemo-item-col all kelas9 kelas7">
+                <div class="col-lg-4 templatemo-item-col all kelas8">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Kelas <span>30</span></h6>
+                        <h6>Kelas <span>8</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>Online Social Networking</h4></a>
-                      <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                      <a href="meeting-details.html"><h4>Bahasa Arab</h4></a>
+                      <p>PUDJIJANTO, S.Ag</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Prakarya</h4></a>
+                      <p>PUDJIJANTO, S.Ag</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Kemuhammadiyahan</h4></a>
+                      <p>SHOLIKHUL ATMAM, S.PdI</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>IPA</h4></a>
+                      <p>MASRUDI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Seni Budaya</h4></a>
+                      <p>SARBINI KUSWANTONO, SP., M.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>PJOK</h4></a>
+                      <p>MUHAMMAD MAUFALDO MAULANA</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Matematika</h4></a>
+                      <p>FARIDA ULFA NURHIDAYATI, S.Si., M.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Inggris</h4></a>
+                      <p>NOSA SETIABUDI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Informatika</h4></a>
+                      <p>VATQI NUR ROCHMAN KAHASTO</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas8">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>8</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Jawa</h4></a>
+                      <p>VATQI NUR ROCHMAN KAHASTO</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Kelas 9 -->
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>IPS</h4></a>
+                      <p>DRA. TRI SULAWESININGSIH</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>PPKN</h4></a>
+                      <p>ARTARI FEBRIANTI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Indonesia</h4></a>
+                      <p>DINI RAMADHANI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Prakarya</h4></a>
+                      <p>PUDJIJANTO, S.Ag</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Al - Islam</h4></a>
+                      <p>SHOLIKHUL ATMAM, S.PdI</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Arab</h4></a>
+                      <p>SHOLIKHUL ATMAM, S.PdI</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Kemuhammadiyahan</h4></a>
+                      <p>SHOLIKHUL ATMAM, S.PdI</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>IPA</h4></a>
+                      <p>MASRUDI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Seni Budaya</h4></a>
+                      <p>SARBINI KUSWANTONO, SP., M.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>PJOK</h4></a>
+                      <p>MUHAMMAD MAUFALDO MAULANA</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Matematika</h4></a>
+                      <p>FARIDA ULFA NURHIDAYATI, S.Si., M.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Inggris</h4></a>
+                      <p>NOSA SETIABUDI, S.Pd</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Informatika</h4></a>
+                      <p>VATQI NUR ROCHMAN KAHASTO</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 templatemo-item-col all kelas9">
+                  <div class="meeting-item">
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>Kelas <span>9</span></h6>
+                      </div>
+                      <a href="meeting-details.html"><h4>Bahasa Jawa</h4></a>
+                      <p>VATQI NUR ROCHMAN KAHASTO</p>
                     </div>
                   </div>
                 </div>
@@ -208,9 +574,6 @@ https://templatemo.com/tm-569-edu-meeting
     </div>
     </div>
 </footer><!-- End Footer -->
-
-<!-- <div id="preloader"></div> -->
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="/vendor/purecounter/purecounter_vanilla.js"></script>
