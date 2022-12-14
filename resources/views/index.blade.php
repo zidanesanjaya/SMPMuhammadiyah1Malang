@@ -53,7 +53,7 @@
             <li><a href="#galeri">Galeri</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/matapelajaran') }}">Mata Pelajaran</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
-            <li><a href="{{ url ('https://aksi.smpmuhasa.sch.id/') }}">AKSI</a></li>
+            <li><a href="{{ url ('http://127.0.0.1:8000/aksimuhasa') }}">AKSI</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>

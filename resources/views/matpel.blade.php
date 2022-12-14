@@ -51,21 +51,11 @@ https://templatemo.com/tm-569-edu-meeting
     <!-- <a href="index.html" class="logo me-auto"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
 
     <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-            <!-- <li><a class="active" href="{{ url ('http://127.0.0.1:8000/') }}">Home</a></li> -->
-            <li><a class="active" href="#hero">Home</a></li>
-            <li><a href="#main">Profile</a></li>
-            <li><a href="#cermus">Cerita Muhasa</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <!-- <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li> -->
-            <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
-            <li><a href="{{ url ('https://aksi.smpmuhasa.sch.id/') }}">AKSI</a></li>
-        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
     <!-- .navbar -->
 
-    <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="get-started-btn">Daftar Sekarang</a>
+    <a href="{{ url ('http://127.0.0.1:8000/') }}" class="get-started-btn">Kembali</a>
 
     </div>
 </header><!-- End Header -->
@@ -94,7 +84,7 @@ https://templatemo.com/tm-569-edu-meeting
                       <div class="date">
                         <h6>Kelas <span>7</span></h6>
                       </div>
-                      <a href="meeting-details.html"><h4>PPKN</h4></a>
+                      <a href="{{ url ('http://127.0.0.1:8000/permatapelajaran') }}"><h4>PPKN</h4></a>
                       <p>ARTARI FEBRIANTI, S.Pd</p>
                     </div>
                   </div>
