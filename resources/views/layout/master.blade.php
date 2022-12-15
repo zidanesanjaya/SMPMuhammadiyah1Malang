@@ -31,7 +31,11 @@
         <link href="/admin/assets/plugins/colorpicker/asColorPicker.min.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
   
-        
+         <!-- DataTables -->
+        <link href="/admin/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="/admin/assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="/admin/assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" /> 
 
         <link href="/admin/assets/plugins/animate/animate.css" rel="stylesheet" type="text/css">
@@ -144,6 +148,23 @@
                                 <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
                                         <i class="mdi mdi-cash-multiple"></i>
+                                        <span> Informasi </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="{{route('visimisi_page')}}">Visi dan Misi</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('sambutan')}}">Sambutan kepala Sekolah</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-cash-multiple"></i>
                                         <span> Pembayaran </span>
                                         <span class="float-right">
                                             <i class="mdi mdi-chevron-right"></i>
@@ -154,7 +175,13 @@
                                             <a href="{{route('gelombang')}}">Gelombang</a>
                                         </li>
                                         <li>
-                                            <a href="#">List Pembayaran</a>
+                                            <a href="{{route('list_pembayaran_lunas_page')}}">List Sudah Lunas</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('list_pembayaran_belum_lunas_page')}}">List Belum Lunas</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('list_pembayaran_page')}}">Pembayaran</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -308,6 +335,25 @@
 
         <!-- Plugins Init js -->
         <script src="/admin/assets/pages/form-advanced.js"></script>
+
+          <!-- Required datatable js -->
+        <script src="/admin/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="/admin/assets/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/jszip.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/pdfmake.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/vfs_fonts.js"></script>
+        <script src="/admin/assets/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/buttons.print.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="/admin/assets/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="/admin/assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+ 
+        <!-- Datatable init js -->
+        <script src="/admin/assets/pages/datatables.init.js"></script>
         <!-- App js -->
         <script src="/admin/assets/js/app.js"></script>
        

@@ -11,6 +11,7 @@ use App\Models\detail_orang_tua;
 use App\Models\ayah;
 use App\Models\ibu;
 use App\Models\wali;
+use App\Models\histori_pembayaran;
 
 use Auth;
 
@@ -23,8 +24,10 @@ class SiswaController extends Controller
 {
     public function pembayaran_page(){
         $user = Auth::user();
+        $pembayaran = DB::table('vw_pembayaran')->where('id_user',Auth::user()->id)->get();
+        $Historipembayaran = DB::table('histori_pembayaran')->where('id_user',Auth::user()->id)->get();
         $listUser = DB::table('vw_user')->where('id',$user->id)->first();
-        return view('dashboard_ppdb.pembayaran',compact('listUser'));
+        return view('dashboard_ppdb.pembayaran',['listUser'=>$listUser , 'pembayaran'=>$pembayaran , 'historiPembayaran'=>$Historipembayaran]);
     }
     public function profile_page(){
         $user = Auth::user();
@@ -45,6 +48,33 @@ class SiswaController extends Controller
         $wali = DB::table('wali')->where('id_user',Auth::user()->id)->first();
 
         return view('dashboard_ppdb.form_wajib_orang_tua',['detail_ortu'=>$detail_ortu , 'ayah'=>$ayah , 'ibu'=>$ibu , 'wali'=>$wali]);
+    }
+    public function insert_pembayaran(Request $request){
+        $this->validate($request, [
+            'setoran' => 'required',
+            'bukti' => 'required',
+        ]);  
+
+        try{
+            $filenameWithExt = $request->file('bukti')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('bukti')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('bukti')->storeAs('public/bukti',$fileNameToStore);
+    
+            $histori = new histori_pembayaran();
+            $histori->id_user = Auth::user()->id;
+            $histori->pembayaran = $request->setoran;
+            $histori->status = 'MENUNGGU';
+            $histori->tanggal_pembayaran = date("Y-m-d");
+            $histori->path_foto = $fileNameToStore;
+
+            $histori->save();
+        }catch(Exception $e){
+            return redirect()->route('pembayaran')->with('msg-red', 'Anda Gagal Upload Pembayaran , Silahkan Coba Lagi');
+        }
+        return redirect()->route('pembayaran')->with('msg-green', 'Anda Berhasil Upload Pembayaran');
     }
     public function update_profile(Request $request){
         $this->validate($request, [
@@ -137,64 +167,48 @@ class SiswaController extends Controller
     }
 
     public function insert_orang_tua(Request $request){
-        // $this->validate($request, [
-        //     'provinsi' => 'required',
-        //     'kota' => 'required',
-        //     'kecamatan' => 'required',
-        //     'kelurahan' => 'required',
-        //     'telepon_orang_tua' => 'required',
-        //     'alamat_orang_tua' => 'required',
-        //     'nik_ayah' => 'required',
-        //     'nama_ayah' => 'required',
-        //     'pendidikan_ayah' => 'required',
-        //     'pekerjaan_ayah' => 'required',
-        //     'tempat_lahir_ayah' => 'required',
-        //     'tanggal_lahir_ayah' => 'required',
-        //     'penghasilan_ayah' => 'required',
-        //     'nik_ibu' => 'required',
-        //     'nama_ibu' => 'required',
-        //     'pendidikan_ibu' => 'required',
-        //     'pekerjaan_ibu' => 'required',
-        //     'tempat_lahir_ibu' => 'required',
-        //     'tanggal_lahir_ibu' => 'required',
-        //     'penghasilan_ibu' => 'required',
-        // ]); 
-        $detail_orang_tua = new detail_orang_tua();
 
-        $detail_orang_tua->id_user = Auth::user()->id;
-        $detail_orang_tua->provinsi = $request->provinsi;
-        $detail_orang_tua->kabupaten = $request->kota;
-        $detail_orang_tua->kecamatan = $request->kecamatan;
-        $detail_orang_tua->kelurahan = $request->kelurahan;
-        $detail_orang_tua->telepon_orang_tua = $request->telepon_orang_tua;
-        $detail_orang_tua->alamat = $request->alamat_orang_tua;
-        $detail_orang_tua->save();
+    
 
-        $ayah = new ayah();
+        if($request->nik_ayah != null && $request->nama_ayah != null && $request->nik_ibu != null && $request->nama_ibu != null){
+            $detail_orang_tua = new detail_orang_tua();
 
-        $ayah->id_user = Auth::user()->id;
-        $ayah->nik = $request->nik_ayah;
-        $ayah->nama = $request->nama_ayah;
-        $ayah->pendidikan = $request->pendidikan_ayah;
-        $ayah->pekerjaan = $request->pekerjaan_ayah;
-        $ayah->tempat_lahir = $request->tempat_lahir_ayah;
-        $ayah->tanggal_lahir = $request->tanggal_lahir_ayah;
-        $ayah->penghasilan = $request->penghasilan_ayah;
-        $ayah->save();
+            $detail_orang_tua->id_user = Auth::user()->id;
+            $detail_orang_tua->provinsi = $request->provinsi;
+            $detail_orang_tua->kabupaten = $request->kota;
+            $detail_orang_tua->kecamatan = $request->kecamatan;
+            $detail_orang_tua->kelurahan = $request->kelurahan;
+            $detail_orang_tua->telepon_orang_tua = $request->telepon_orang_tua;
+            $detail_orang_tua->alamat = $request->alamat_orang_tua;
+            $detail_orang_tua->save();
 
-        $ibu = new ibu();
-        $ibu->id_user = Auth::user()->id;
-        $ibu->nik = $request->nik_ibu;
-        $ibu->nama = $request->nama_ibu;
-        $ibu->pendidikan = $request->pendidikan_ibu;
-        $ibu->pekerjaan = $request->pekerjaan_ibu;
-        $ibu->tempat_lahir = $request->tempat_lahir_ibu;
-        $ibu->tanggal_lahir = $request->tanggal_lahir_ibu;
-        $ibu->penghasilan = $request->penghasilan_ibu;
-        $ibu->save();
+            $ayah = new ayah();
 
+            $ayah->id_user = Auth::user()->id;
+            $ayah->nik = $request->nik_ayah;
+            $ayah->nama = $request->nama_ayah;
+            $ayah->pendidikan = $request->pendidikan_ayah;
+            $ayah->pekerjaan = $request->pekerjaan_ayah;
+            $ayah->tempat_lahir = $request->tempat_lahir_ayah;
+            $ayah->tanggal_lahir = $request->tanggal_lahir_ayah;
+            $ayah->penghasilan = $request->penghasilan_ayah;
+            $ayah->save();
 
-        if($request->nama_wali != null){
+            $ibu = new ibu();
+            $ibu->id_user = Auth::user()->id;
+            $ibu->nik = $request->nik_ibu;
+            $ibu->nama = $request->nama_ibu;
+            $ibu->pendidikan = $request->pendidikan_ibu;
+            $ibu->pekerjaan = $request->pekerjaan_ibu;
+            $ibu->tempat_lahir = $request->tempat_lahir_ibu;
+            $ibu->tanggal_lahir = $request->tanggal_lahir_ibu;
+            $ibu->penghasilan = $request->penghasilan_ibu;
+            $ibu->save();
+        }else{
+            return redirect('form_wajib_orang_tua')->with('errors', 'Anda Harus Mengisikan Minimal form Ayah dan Ibu');;
+        }
+
+        if($request->nama_wali != null && $request->nik_wali != null){
             $wali = new wali();
             $wali->id_user = Auth::user()->id;
             $wali->nik = $request->nik_wali;

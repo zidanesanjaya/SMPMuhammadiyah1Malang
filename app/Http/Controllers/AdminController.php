@@ -11,6 +11,7 @@ use App\Models\detail_orang_tua;
 use App\Models\ayah;
 use App\Models\ibu;
 use App\Models\wali;
+use App\Models\pembayaran;
 
 // use App\Models\User;
 use Illuminate\Http\Request;
@@ -75,8 +76,12 @@ class AdminController extends Controller
         ]);
         $user =  User::all()->where('id',$id)->first();
 
+        $gelombang_temp = Gelombang_Model::all()->where('id',$request->gelombang)->first();     
+
         $user->id_gelombang = $request->gelombang;
         $user->save();
+
+
 
         return redirect('user_siswa')->with('gelombang', 'Berhasil Edit Gelombang');
     }

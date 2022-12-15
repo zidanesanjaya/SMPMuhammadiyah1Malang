@@ -97,7 +97,7 @@
     <div class="container" data-aos="fade-up">
         <div class="row">
         <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-            <img src="img/galeri/guru1.jpg" class="img-fluid" alt="">
+            <img src="/storage/lainya/{{$fotoKepsek->lainya}}" class="img-fluid" alt="">
         </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <div class="section-title">
@@ -114,11 +114,7 @@
                         Baca Selengkapnya
                     </summary>
                     <p id="sambutan">
-                    Seraya memanjatkan puji syukur kehadirat Allah SWT, disertai perasaan bangga saya menuliskan kata Sambutan Kepala sekolah, setelah dilakukan update, baik dari sisi pengelolaan maupun isinya. 
-                    Di era global dan pesatnya Teknologi Informasi ini, tidak dipungkiri bahwa keberadaan sebuah website untuk suatu organisasi, termasuk SMP Muhammadiyah 1 Malang, sangatlah penting. 
-                    Website dapat digunakan sebagai media berbagi informasi - informasi dari sekolah, yang memang harus diketahui oleh masyarakat secara luas. 
-                    Disamping itu, website ini juga nantinya akan menjadi wadah kreasi siswa-siswi SMP Muhammadiyah 1 Malang. 
-                    Oleh karena itu, saya sangat berharap, melalui website ini, SMP Muhammadiyah 1 Malang akan semakin berkembang, sehingga pada waktunya nanti dapat memberikan kontribusi bagai kemajuan masyarakat secara luas dan SMP Muhammadiyah 1 Malang sendiri khususnya, Terima kasih.
+                        {{$sambutan->lainya}}
                     </p>
                     <h3>Wassalamu’alaikum Warahmatullahi Wabarakatuh</h3>
                     <p style="text-align: right;">
@@ -138,18 +134,19 @@
         <div class="row counters">
             <div class="col-lg-6 col-12 text-center">
                 <span>Visi</span>
-                <p>TERBENTUKNYA PRIBADI BERJIWA KEPEMIMPINAN ISLAMI, PEDULI DAN BERWAWASAN KEUNGGULAN
-                </p>
+                <ul>
+                    @foreach($visi as $value)
+                    <li><p>{{$value->lainya}}</p></li>
+                    @endforeach
+                </ul>
             </div>
 
             <div class="col-lg-6 col-12 text-center">
                 <span>Misi</span>
                 <ul>
-                    <li><i class="bi bi-check-circle"></i> Meningkatkan profesionalisme tenaga pendidik dan kependidikan</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap dan karakter islami di lingkungan sekolah</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap dan karakter islami di lingkungan sekolah.</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap peduli terhadap sesama</li>
-                    <li><i class="bi bi-check-circle"></i> Menumbuhkan sikap peduli terhadap sesama</li>
+                    @foreach($misi as $value)
+                    <li><i class="bi bi-check-circle"></i> {{$value->lainya}}</li>
+                    @endforeach
                 </ul>
             </div>
         </div>

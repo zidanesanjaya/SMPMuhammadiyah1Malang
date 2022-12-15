@@ -56,7 +56,7 @@
 
 
 <div class="container mt-5 p-5 bg-white">
-    @if($detail_ortu == null && $wali == null && $ibu == null && $ayah == null)
+    @if($detail_ortu == null && $ibu == null && $ayah == null)
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 

@@ -93,5 +93,12 @@
   </div>
 </div>
 
+<script>
+    function myFunction(val){
+        detail(val);
+        $('#histori').modal('show');
+   }
+</script>
+
 
 @endsection
