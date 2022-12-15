@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            sosial_media::class,
             admin::class,
         ]);
     }

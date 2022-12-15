@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="page-title-box">
-            <h4 class="page-title">EDIT VISI MISI</h4>
+            <h4 class="page-title">Edit Galeri</h4>
         </div>
     </div>   
 </div>
@@ -27,13 +27,12 @@
 <div class="container bg-white border p-3">
     <div class="row form-material">
         <div class="col-md-12">
-            <form action="{{route('store.visimisi')}}" method="post">
+            <form action="{{route('store.galeri')}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <h6 class="text-muted">Visi</h6>
-                <input type="text" class="form-control" placeholder="Masukan Visi" name="Visi">
-                
-                <h6 class="text-muted mt-5">Misi</h6>
-                <input type="text" class="form-control" placeholder="Masukan Misi" name="Misi">
+                <h6 class="text-muted mt-3">Foto</h6>
+                <div class="card-body">
+                    <input type="file" id="input-file-now-custom-1" class="dropify"  name="foto"/>
+                </div>
 
                 <button type="submit" class="btn btn-success btn-raised btn-block mt-3">Simpan</button>
             </form>
@@ -44,30 +43,28 @@
         <div class="col-lg-12 col-sm-12">
             <div class="card m-b-30">
                 <div class="card-body table-responsive">
-                    <h5 class="header-title">Visi Dan Misi</h5>
+                    <h5 class="header-title">Galeri</h5>
                     <div class="">
                         <table id="datatable2" class="table">
                             <thead>
                             <tr>
-                                <th>Type</th>
-                                <th>Keterangan</th>
+                                <th>Galeri</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>
 
                             <tbody>
-                                @foreach($visimisi as $value)
-                                    <tr>
-                                        <td>{{$value->type}}</td>
-                                        <td>{{$value->lainya}}</td>
-                                        <td>
-                                        <form action="{{ route('destroy.visimisi', $value->id) }}" method="POST">
+                                @foreach($galeri as $value)
+                                <tr>
+                                    <td><img src="/storage/lainya/{{$value->lainya}}" width="200px" alt=""></td>
+                                    <td>
+                                    <form action="{{ route('destroy.galeri', $value->id) }}" method="POST">
                                         @csrf
                                         {{ method_field('delete')}}
                                         <button class="btn btn-danger btn-raised" type="submit"><i class="mdi mdi-delete"></i> Hapus</button>
                                     </form>
-                                        </td>
-                                    </tr>
+                                    </td>
+                                </tr>
                                 @endforeach
                             </tbody>
                         </table>

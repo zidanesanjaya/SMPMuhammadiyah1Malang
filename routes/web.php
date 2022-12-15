@@ -92,8 +92,14 @@ Route::group(['middleware' => ['auth']], function() {
         //Informasi
         Route::get('sambutan', [informasiController::class, 'sambutan'])->name('sambutan'); 
         Route::get('visimisi', [informasiController::class, 'visimisi_page'])->name('visimisi_page'); 
+        Route::get('galeri', [informasiController::class, 'galeri'])->name('galeri'); 
+        Route::get('cermus', [informasiController::class, 'cermus'])->name('cermus'); 
             Route::put('store_sambutan', [informasiController::class, 'insert_sambutan'])->name('store.sambutan'); 
             Route::post('store_visimisi', [informasiController::class, 'insert_visi_misi'])->name('store.visimisi'); 
+            Route::post('store_galeri', [informasiController::class, 'insert_galeri'])->name('store.galeri'); 
+            Route::post('store_cermus', [informasiController::class, 'insert_cermus'])->name('store.cermus'); 
+            Route::delete('delete_galeri/{id}', [informasiController::class, 'destroy_galeri'])->name('destroy.galeri'); 
+            Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi'); 
 
         //Sosial Media
         Route::get('sosial_media', [SosialMediaController::class, 'sosial_media_page'])->name('sosial_media.page'); 
@@ -119,7 +125,17 @@ Route::group(['middleware' => ['auth']], function() {
 
 
     Route::middleware([CheckRoleUser::class])->group(function(){
-        
+        //Informasi
+        Route::get('sambutan', [informasiController::class, 'sambutan'])->name('sambutan'); 
+        Route::get('visimisi', [informasiController::class, 'visimisi_page'])->name('visimisi_page'); 
+        Route::get('galeri', [informasiController::class, 'galeri'])->name('galeri'); 
+        Route::get('cermus', [informasiController::class, 'cermus'])->name('cermus'); 
+            Route::put('store_sambutan', [informasiController::class, 'insert_sambutan'])->name('store.sambutan'); 
+            Route::post('store_visimisi', [informasiController::class, 'insert_visi_misi'])->name('store.visimisi'); 
+            Route::post('store_galeri', [informasiController::class, 'insert_galeri'])->name('store.galeri'); 
+            Route::post('store_cermus', [informasiController::class, 'insert_cermus'])->name('store.cermus'); 
+            Route::delete('delete_galeri/{id}', [informasiController::class, 'destroy_galeri'])->name('destroy.galeri'); 
+            Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi'); 
     });
 
     Route::middleware([CheckRoleSiswa::class])->group(function(){

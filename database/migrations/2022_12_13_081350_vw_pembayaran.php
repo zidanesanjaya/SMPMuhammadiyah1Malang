@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         DB::statement("
-        SELECT i.id as id_user , i.nama_lengkap , i.id_gelombang , k.nama_gelombang , COALESCE(h.setoran,'0')as setoran ,k.biaya as total_pembayaran ,  COALESCE(h.status_pembayaran,'Belum Lunas') as status_pembayaran FROM users as i LEFT JOIN (
+        CREATE VIEW vw_pembayaran as
+        (SELECT i.id as id_user , i.nama_lengkap , i.id_gelombang , k.nama_gelombang , COALESCE(h.setoran,'0')as setoran ,k.biaya as total_pembayaran ,  COALESCE(h.status_pembayaran,'Belum Lunas') as status_pembayaran FROM users as i LEFT JOIN (
             SELECT
                 g.*,
             IF
@@ -37,7 +38,7 @@ return new class extends Migration
                 GROUP BY
                 c.id 
                 ) AS g
-            )as h ON h.id_user = i.id left join gelombang k on i.id_gelombang = k.id where i.role = 'siswa';
+            )as h ON h.id_user = i.id left join gelombang k on i.id_gelombang = k.id where i.role = 'siswa');
         ");
     }
 

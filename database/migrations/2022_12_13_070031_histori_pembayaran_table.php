@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('histori_pembayaran', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_user');
-            $table->integer('pembayaran'); 
-            $table->date('tanggal_pembayaran');
-            $table->string('path_foto');
-            $table->string('status');
+            $table->integer('pembayaran')->nullable(); 
+            $table->date('tanggal_pembayaran')->nullable();
+            $table->text('path_foto')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

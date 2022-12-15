@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('informasi_lainya', function (Blueprint $table) {
             $table->id();
             $table->string('type')->nullable(); 
-            $table->string('lainya')->nullable();
-            $table->string('var1')->nullable();
-            $table->string('var2')->nullable();
+            $table->text('lainya')->nullable();
+            $table->text('var1')->nullable();
+            $table->text('var2')->nullable();
             $table->timestamps();
         });
     }

@@ -118,6 +118,29 @@
                                 </a>
                             </li>
                             @elseif(Auth::user()->role == 'user')
+                            <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-calendar-text"></i>
+                                        <span> Informasi </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="{{route('visimisi_page')}}">Visi dan Misi</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('sambutan')}}">Sambutan kepala Sekolah</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('galeri')}}">Galeri</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('cermus')}}">Cerita Muhasa</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             @elseif(Auth::user()->role == 'admin')
                                 <li>
                                     <a href="{{route('dashboard_admin')}}" class="waves-effect">
@@ -147,7 +170,7 @@
                                 </li> -->
                                 <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
-                                        <i class="mdi mdi-cash-multiple"></i>
+                                        <i class="mdi mdi-calendar-text"></i>
                                         <span> Informasi </span>
                                         <span class="float-right">
                                             <i class="mdi mdi-chevron-right"></i>
@@ -159,6 +182,12 @@
                                         </li>
                                         <li>
                                             <a href="{{route('sambutan')}}">Sambutan kepala Sekolah</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('galeri')}}">Galeri</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('cermus')}}">Cerita Muhasa</a>
                                         </li>
                                     </ul>
                                 </li>

@@ -97,12 +97,12 @@
     <div class="container" data-aos="fade-up">
         <div class="row">
         <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-            <img src="/storage/lainya/{{$fotoKepsek->lainya}}" class="img-fluid" alt="">
+            <img src="/storage/lainya/{{$fotoKepsek}}" class="img-fluid" alt="">
         </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <div class="section-title">
                 <h2>Kepala Sekolah</h2>
-                <p>Yanur Setyaningrum, M.Pd</p>
+                <p>{{$nama_kepsek}}</p>
             </div>
                     <!-- <summary>Sambutan Kepala Sekolah</summary> -->
                     <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
@@ -114,7 +114,7 @@
                         Baca Selengkapnya
                     </summary>
                     <p id="sambutan">
-                        {{$sambutan->lainya}}
+                        {{$sambutan}}
                     </p>
                     <h3>Wassalamu’alaikum Warahmatullahi Wabarakatuh</h3>
                     <p style="text-align: right;">
@@ -145,7 +145,7 @@
                 <span>Misi</span>
                 <ul>
                     @foreach($misi as $value)
-                    <li><i class="bi bi-check-circle"></i> {{$value->lainya}}</li>
+                        <li><i class="bi bi-check-circle"></i> {{$value->lainya}}</li>
                     @endforeach
                 </ul>
             </div>
@@ -358,11 +358,11 @@
         </div>
 
         <div class="row g-4 portfolio-container">
+            @foreach($galeri as $value)
             <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                 <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru.jpg" alt="">
+                    <img class="img-fluid" src="/storage/lainya/{{$value->lainya}}" alt="">
                     <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Landscaping</h4>
                         <div class="d-flex">
                             <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
@@ -370,66 +370,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru1.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Pruning plants</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru2.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Irrigation & Drainage</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru3.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Garden Maintenance</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru4.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Green Technology</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/galeri/guru5.jpg" alt="">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Urban Gardening</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
