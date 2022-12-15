@@ -32,27 +32,23 @@ use App\Http\Middleware\CheckRoleSiswa;
 //     return view('index');
 // });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
-
 Route::get('/cermus', function () {
     return view('cermus');
-});
-
-Route::get('/galeri', function () {
-    return view('galeri');
 });
 
 Route::get('/matapelajaran', function () {
     return view('matpel');
 });
 
+Route::get('/permatapelajaran', function () {
+    return view('permatpel');
+});
+
 Route::get('/ppdb', function () {
     return view('ppdb');
 });
 
-Route::get('/aksi', function () {
+Route::get('/aksimuhasa', function () {
     return view('aksi');
 });
 
