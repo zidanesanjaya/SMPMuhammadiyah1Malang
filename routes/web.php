@@ -16,6 +16,8 @@ use App\Http\Controllers\UmumController;
 use App\Http\Middleware\CheckRoleAdmin;
 use App\Http\Middleware\CheckRoleUser;
 use App\Http\Middleware\CheckRoleSiswa;
+use App\Http\Middleware\multipleRole;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -71,13 +73,15 @@ Route::post('registration_ppdb', [AuthController::class, 'Registration_Ppdb'])->
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin'])->name('dashboard_admin'); 
 
+    Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin'])->name('dashboard_admin'); 
+    
     Route::middleware([CheckRoleAdmin::class])->group(function(){
         //json
         Route::get('json_vw_histori_pembayaran/{id}', [GelombangController::class, 'json_vw_histori_pembayaran'])->name('json_vw_histori_pembayaran');
         Route::get('json_detail_siswa_by_id/{id}', [AdminController::class, 'get_json_detail_siswa'])->name('detail_siswa_by_id');
         Route::get('json_gelombang', [AdminController::class, 'get_json_gelombang'])->name('json_gelombang');
+        
         //Gelombang
         Route::get('gelombang', [GelombangController::class, 'index'])->name('gelombang'); 
         Route::get('list_pembayaran_lunas_page', [GelombangController::class, 'list_pembayaran_lunas_page'])->name('list_pembayaran_lunas_page');
@@ -89,17 +93,7 @@ Route::group(['middleware' => ['auth']], function() {
             Route::put('update_gelombang', [GelombangController::class, 'update_gelombang'])->name('update.gelombang'); 
             Route::delete('destroy_gelombang/{id}', [GelombangController::class, 'destroy_gelombang'])->name('gelombang.destroy');
     
-        //Informasi
-        Route::get('sambutan', [informasiController::class, 'sambutan'])->name('sambutan'); 
-        Route::get('visimisi', [informasiController::class, 'visimisi_page'])->name('visimisi_page'); 
-        Route::get('galeri', [informasiController::class, 'galeri'])->name('galeri'); 
-        Route::get('cermus', [informasiController::class, 'cermus'])->name('cermus'); 
-            Route::put('store_sambutan', [informasiController::class, 'insert_sambutan'])->name('store.sambutan'); 
-            Route::post('store_visimisi', [informasiController::class, 'insert_visi_misi'])->name('store.visimisi'); 
-            Route::post('store_galeri', [informasiController::class, 'insert_galeri'])->name('store.galeri'); 
-            Route::post('store_cermus', [informasiController::class, 'insert_cermus'])->name('store.cermus'); 
-            Route::delete('delete_galeri/{id}', [informasiController::class, 'destroy_galeri'])->name('destroy.galeri'); 
-            Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi'); 
+        // //Informasi
 
         //Sosial Media
         Route::get('sosial_media', [SosialMediaController::class, 'sosial_media_page'])->name('sosial_media.page'); 
@@ -123,19 +117,18 @@ Route::group(['middleware' => ['auth']], function() {
             Route::post('store_kelas', [KelasController::class, 'store_kelas'])->name('store.kelas'); 
     });
 
-
-    Route::middleware([CheckRoleUser::class])->group(function(){
-        //Informasi
-        Route::get('sambutan', [informasiController::class, 'sambutan'])->name('sambutan'); 
-        Route::get('visimisi', [informasiController::class, 'visimisi_page'])->name('visimisi_page'); 
-        Route::get('galeri', [informasiController::class, 'galeri'])->name('galeri'); 
-        Route::get('cermus', [informasiController::class, 'cermus'])->name('cermus'); 
-            Route::put('store_sambutan', [informasiController::class, 'insert_sambutan'])->name('store.sambutan'); 
-            Route::post('store_visimisi', [informasiController::class, 'insert_visi_misi'])->name('store.visimisi'); 
-            Route::post('store_galeri', [informasiController::class, 'insert_galeri'])->name('store.galeri'); 
-            Route::post('store_cermus', [informasiController::class, 'insert_cermus'])->name('store.cermus'); 
-            Route::delete('delete_galeri/{id}', [informasiController::class, 'destroy_galeri'])->name('destroy.galeri'); 
-            Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi'); 
+    Route::group(['middleware' => ['multipleRole']], function() {
+         //Informasi
+         Route::get('sambutan', [informasiController::class, 'sambutan'])->name('sambutan'); 
+         Route::get('visimisi', [informasiController::class, 'visimisi_page'])->name('visimisi_page'); 
+         Route::get('galeri', [informasiController::class, 'galeri'])->name('galeri'); 
+         Route::get('cermus', [informasiController::class, 'cermus'])->name('cermus'); 
+             Route::put('store_sambutan', [informasiController::class, 'insert_sambutan'])->name('store.sambutan'); 
+             Route::post('store_visimisi', [informasiController::class, 'insert_visi_misi'])->name('store.visimisi'); 
+             Route::post('store_galeri', [informasiController::class, 'insert_galeri'])->name('store.galeri'); 
+             Route::post('store_cermus', [informasiController::class, 'insert_cermus'])->name('store.cermus'); 
+             Route::delete('delete_galeri/{id}', [informasiController::class, 'destroy_galeri'])->name('destroy.galeri'); 
+             Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi'); 
     });
 
     Route::middleware([CheckRoleSiswa::class])->group(function(){

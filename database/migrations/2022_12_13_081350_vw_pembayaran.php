@@ -24,7 +24,7 @@ return new class extends Migration
                 (
                 SELECT
                     c.id as id_user,
-                    C.nama_lengkap,
+                    max( C.nama_lengkap),
                     MAX( c.id_gelombang ) AS id_gelombang,
                     MAX( d.nama_gelombang ) AS nama_gelombang,
                     SUM( a.pembayaran ) AS setoran,

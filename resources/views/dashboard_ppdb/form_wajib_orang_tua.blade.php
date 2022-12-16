@@ -183,11 +183,11 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="">Pendidikan Wali </label>
+                                <label class="">Pendidikan Ibu </label>
                                 <input class="form-control" name="pendidikan_ibu" type="text">   
                             </div>
                             <div class="col">
-                                <label class="">Pekerjaan Wali </label>
+                                <label class="">Pekerjaan Ibu </label>
                                 <input class="form-control" name="pekerjaan_ibu" type="text">   
                             </div>
                         </div>
