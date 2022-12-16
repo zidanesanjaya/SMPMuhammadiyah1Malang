@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('judul'); 
             $table->string('foto');
             $table->string('deskripsi');
-            $table->unsignedBigInteger('created_by'); // FK
-            $table->unsignedBigInteger('updated_by'); // FK
+            $table->string('created_by')->nullable(); // FK
+            $table->string('updated_by')->nullable(); // FK
             $table->timestamps();
         });
     }

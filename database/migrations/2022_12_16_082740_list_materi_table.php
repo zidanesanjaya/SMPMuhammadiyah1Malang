@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kelas', function (Blueprint $table) {
+        Schema::create('list_materi', function (Blueprint $table) {
             $table->id();
-            $table->integer('nama_kelas'); 
-            $table->string('var_1')->nullable();
-            $table->string('var_2')->nullable();
+            $table->string('nama_materi')->nullable(); 
             $table->timestamps();
         });
     }

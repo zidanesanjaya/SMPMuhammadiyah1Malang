@@ -141,6 +141,26 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-book-open-page-variant"></i>
+                                        <span> Pembelajaran </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#">Tambah Materi Baru</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('page.list_materi')}}">Master Materi</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('page.list_guru')}}">Master Guru</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             @elseif(Auth::user()->role == 'admin')
                                 <li>
                                     <a href="{{route('dashboard_admin')}}" class="waves-effect">
@@ -188,6 +208,26 @@
                                         </li>
                                         <li>
                                             <a href="{{route('cermus')}}">Cerita Muhasa</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-book-open-page-variant"></i>
+                                        <span> Pembelajaran </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="{{route('page.materi')}}">Tambah Materi Baru</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('page.list_materi')}}">Master Materi</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('page.list_guru')}}">Master Guru</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -364,6 +404,10 @@
 
         <!-- Plugins Init js -->
         <script src="/admin/assets/pages/form-advanced.js"></script>
+
+        <!--Wysiwig js-->
+        <script src="/admin/assets/plugins/tinymce/tinymce.min.js"></script>
+        <script src="/admin/assets/pages/form-editor-init.js"></script>
 
           <!-- Required datatable js -->
         <script src="/admin/assets/plugins/datatables/jquery.dataTables.min.js"></script>

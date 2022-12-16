@@ -10,6 +10,7 @@ use App\Http\Controllers\SosialMediaController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\informasiController;
 use App\Http\Controllers\UmumController;
+use App\Http\Controllers\PembelajaranController;
 
 
 
@@ -71,6 +72,7 @@ Route::post('login_ppdb', [AuthController::class, 'login'])->name('login.login_p
 Route::post('login_admin_auth', [AuthController::class, 'login_admin_auth'])->name('login.login_admin_auth'); 
 Route::post('registration_ppdb', [AuthController::class, 'Registration_Ppdb'])->name('register.register_ppdb'); 
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
+Route::get('detail_cermus/{id}', [UmumController::class, 'detail_cermus'])->name('detail_cermus'); 
 
 Route::group(['middleware' => ['auth']], function() {
 
@@ -122,13 +124,27 @@ Route::group(['middleware' => ['auth']], function() {
          Route::get('sambutan', [informasiController::class, 'sambutan'])->name('sambutan'); 
          Route::get('visimisi', [informasiController::class, 'visimisi_page'])->name('visimisi_page'); 
          Route::get('galeri', [informasiController::class, 'galeri'])->name('galeri'); 
-         Route::get('cermus', [informasiController::class, 'cermus'])->name('cermus'); 
+         Route::get('cermus', [informasiController::class, 'cerita_muhasa'])->name('cermus'); 
+         Route::get('cermus_edit/{id}', [informasiController::class, 'cerita_muhasa_edit'])->name('page.edit_cermus'); 
+            Route::put('update_sambutan/{id}', [informasiController::class, 'update_cermus'])->name('update.cermus'); 
              Route::put('store_sambutan', [informasiController::class, 'insert_sambutan'])->name('store.sambutan'); 
              Route::post('store_visimisi', [informasiController::class, 'insert_visi_misi'])->name('store.visimisi'); 
              Route::post('store_galeri', [informasiController::class, 'insert_galeri'])->name('store.galeri'); 
              Route::post('store_cermus', [informasiController::class, 'insert_cermus'])->name('store.cermus'); 
              Route::delete('delete_galeri/{id}', [informasiController::class, 'destroy_galeri'])->name('destroy.galeri'); 
-             Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi'); 
+             Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi');
+             Route::delete('delete_cermus/{id}', [informasiController::class, 'destroy_cermus'])->name('destroy.cermus'); 
+        //Pembelajaran
+        Route::get('list_materi', [PembelajaranController::class, 'list_materi'])->name('page.list_materi'); 
+        Route::get('list_guru', [PembelajaranController::class, 'list_guru'])->name('page.list_guru'); 
+        Route::get('materi', [PembelajaranController::class, 'materi'])->name('page.materi'); 
+            Route::post('store_src', [PembelajaranController::class, 'insert_materi'])->name('store.materi'); 
+            Route::post('store_materi', [PembelajaranController::class, 'insert_list_materi'])->name('store.list_materi'); 
+            Route::post('store_guru', [PembelajaranController::class, 'insert_guru'])->name('store.guru'); 
+            Route::delete('delete_guru/{id}', [PembelajaranController::class, 'destroy_guru'])->name('destroy.guru'); 
+            Route::delete('delete_list_materi/{id}', [PembelajaranController::class, 'destroy_list_materi'])->name('destroy.list_materi'); 
+            Route::delete('delete_materi/{id}', [PembelajaranController::class, 'destroy_materi'])->name('destroy.materi'); 
+
     });
 
     Route::middleware([CheckRoleSiswa::class])->group(function(){

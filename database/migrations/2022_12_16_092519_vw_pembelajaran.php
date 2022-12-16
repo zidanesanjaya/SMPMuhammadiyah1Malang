@@ -13,10 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('cerita_muhasa', function (Blueprint $table) {
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');;
-            $table->foreign('updated_by')->references('id')->on('users')->onDelete('cascade');;
-       });
+        DB::statement("
+        CREATE VIEW VW_PEMBELAJARAN as (SELECT
+        a.*,
+        b.nama_materi,
+        c.nama_guru 
+        FROM
+        materi AS a
+        LEFT JOIN list_materi AS b ON a.id_list_materi = b.id
+        LEFT JOIN guru as c ON a.id_guru = c.id);
+        ");
     }
 
     /**

@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('materi', function (Blueprint $table) {
-            $table->foreign('id_kelas')->references('id')->on('kelas')->onDelete('cascade');
-       });
+        Schema::create('guru', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_guru')->nullable(); 
+            $table->timestamps();
+        });
     }
 
     /**

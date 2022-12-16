@@ -24,6 +24,14 @@
     <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+        .course-content .deskripsi{
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 400px;
+            }
+    </style>
 
     <!-- Template Main CSS File -->
     <link href="/css/style.css" rel="stylesheet">
@@ -274,69 +282,34 @@
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
+
+        @foreach($cermus as $value)
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-            <img src="/img/course-1.jpg" class="img-fluid" alt="...">
-            <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4>Web Development</h4>
-                <p class="price">$169</p>
-                </div>
+            <img src="/storage/lainya/{{$value->foto}}" class="img-fluid" alt="...">
+                <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3 row">
+                        <div class="col-7">
+                            <h3 class="bg-white"><a href="{{route('detail_cermus' , $value->id)}}">{{$value->judul}}</a></h3>
+                        </div>
+                        <div class="col">
+                            <p class="price">{{date("d-m-Y", strtotime($value->created_at))}}</p>
+                        </div>
+                    </div>
 
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/user.png" class="img-fluid" alt="">
-                        <span>Antonio</span>
+                    <div class="deskripsi">
+                        <?php echo $value->deskripsi ?>
+                    </div>
+                    <div class="trainer d-flex justify-content-between align-items-center">
+                        <div class="trainer-profile d-flex align-items-center">
+                            <img src="/img/user.png" class="img-fluid" alt="">
+                            <span>{{$value->created_by}}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div> <!-- End Course Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-            <img src="/img/course-2.jpg" class="img-fluid" alt="...">
-            <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4>Marketing</h4>
-                <p class="price">$250</p>
-                </div>
-
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/user.png" class="img-fluid" alt="">
-                        <span>Lana</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div> <!-- End Course Item-->
-
-        
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-            <img src="/img/course-3.jpg" class="img-fluid" alt="...">
-            <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4>Content</h4>
-                    <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                    <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                    <div class="trainer-profile d-flex align-items-center">
-                        <img src="/img/user.png" class="img-fluid" alt="">
-                        <span>Brandon</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
+        @endforeach
         <!-- End Course Item-->
         
         </div>

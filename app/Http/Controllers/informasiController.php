@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\informasi_lainya;
+use App\Models\cerita_muhasa;
 use DB;
+use Auth;
 
 use Illuminate\Http\Request;
 
@@ -16,17 +18,27 @@ class informasiController extends Controller
         $galeri = DB::table('informasi_lainya')->where('type','galeri')->get();
         return view('dashboard_admin.informasi.galeri',['galeri'=>$galeri]);
     }
+    public function cerita_muhasa(){
+        $cerita_muhasa = DB::table('cerita_muhasa')->get();
+        return view('dashboard_admin.informasi.cermus',['cermus'=>$cerita_muhasa]);
+    }
+    public function cerita_muhasa_edit($id){
+        $cerita_muhasa = DB::table('cerita_muhasa')->where('id',$id)->first();
+        return view('dashboard_admin.informasi.edit_cermus',['cermus'=>$cerita_muhasa]);
+    }
     public function destroy_galeri($id){
         informasi_lainya::destroy($id);
         return redirect()->route('galeri')->with('msg-green','Success Menghapus Foto');
+    }
+    public function destroy_cermus($id){
+        cerita_muhasa::destroy($id);
+        return redirect()->route('cermus')->with('msg-red','Success Menghapus Foto');
     }
     public function destroy_visimisi($id){
         informasi_lainya::destroy($id);
         return redirect()->route('visimisi_page')->with('msg-green','Success Menghapus Visi / Misi');
     }
-    public function cermus(){
-        return view('dashboard_admin.informasi.cermus');
-    }
+
     public function sambutan(){
         $sambutan = DB::table('informasi_lainya')->where('type','sambutan')->first();
         $nama_kepsek = DB::table('informasi_lainya')->where('type','nama_kepsek')->first();
@@ -63,8 +75,47 @@ class informasiController extends Controller
 
         return redirect()->route('galeri')->with('msg-green','Success Menambahkan Foto');
     }
-    public function insert_cermus(Request $request){
 
+    public function insert_cermus(Request $request){
+        $filenameWithExt = $request->file('foto')->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('foto')->getClientOriginalExtension();
+        $fileNameToStore = $filename.'_'.time().'.'.$extension;
+        // Upload Image
+        $path = $request->file('foto')->storeAs('public/lainya',$fileNameToStore);
+
+        $cerita_muhasa = new cerita_muhasa();
+        $cerita_muhasa->foto = $fileNameToStore;
+        $cerita_muhasa->judul = $request->judul;
+        $cerita_muhasa->deskripsi = $request->deskripsi;
+        $cerita_muhasa->created_by = Auth::user()->name;
+        $cerita_muhasa->created_at = date("Y-m-d");
+        $cerita_muhasa->save();
+
+        return redirect()->route('cermus')->with('msg-green','Success Menambahkan Cerita Muhasa');
+    }
+    public function update_cermus(Request $request , $id){
+        $cerita_muhasa = cerita_muhasa::findOrFail($id);
+
+        if($request->hasFile('foto')){
+            $filenameWithExt = $request->file('foto')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('foto')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('foto')->storeAs('public/lainya',$fileNameToStore);
+
+            $cerita_muhasa->foto = $fileNameToStore;
+        }
+       
+
+        $cerita_muhasa->judul = $request->judul;
+        $cerita_muhasa->deskripsi = $request->deskripsi;
+        $cerita_muhasa->updated_by = Auth::user()->name;
+        $cerita_muhasa->updated_at = date("Y-m-d");
+        $cerita_muhasa->save();
+
+        return redirect()->route('cermus')->with('msg-green','Success Edit Cerita Muhasa');
     }
     public function insert_visi_misi(Request $request){
         $visimisi = new informasi_lainya();
