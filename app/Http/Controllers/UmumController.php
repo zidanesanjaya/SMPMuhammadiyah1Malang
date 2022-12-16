@@ -29,4 +29,19 @@ class UmumController extends Controller
         $cermus_list = DB::table('cerita_muhasa')->take(5)->get();
         return view('dashboard_admin.informasi.detail_cermus',['cermus'=>$cermus,'cermus_list'=>$cermus_list]);
     }
+    public function cermus(){
+        $cermus_list = DB::table('cerita_muhasa')->get();
+        return view('cermus',['cermus_list'=>$cermus_list]);
+    }
+    public function matpel(){
+        $matpel = DB::table('vw_matpel')->get();
+        return view('matpel',['matpel'=>$matpel]);
+    }
+    public function detail_mapel($kelas , $mata_pelajaran , $nama_guru){
+        $matpel = DB::table('vw_pembelajaran')->where('kelas',$kelas)
+                                        ->where('nama_materi',$mata_pelajaran)
+                                        ->where('nama_guru',$nama_guru)
+                                        ->get();
+        return view('permatpel',['matpel'=>$matpel , 'nama_mapel'=>$mata_pelajaran]);
+    }
 }

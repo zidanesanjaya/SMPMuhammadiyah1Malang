@@ -28,10 +28,10 @@
     <!-- Template Main CSS File -->
     <link href="/css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="matpel/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="matpel/assets/css/templatemo-edu-meeting.css">
-    <link rel="stylesheet" href="matpel/assets/css/owl.css">
-    <link rel="stylesheet" href="matpel/assets/css/lightbox.css">
+    <link rel="stylesheet" href="/matpel/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/matpel/assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="/matpel/assets/css/owl.css">
+    <link rel="stylesheet" href="/matpel/assets/css/lightbox.css">
 <!--
 
 TemplateMo 569 Edu Meeting
@@ -68,20 +68,22 @@ https://templatemo.com/tm-569-edu-meeting
             <div class="col-lg-12">
               <div class="filters">
                 <ul>
-                  <li class="active">Materi PPKN</li>
+                  <li class="active">Materi {{$nama_mapel}}</li>
                 </ul>
               </div>
-              <div class="col-lg-4 templatemo-item-col all kelas7">
+              @foreach($matpel as $value)
+                <div class="col-lg-4 templatemo-item-col all kelas7">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
-                        <h6>Materi <span>1</span></h6>
+                        <h6>Materi <span>{{$value->materi_ke}}</span></h6>
                       </div>
-                      <a href="#"><h4>(Nama Materi)</h4></a>
-                      <p>(PDF Download)</p>
+                      <span><h4>{{$value->nama_materi}}</h4></span>
+                      <p><a href="/storage/materi/{{$value->src1}}">{{pathinfo($value->src1, PATHINFO_EXTENSION);}}</a> , <a href="/storage/materi/{{$value->src2}}">{{pathinfo($value->src2, PATHINFO_EXTENSION);}}</a> , <a href="/storage/materi/{{$value->src3}}">{{pathinfo($value->src3, PATHINFO_EXTENSION);}}</a></p>
                     </div>
                   </div>
                 </div>
+                @endforeach
             </div>
           </div>
         </div>

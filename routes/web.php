@@ -35,17 +35,17 @@ use App\Http\Middleware\multipleRole;
 //     return view('index');
 // });
 
-Route::get('/cermus', function () {
+Route::get('/cermus1', function () {
     return view('cermus');
 });
 
-Route::get('/matapelajaran', function () {
-    return view('matpel');
-});
+// Route::get('/matapelajaran', function () {
+//     return view('matpel');
+// });
 
-Route::get('/permatapelajaran', function () {
-    return view('permatpel');
-});
+// Route::get('/permatapelajaran', function () {
+//     return view('permatpel');
+// });
 
 Route::get('/ppdb', function () {
     return view('ppdb');
@@ -73,6 +73,9 @@ Route::post('login_admin_auth', [AuthController::class, 'login_admin_auth'])->na
 Route::post('registration_ppdb', [AuthController::class, 'Registration_Ppdb'])->name('register.register_ppdb'); 
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 Route::get('detail_cermus/{id}', [UmumController::class, 'detail_cermus'])->name('detail_cermus'); 
+Route::get('mata_pelajaran_detail/{kelas}/{nama_materi}/{nama_guru}', [UmumController::class, 'detail_mapel'])->name('page.matpel_detail'); 
+Route::get('mata_pelajaran', [UmumController::class, 'matpel'])->name('page.matpel'); 
+Route::get('cermus_list/', [UmumController::class, 'cermus'])->name('cermus.list'); 
 
 Route::group(['middleware' => ['auth']], function() {
 
@@ -135,6 +138,7 @@ Route::group(['middleware' => ['auth']], function() {
              Route::delete('delete_visi_misi/{id}', [informasiController::class, 'destroy_visimisi'])->name('destroy.visimisi');
              Route::delete('delete_cermus/{id}', [informasiController::class, 'destroy_cermus'])->name('destroy.cermus'); 
         //Pembelajaran
+        
         Route::get('list_materi', [PembelajaranController::class, 'list_materi'])->name('page.list_materi'); 
         Route::get('list_guru', [PembelajaranController::class, 'list_guru'])->name('page.list_guru'); 
         Route::get('materi', [PembelajaranController::class, 'materi'])->name('page.materi'); 

@@ -59,7 +59,7 @@
             <li><a href="#main">Profile</a></li>
             <li><a href="#cermus">Cerita Muhasa</a></li>
             <li><a href="#galeri">Galeri</a></li>
-            <li><a href="{{ url ('http://127.0.0.1:8000/matapelajaran') }}">Mata Pelajaran</a></li>
+            <li><a href="{{ route('page.matpel') }}">Mata Pelajaran</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/aksimuhasa') }}">AKSI</a></li>
         </ul>
@@ -314,7 +314,7 @@
         
         </div>
         <div class="mt-3 d-flex flex-row-reverse p-2 bd-highlight">
-                <a href="{{ url ('http://127.0.0.1:8000/cermus') }}" class="get-started-btn">Berita Lainnya</a>
+                <a href="{{ route('cermus.list') }}" class="get-started-btn">Berita Lainnya</a>
         </div>
     </div>
     </section><!-- End Popular Courses Section -->

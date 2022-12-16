@@ -33,6 +33,7 @@ class PembelajaranController extends Controller
 
         return redirect()->route('page.list_guru')->with('success','Berhasil Menambahkan Guru Baru');
     }
+   
     public function insert_materi(Request $request){
         $materi = new materi();
 
@@ -40,6 +41,37 @@ class PembelajaranController extends Controller
         $materi->kelas = $request->list_kelas;
         $materi->id_guru = $request->id_guru;
         $materi->id_list_materi = $request->id_list_materi;
+
+        if($request->hasFile('src1')){
+            $filenameWithExt = $request->file('src1')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('src1')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('src1')->storeAs('public/materi',$fileNameToStore);
+
+            $materi->src1 =  $fileNameToStore;
+        }
+        if($request->hasFile('src2')){
+            $filenameWithExt = $request->file('src2')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('src2')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('src2')->storeAs('public/materi',$fileNameToStore);
+
+            $materi->src2 =  $fileNameToStore;
+        }
+        if($request->hasFile('src3')){
+            $filenameWithExt = $request->file('src3')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('src3')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('src3')->storeAs('public/materi',$fileNameToStore);
+
+            $materi->src3 =  $fileNameToStore;
+        }
 
         $materi->save();
 
