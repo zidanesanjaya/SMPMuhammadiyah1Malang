@@ -19,6 +19,6 @@ class CheckRoleUser
         if (auth()->user()->role == 'user') {
             return $next($request);
         }
-        return response()->json('Anda Tidak Dapat Akses Halaman Ini');
+        return response()->json('Halaman Ini Hanya Bisa Diakses Oleh User(Karyawan)');
     }
 }

@@ -20,6 +20,6 @@ class CheckRoleAdmin
         if (auth()->user()->role == 'admin') {
             return $next($request);
         }
-        return response()->json('Anda Tidak Dapat Akses Halaman Ini');
+        return response()->json('Halaman Ini Hanya Bisa Diakses oleh Admin');
     }
 }
