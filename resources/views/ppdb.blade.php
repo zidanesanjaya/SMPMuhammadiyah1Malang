@@ -80,7 +80,7 @@
                 <a href="{{ url ('http://127.0.0.1:8000/ppdb') }}" class="nav-item nav-link active">HOME</a>
                 <a href="#about" class="nav-item nav-link">TENTANG KAMI</a>
                 <a href="#kegiatan" class="nav-item nav-link">KEGIATAN KAMI</a>
-                <a href="{{ url ('http://127.0.0.1:8000/cermus') }}" class="nav-item nav-link" target="_blank">CERITA MUHASA</a>
+                <a href="{{ url ('http://127.0.0.1:8000/cermus_list') }}" class="nav-item nav-link" target="_blank">CERITA MUHASA</a>
                 <a href="{{ url ('http://127.0.0.1:8000/register') }}" class="nav-item nav-link">DAFTAR PPDB</a>
                 <a href="{{ url ('http://127.0.0.1:8000/login') }}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-lg-block nav-item nav-link">MASUK<i class="fa fa-arrow-right ms-3"></i></a>
             </div>

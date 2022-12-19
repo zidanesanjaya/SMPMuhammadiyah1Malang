@@ -29,7 +29,9 @@
             word-wrap: break-word;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 400px;
+            max-width: 300px;
+            white-space: nowrap;
+            
             }
     </style>
 
@@ -285,7 +287,7 @@
 
         @foreach($cermus as $value)
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
+            <div class="course-item shadow-sm bg-body rounded">
             <img src="/storage/lainya/{{$value->foto}}" alt="..." width="394px" height="325px">
                 <div class="course-content">
                     <div class="d-flex justify-content-between align-items-center mb-3 row">

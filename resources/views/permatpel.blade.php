@@ -49,13 +49,9 @@ https://templatemo.com/tm-569-edu-meeting
     <h1 class="logo me-auto"><a href="{{ url ('http://127.0.0.1:8000/') }}">SMP MUHASA</a></h1>
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo me-auto"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
-
-    <nav id="navbar" class="navbar order-last order-lg-0">
-        <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
     <!-- .navbar -->
 
-    <a href="{{ url ('http://127.0.0.1:8000/matapelajaran') }}" class="get-started-btn">Kembali</a>
+    <a href="{{ url ('http://127.0.0.1:8000/mata_pelajaran') }}" class="get-started-btn">Kembali</a>
 
     </div>
 </header><!-- End Header -->
@@ -71,8 +67,9 @@ https://templatemo.com/tm-569-edu-meeting
                   <li class="active">Materi {{$nama_mapel}}</li>
                 </ul>
               </div>
+              <div class="row">
               @foreach($matpel as $value)
-                <div class="col-lg-4 templatemo-item-col all kelas7">
+                <div class="col-lg-4 templatemo-item-col">
                   <div class="meeting-item">
                     <div class="down-content">
                       <div class="date">
@@ -84,6 +81,7 @@ https://templatemo.com/tm-569-edu-meeting
                   </div>
                 </div>
                 @endforeach
+              </div>
             </div>
           </div>
         </div>

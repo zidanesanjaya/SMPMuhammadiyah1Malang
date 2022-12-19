@@ -50,11 +50,6 @@ https://templatemo.com/tm-569-edu-meeting
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo me-auto"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <nav id="navbar" class="navbar order-last order-lg-0">
-        <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-    <!-- .navbar -->
-
     <a href="{{ url ('http://127.0.0.1:8000/') }}" class="get-started-btn">Kembali</a>
 
     </div>

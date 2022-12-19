@@ -26,7 +26,15 @@
 
   <!-- Template Main CSS File -->
   <link href="/css/style.css" rel="stylesheet">
-
+  <style>
+      .course-content .deskripsi{
+          word-wrap: break-word;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 300px;
+          white-space: nowrap;
+          }
+  </style>
 </head>
 
 <body>
