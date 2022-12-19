@@ -15,7 +15,7 @@ class UmumController extends Controller
         $sambutan = DB::table('informasi_lainya')->where('type','sambutan')->first();
         $nama_kepsek = DB::table('informasi_lainya')->where('type','nama_kepsek')->first();
         $galeri =DB::table('informasi_lainya')->where('type','galeri')->get();
-        $cermus = DB::table('cerita_muhasa')->take(3)->get();
+        $cermus = DB::table('cerita_muhasa')->take(3)->orderBy('created_at', 'desc')->get();
 
         $fotoKepsek = $fotoKepsek == null ? null : $fotoKepsek->lainya;
         $sambutan = $sambutan == null ? null : $sambutan->lainya;

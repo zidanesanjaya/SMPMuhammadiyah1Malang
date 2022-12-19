@@ -44,7 +44,7 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <!-- .navbar -->
-            <a href="{{ url ('http://127.0.0.1:8000/') }}" class="get-started-btn">Kembali</a>
+            <a href="{{ url ('http://127.0.0.1:8000/cermus_list') }}" class="get-started-btn">Kembali</a>
             </div>
         </header><!-- End Header -->
         <div class="container-xl p-3 mt-5 border pt-5">
@@ -81,7 +81,7 @@
                 @foreach($cermus_list as $value)
                     <div class="align-items-stretch">
                         <div class="course-item">
-                        <img src="/storage/lainya/{{$value->foto}}" class="img-fluid" alt="...">
+                        <img src="/storage/lainya/{{$value->foto}}" alt="..." width="394px" height="325px">
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3 row mt-2">
                                     <div class="col-7">

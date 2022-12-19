@@ -63,7 +63,7 @@
         @foreach($cermus_list as $value)
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-            <img src="/storage/lainya/{{$value->foto}}" class="img-fluid" alt="...">
+            <img src="/storage/lainya/{{$value->foto}}" alt="..." width="394px" height="325px">
                 <div class="course-content">
                     <div class="d-flex justify-content-between align-items-center mb-3 row">
                         <div class="col-7">
