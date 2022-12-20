@@ -51,9 +51,9 @@ Route::get('/ppdb', function () {
     return view('ppdb');
 });
 
-Route::get('/aksimuhasa', function () {
-    return view('aksi');
-});
+// Route::get('/aksimuhasa', function () {
+//     return view('aksi');
+// });
 
 Route::get('wizard', function () {
     return view('default');
@@ -61,6 +61,7 @@ Route::get('wizard', function () {
 
 Route::get('/', [UmumController::class, 'index']);
 
+Route::get('aksimuhasa', [UmumController::class, 'aksi'])->name('aksi.page'); 
 
 // Login And Register Page
 Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -120,6 +121,17 @@ Route::group(['middleware' => ['auth']], function() {
         Route::get('list_kelas', [KelasController::class, 'kelas_page'])->name('kelas.page'); 
             Route::delete('destroy_kelas/{id}', [KelasController::class, 'destroy_kelas'])->name('kelas.destroy');
             Route::post('store_kelas', [KelasController::class, 'store_kelas'])->name('store.kelas'); 
+
+        //lomba
+        Route::get('timeline', [InformasiController::class, 'timeline'])->name('timeline.page'); 
+        Route::get('macam_lomba', [InformasiController::class, 'macam_lomba'])->name('macamlomba.page');
+        Route::get('narahubung', [InformasiController::class, 'narahubung'])->name('narahubung.page');
+        Route::get('edit_narahubung/{id}', [InformasiController::class, 'edit_narahubung'])->name('edit_narahubung.page');
+            Route::post('store_timeline', [InformasiController::class, 'store_timeline'])->name('store.timeline'); 
+            Route::post('store_lomba', [InformasiController::class, 'store_lomba'])->name('store.lomba');
+            Route::put('update_narahubung/{id}', [InformasiController::class, 'update_narahubung'])->name('update.narahubung');
+            Route::delete('destroy_timeline/{id}', [InformasiController::class, 'destroy_timeline'])->name('timeline.destroy');
+            Route::delete('destroy_lomba/{id}', [InformasiController::class, 'destroy_lomba'])->name('lomba.destroy');
     });
 
     Route::group(['middleware' => ['multipleRole']], function() {

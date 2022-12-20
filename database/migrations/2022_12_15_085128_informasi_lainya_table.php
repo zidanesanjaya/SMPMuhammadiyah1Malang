@@ -19,6 +19,10 @@ return new class extends Migration
             $table->text('lainya')->nullable();
             $table->text('var1')->nullable();
             $table->text('var2')->nullable();
+            $table->text('var3')->nullable();
+            $table->text('var4')->nullable();
+            $table->date('var5')->nullable();
+
             $table->timestamps();
         });
     }

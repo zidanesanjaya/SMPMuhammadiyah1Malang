@@ -14,6 +14,18 @@ class informasiController extends Controller
         $visimisi = DB::table('informasi_lainya')->where('type','visi')->orwhere('type','misi')->get();
         return view('dashboard_admin.informasi.visimisi',['visimisi'=>$visimisi]);
     }
+    public function timeline(){
+        $timeline = DB::table('informasi_lainya')->where('type','timeline')->get();
+        return view('dashboard_admin.informasi_lomba.timeline',['timeline'=>$timeline]);
+    }
+    public function macam_lomba(){
+        $lomba = DB::table('informasi_lainya')->where('type','lomba')->get();
+        return view('dashboard_admin.informasi_lomba.macam_lomba',['lomba'=>$lomba]);
+    }
+    public function narahubung(){
+        $lomba = DB::table('informasi_lainya')->where('type','narahubung1')->orwhere('type','narahubung2')->get();
+        return view('dashboard_admin.informasi_lomba.narahubung',['narahubung'=>$lomba]);
+    }
     public function galeri(){
         $galeri = DB::table('informasi_lainya')->where('type','galeri')->get();
         return view('dashboard_admin.informasi.galeri',['galeri'=>$galeri]);
@@ -74,6 +86,43 @@ class informasiController extends Controller
         $galeri->save();
 
         return redirect()->route('galeri')->with('msg-green','Success Menambahkan Foto');
+    }
+
+    public function store_lomba(Request $request){
+        $filenameWithExt = $request->file('foto')->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('foto')->getClientOriginalExtension();
+        $fileNameToStore = $filename.'_'.time().'.'.$extension;
+        // Upload Image
+        $path = $request->file('foto')->storeAs('public/lomba',$fileNameToStore);
+
+        $filenameWithExtPdf = $request->file('pdf')->getClientOriginalName();
+        $filenamePdf = pathinfo($filenameWithExtPdf, PATHINFO_FILENAME);
+        $extensionPdf = $request->file('pdf')->getClientOriginalExtension();
+        $fileNameToStorePdf = $filenamePdf.'_'.time().'.'.$extensionPdf;
+        // Upload Image
+        $pathLomba = $request->file('pdf')->storeAs('public/lomba',$fileNameToStorePdf);
+
+        $lomba = new informasi_lainya();
+        $lomba->type = 'lomba';
+        $lomba->lainya = $request->nama_lomba;
+        $lomba->var1 = $request->deskripsi;
+        $lomba->var2 = $request->link;
+        $lomba->var3 = $fileNameToStore;
+        $lomba->var4 = $fileNameToStorePdf;
+
+        $lomba->save();
+
+        return redirect()->route('macamlomba.page')->with('msg-green','Success Menambahkan Lomba');
+    }
+    public function store_timeline(Request $request){
+        $timeline = new informasi_lainya();
+        $timeline->type = 'timeline';
+        $timeline->lainya = $request->deskripsi;
+        $timeline->var5 = $request->tanggal;
+        $timeline->save();
+        return redirect()->route('timeline.page')->with('msg-green','Success timeline');
+
     }
 
     public function insert_cermus(Request $request){
@@ -200,5 +249,26 @@ class informasiController extends Controller
         }
 
         return redirect()->route('sambutan')->with('msg-green','Sukses Menambahkan / Mengupdate Data');
+    }
+    public function destroy_timeline($id){
+        informasi_lainya::destroy($id);
+        return redirect()->route('timeline.page')->with('msg-green','Timeline deleted successfully');    
+    }
+    public function destroy_lomba($id){
+        informasi_lainya::destroy($id);
+        return redirect()->route('macamlomba.page')->with('msg-green','Lomba deleted successfully');    
+    }
+    public function update_narahubung(Request $request,$id){
+        $informasi= informasi_lainya::findOrFail($id);
+
+        $informasi->update([
+            'lainya'=> $request->lainya,
+            'var1'=> $request->var1,
+        ]);
+        return redirect()->route('narahubung.page')->with('msg-green','Berhasil Update Narahubung');
+    }
+    public function edit_narahubung($id){
+        $informasi= informasi_lainya::findOrFail($id)->first();
+        return view('dashboard_admin.informasi_lomba.edit_narahubung',['narahubung'=>$informasi]);
     }
 }

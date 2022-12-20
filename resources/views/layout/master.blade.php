@@ -233,6 +233,26 @@
                                 </li>
                                 <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="mdi mdi-houzz"></i>
+                                        <span> Lomba </span>
+                                        <span class="float-right">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="{{route('timeline.page')}}">Timeline</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('macamlomba.page')}}">Macam lomba</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('narahubung.page')}}">Narahubung</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect">
                                         <i class="mdi mdi-cash-multiple"></i>
                                         <span> Pembayaran </span>
                                         <span class="float-right">

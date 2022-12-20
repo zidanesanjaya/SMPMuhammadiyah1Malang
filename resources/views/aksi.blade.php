@@ -97,28 +97,14 @@
           </div><!-- End Service Item -->
 
         <div class="row gy-4 d-flex justify-content-center">
+          @foreach($timeline as $value)
           <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
             <div class="service-item position-relative shadow-sm bg-body rounded">
-              <h4>24 Agustus 2022</h4>
-              <p>Pembukaan Pendaftaran.</p>
+              <h4>{{date('d F Y', strtotime($value->var5))}}</h4>
+              <p>{{$value->lainya}}</p>
             </div>
           </div><!-- End Service Item -->
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-            <div class="service-item position-relative shadow-sm bg-body rounded">
-              <h4>25 Agustus 2022</h4>
-              <p>Penutupan Pendaftaran.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-            <div class="service-item position-relative shadow-sm bg-body rounded">
-              <h4>26 Agustus 2022</h4>
-              <p>Pembukaan, Penutupan Acara Monaco 2022 dan Pengumuman Pemenang Lomba.</p>
-            </div>
-          </div><!-- End Service Item -->
-          
-
+          @endforeach
         </div>
 
       </div>
@@ -151,113 +137,34 @@
   <div class="container" data-aos="fade-up">
 
   <ul class="nav nav-tabs row gy-4 d-flex justify-content-center text-center">
+    @foreach($lomba as $value)
     <li class="nav-item col-6 col-md-4 col-lg-2">
-      <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-{{str_replace(' ', '_', $value->lainya)}}">
         <!-- <i class="bi bi-binoculars color-cyan"></i> -->
-        <h4>Lomba Tari</h4>
+        <h4>{{$value->lainya}}</h4>
       </a>
     </li><!-- End Tab 1 Nav -->
-
-    <li class="nav-item col-6 col-md-4 col-lg-2">
-      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-        <!-- <i class="bi bi-box-seam color-indigo"></i> -->
-        <h4>Lomba Menggambar dan Mewarnai</h4>
-      </a>
-    </li><!-- End Tab 2 Nav -->
-
-    <li class="nav-item col-6 col-md-4 col-lg-2">
-      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-        <!-- <i class="bi bi-brightness-high color-teal"></i> -->
-        <h4>Olimpiade MIPA</h4>
-      </a>
-    </li><!-- End Tab 3 Nav -->
-
-    <li class="nav-item col-6 col-md-4 col-lg-2">
-      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-        <!-- <i class="bi bi-brightness-high color-teal"></i> -->
-        <h4>Lomba Islami</h4>
-      </a>
-    </li><!-- End Tab 4 Nav -->
-
+    @endforeach
   </ul>
 
   <div class="tab-content">
-
-    <div class="tab-pane active show" id="tab-1">
+    @foreach($lomba as $value)
+    <div class="tab-pane" id="tab-{{str_replace(' ', '_', $value->lainya)}}">
       <div class="row gy-4">
         <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-          <h3>Lomba Tari</h3>
+          <h3>{{$value->lainya}}</h3>
           <p class="fst-italic">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {{$value->var1}}
           </p>
-          <a target="_blank" href="https://drive.google.com/file/d/1BhGieNprFFj5Lxgm4haTyneIGiVj_cMN/view?usp=sharing" class="btn btn-outline-primary">Juknis Lomba Seni</a>
-          <a target="_blank" href="https://bit.ly/LombaTari_AKSI2022" class="btn btn-outline-primary">Pendaftaran Lomba Tari</a>
+          <a target="_blank" href="/storage/lomba/{{$value->var4}}" class="btn btn-outline-primary">Juknis Lomba Seni</a>
+          <a target="_blank" href="https://{{$value->var2}}" class="btn btn-outline-primary">Pendaftaran Lomba Tari</a>
         </div>
         <div class="col-lg-4 order-1 order-lg-2 text-center">
-          <img src="/aksi/img/lombaSeni.png" alt="" class="img-fluid">
+          <img src="/storage/lomba/{{$value->var3}}" alt="" class="img-fluid">
         </div>
       </div>
     </div><!-- End Tab Content 1 -->
-
-    <div class="tab-pane" id="tab-2">
-      <div class="row gy-4">
-        <div class="col-lg-8 order-2 order-lg-1">
-        <h3>Lomba Menggambar dan Mewarnai</h3>
-          <p class="fst-italic">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <a target="_blank" href="https://drive.google.com/file/d/1BhGieNprFFj5Lxgm4haTyneIGiVj_cMN/view?usp=sharing" class="btn btn-outline-primary">Juknis Lomba Seni</a>
-          <a target="_blank" href="https://bit.ly/LombaMenggambar_AKSI2022" class="btn btn-outline-primary">Pendaftaran Lomba Tari</a>
-        </div>
-        <div class="col-lg-4 order-1 order-lg-2 text-center">
-          <img src="/aksi/img/lombaSeni.png" alt="" class="img-fluid">
-        </div>
-      </div>
-    </div><!-- End Tab Content 2 -->
-
-    <div class="tab-pane" id="tab-3">
-      <div class="row gy-4">
-        <div class="col-lg-8 order-2 order-lg-1">
-          <h3>Olimpiade Mipa</h3>
-          <p class="fst-italic">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <a target="_blank" href="https://drive.google.com/file/d/1Vj9LuGrrUVWacMMctnLohZpuzkEfbIJ3/view?usp=sharing" class="btn btn-outline-primary">Juknis Olimpiade MIPA</a>
-          <a target="_blank" href="https://s.id/FormulirOlimpiade" class="btn btn-outline-primary">Pendaftaran Olimpiade MIPA</a>
-        </div>
-        <div class="col-lg-4 order-1 order-lg-2 text-center">
-          <img src="/aksi/img/olimpiadeMipa.png" alt="" class="img-fluid">
-        </div>
-      </div>
-    </div><!-- End Tab Content 3 -->
-
-    <div class="tab-pane" id="tab-4">
-      <div class="row gy-4">
-        <div class="col-lg-8 order-2 order-lg-1">
-          <h3>Lomba Islami</h3>
-          <p class="fst-italic">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <a target="_blank" href="https://drive.google.com/file/d/1BhGieNprFFj5Lxgm4haTyneIGiVj_cMN/view?usp=sharing" class="btn btn-outline-primary">Juknis Lomba Islami</a>
-          <a target="_blank" href="https://bit.ly/LombaMenggambar_AKSI2022" class="btn btn-outline-primary">Pendaftaran Lomba Islami</a>
-        </div>
-        <div class="col-lg-4 order-1 order-lg-2 text-center">
-          <img src="/aksi/img/lombaIslami.png" alt="" class="img-fluid">
-        </div>
-      </div>
-    </div><!-- End Tab Content 4 -->
+    @endforeach
   </div>
   </div>
 </section><!-- End Features Section -->
@@ -286,8 +193,8 @@
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
                   <h4>Narahubung 1:</h4>
-                  <p>+62-8564-6717-897</p>
-                  <p>(Bu Ulfa)</p>
+                  <p>{{$narahubung1->lainya}}</p>
+                  <p>({{$narahubung1->var1}})</p>
                 </div>
               </div><!-- End Info Item -->
             </div>
@@ -319,8 +226,8 @@
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
                   <h4>Narahubung 2:</h4>
-                  <p>+62-8133-0951-615</p>
-                  <p>(Bu Vini)</p>
+                  <p>{{$narahubung2->lainya}}</p>
+                  <p>({{$narahubung2->var1}})</p>
                 </div>
               </div><!-- End Info Item -->
             </div>

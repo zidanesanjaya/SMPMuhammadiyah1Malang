@@ -23,6 +23,19 @@ class admin extends Seeder
                 'role' => 'admin',
                 'password' => Hash::make('admin123'),
             ]];
+        $narahubung = [
+            [
+                'type' => 'narahubung1',
+                'lainya' => '08123456790',
+                'var1' => 'Bu Vini',
+            ],
+            [
+                'type' => 'narahubung2',
+                'lainya' => '08123456790',
+                'var1' => 'Bu Ulfa',
+            ]
+        ];
+        DB::table('informasi_lainya')->insert($narahubung);
         DB::table('users')->insert($admin);
     }
 }
