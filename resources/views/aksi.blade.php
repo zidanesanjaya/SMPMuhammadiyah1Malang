@@ -89,36 +89,35 @@
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-2 col-md-6 d-flex" data-aos="zoom-out">
+        <div class="d-flex justify-content-center text-center" data-aos="zoom-out">
             <div class="service-item position-relative">
               <p>Waktu</p>
               <h4>Pelaksanaan</h4>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-            <div class="service-item position-relative">
+        <div class="row gy-4 d-flex justify-content-center">
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+            <div class="service-item position-relative shadow-sm bg-body rounded">
               <h4>24 Agustus 2022</h4>
               <p>Pembukaan Pendaftaran.</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-            <div class="service-item position-relative">
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+            <div class="service-item position-relative shadow-sm bg-body rounded">
               <h4>25 Agustus 2022</h4>
               <p>Penutupan Pendaftaran.</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-            <div class="service-item position-relative">
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+            <div class="service-item position-relative shadow-sm bg-body rounded">
               <h4>26 Agustus 2022</h4>
               <p>Pembukaan, Penutupan Acara Monaco 2022 dan Pengumuman Pemenang Lomba.</p>
             </div>
           </div><!-- End Service Item -->
+          
 
         </div>
 
