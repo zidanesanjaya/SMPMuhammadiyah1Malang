@@ -51,7 +51,7 @@
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+      <a href="{{ url ('http://127.0.0.1:8000/') }}" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="/aksi/img/logo.png" alt=""> -->
         <h1>AKSI<span>.</span></h1>
@@ -60,7 +60,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="{{ url ('http://127.0.0.1:8000/aksimuhasa') }}">Home</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -79,7 +79,7 @@
         dapat memberikan kontribusi positif untuk kemajuan bangsa Indonesia.
       </p>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="#about" class="btn-get-started scrollto">Tentang Aksi</a>
       </div>
     </div>
   </section>
@@ -268,27 +268,39 @@
       <div class="container">
 
         <div class="section-header">
-          <h2>Contact Us</h2>
+          <h2>Kontak Kami</h2>
         </div>
 
       </div>
 
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3951.3262140828665!2d112.62717!3d-7.965200000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8670066f016a7940!2sSchool%20SMP%20Muhammadiyah%201%20Malang!5e0!3m2!1sen!2sus!4v1669865562112!5m2!1sen!2sus" width="100%" height="371.59" allowfullscreen="" loading="lazy"></iframe>
       </div><!-- End Google Maps -->
 
       <div class="container">
 
-        <div class="row gy-5 gx-lg-5">
+        <div class="row gy-9 gx-lg-9 d-flex justify-content-between">
 
-          <div class="col-lg-4">
+          <div class="col-lg-3">
+            <div class="info">
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Narahubung 1:</h4>
+                  <p>+62-8564-6717-897</p>
+                  <p>(Bu Ulfa)</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+          </div>
 
+          <div class="col-lg-5">
             <div class="info">
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h4>Location:</h4>
-                  <p>Jl. Brigjend Slamet Riadi No.134, Oro-oro Dowo, Kec. Klojen, Kota Malang</p>
+                  <p class="text-center">Jl. Brigjend Slamet Riadi No.134, Oro-oro Dowo, Kec. Klojen, Kota Malang</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -296,25 +308,25 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h4>Email:</h4>
-                  <p>smpm1.mlg@gmail.com</p>
+                  <p class="text-center">smpm1.mlg@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
+            </div>
+          </div>
 
+          <div class="col-lg-3">
+            <div class="info">
               <div class="info-item d-flex">
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
-                  <h4>Call:</h4>
+                  <h4>Narahubung 2:</h4>
                   <p>+62-8133-0951-615</p>
+                  <p>(Bu Vini)</p>
                 </div>
               </div><!-- End Info Item -->
-
             </div>
-
           </div>
-
-          <div class="col-lg-8">
-            asd
-          </div><!-- End Contact Form -->
+          <!-- End Contact Form -->
 
         </div>
 
