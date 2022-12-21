@@ -140,8 +140,10 @@ Route::group(['middleware' => ['auth']], function() {
          Route::get('visimisi', [informasiController::class, 'visimisi_page'])->name('visimisi_page'); 
          Route::get('galeri', [informasiController::class, 'galeri'])->name('galeri'); 
          Route::get('cermus', [informasiController::class, 'cerita_muhasa'])->name('cermus'); 
+         Route::get('jml', [informasiController::class, 'jml'])->name('jml'); 
          Route::get('cermus_edit/{id}', [informasiController::class, 'cerita_muhasa_edit'])->name('page.edit_cermus'); 
-            Route::put('update_sambutan/{id}', [informasiController::class, 'update_cermus'])->name('update.cermus'); 
+             Route::put('update_jumlah', [informasiController::class, 'update_jumlah'])->name('update.jumlah'); 
+             Route::put('update_sambutan/{id}', [informasiController::class, 'update_cermus'])->name('update.cermus'); 
              Route::put('store_sambutan', [informasiController::class, 'insert_sambutan'])->name('store.sambutan'); 
              Route::post('store_visimisi', [informasiController::class, 'insert_visi_misi'])->name('store.visimisi'); 
              Route::post('store_galeri', [informasiController::class, 'insert_galeri'])->name('store.galeri'); 

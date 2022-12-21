@@ -271,4 +271,46 @@ class informasiController extends Controller
         $informasi= informasi_lainya::findOrFail($id)->first();
         return view('dashboard_admin.informasi_lomba.edit_narahubung',['narahubung'=>$informasi]);
     }
+    public function jml(){
+        $jml_mapel = DB::table('informasi_lainya')->where('type','jumlah_mapel')->first();
+        $jml_guru = DB::table('informasi_lainya')->where('type','jumlah_guru')->first();
+        $jml_siswa = DB::table('informasi_lainya')->where('type','jumlah_siswa')->first();
+        $jml_ekskul = DB::table('informasi_lainya')->where('type','jumlah_ekskul')->first();
+
+        return view('dashboard_admin.informasi.informasi_jumlah',['jml_siswa'=>$jml_siswa , 'jml_guru'=>$jml_guru , 'jml_mapel'=>$jml_mapel , 'jml_ekskul'=>$jml_ekskul]);
+    }
+
+    public function update_jumlah(Request $request){
+        $jml_mapel_ = DB::table('informasi_lainya')->where('type','jumlah_mapel')->first();
+        $jml_guru_ = DB::table('informasi_lainya')->where('type','jumlah_guru')->first();
+        $jml_siswa_ = DB::table('informasi_lainya')->where('type','jumlah_siswa')->first();
+        $jml_ekskul_ = DB::table('informasi_lainya')->where('type','jumlah_ekskul')->first();
+
+        $jml_mapel = informasi_lainya::findOrFail($jml_mapel_->id);
+        $jml_guru = informasi_lainya::findOrFail($jml_guru_->id);
+        $jml_siswa = informasi_lainya::findOrFail($jml_siswa_->id);
+        $jml_ekskul = informasi_lainya::findOrFail($jml_ekskul_->id);
+
+        if($request->mapel != null){
+            $jml_mapel->lainya = $request->mapel;
+            $jml_mapel->save();
+        }
+
+        if($request->guru != null){
+            $jml_guru->lainya = $request->guru;
+            $jml_guru->save();
+        }
+
+        if($request->siswa != null){
+            $jml_siswa->lainya = $request->siswa;
+            $jml_siswa->save();
+        }
+
+        if($request->ekskul != null){
+            $jml_ekskul->lainya = $request->ekskul;
+            $jml_ekskul->save();
+        }
+
+        return redirect()->route('jml');
+    }
 }

@@ -16,13 +16,19 @@ class UmumController extends Controller
         $nama_kepsek = DB::table('informasi_lainya')->where('type','nama_kepsek')->first();
         $galeri =DB::table('informasi_lainya')->where('type','galeri')->get();
         $cermus = DB::table('cerita_muhasa')->take(3)->orderBy('id', 'desc')->get();
+
+        $jml_mapel = DB::table('informasi_lainya')->where('type','jumlah_mapel')->first();
+        $jml_guru = DB::table('informasi_lainya')->where('type','jumlah_guru')->first();
+        $jml_siswa = DB::table('informasi_lainya')->where('type','jumlah_siswa')->first();
+        $jml_ekskul = DB::table('informasi_lainya')->where('type','jumlah_ekskul')->first();
+
         // echo json_encode($cermus); die();
 
         $fotoKepsek = $fotoKepsek == null ? null : $fotoKepsek->lainya;
         $sambutan = $sambutan == null ? null : $sambutan->lainya;
         $nama_kepsek = $nama_kepsek == null ? null : $nama_kepsek->lainya;
 
-        return view('index',['visi'=>$visi , 'misi'=>$misi , 'fotoKepsek' => $fotoKepsek , 'sambutan'=>$sambutan , 'nama_kepsek'=>$nama_kepsek , 'galeri'=> $galeri , 'cermus'=>$cermus]);
+        return view('index',['visi'=>$visi , 'misi'=>$misi , 'fotoKepsek' => $fotoKepsek , 'sambutan'=>$sambutan , 'nama_kepsek'=>$nama_kepsek , 'galeri'=> $galeri , 'cermus'=>$cermus , 'jml_siswa'=>$jml_siswa , 'jml_guru'=>$jml_guru , 'jml_mapel'=>$jml_mapel , 'jml_ekskul'=>$jml_ekskul]);
     }
 
     public function detail_cermus($id){

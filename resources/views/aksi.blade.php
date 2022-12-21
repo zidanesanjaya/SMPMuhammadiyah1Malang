@@ -277,7 +277,25 @@
 
   <!-- Template Main JS File -->
   <script src="/aksi/js/main.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $( document ).ready(function() {
+      console.log(getMachineId());
+    });
+    
+    
+function getMachineId() {
+    
+    let machineId = localStorage.getItem('MachineId');
+    
+    if (!machineId) {
+        machineId = crypto.randomUUID();
+        localStorage.setItem('MachineId', machineId);
+    }
 
+    return machineId;
+}
+  </script>
 </body>
 
 </html>

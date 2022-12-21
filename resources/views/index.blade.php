@@ -250,22 +250,22 @@
         <div class="row counters">
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="128" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{$jml_siswa->lainya}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Siswa</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{$jml_mapel->lainya}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Mata Pelajaran</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{$jml_guru->lainya}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Guru</p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{$jml_ekskul->lainya}}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Ekstrakulikuler</p>
         </div>
         </div>
