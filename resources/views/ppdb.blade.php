@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PPDB</title>
+    <title>SMP Muhammadiyah 1 Malang - PPDB</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
+    <link href="/img/logohead.png" rel="icon">
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->

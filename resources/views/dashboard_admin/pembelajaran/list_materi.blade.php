@@ -11,10 +11,10 @@
 <div class="container bg-white border p-3">
     <div class="row">
         <div class="col">
-            <h5>Form Materi</h5>
+            <h5>Form Mata Pelajaran</h5>
         </div>
         <div class="col text-right">
-            <a href="#" class="btn btn-warning btn-raised" data-toggle="modal" data-target="#editPassword"> Tambah Judul Materi</a>
+            <a href="#" class="btn btn-warning btn-raised" data-toggle="modal" data-target="#editPassword"> Tambah Mata Pelajaran</a>
         </div>
     </div>
     <hr>
@@ -35,7 +35,7 @@
                     <table id="datatable2" class="table">
                         <thead>
                             <tr>
-                                <th>Nama Materi</th>
+                                <th>Nama Mata Pelajaran</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -65,7 +65,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tambah Materi</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Mata Pelajaran</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -73,7 +73,7 @@
       <form action="{{route('store.list_materi')}}" method="post" >
         @csrf
         <div class="modal-body">
-            <h6 class="text-muted mt-3">Judul Materi</h6>
+            <h6 class="text-muted mt-3">Nama Mata Pelajaran</h6>
             <input type="text" class="form-control pl-2" name="nama_materi">
         </div>
         <div class="modal-footer">

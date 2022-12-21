@@ -10,7 +10,8 @@
         <meta content="Mannatthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="/admin/assets/images/favicon.ico">
+        <!-- <link rel="shortcut icon" href="/admin/assets/images/favicon.ico"> -->
+    <link href="/img/logohead.png" rel="icon">
 
         <!-- Dropzone css -->
         <link href="/admin/assets/plugins/dropify/css/dropify.min.css" rel="stylesheet"> 
@@ -69,8 +70,8 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.html" class="logo">
-                            <img src="/img/logohead.png" alt="" class="logo-large">
+                        <a href="#" class="logo">
+                            <img src="/img/logohead.png" alt="" class="w-25">
                         </a>
                     </div>
                 </div>
@@ -151,13 +152,13 @@
                                     </a>
                                     <ul class="list-unstyled">
                                         <li>
-                                            <a href="#">Tambah Materi Baru</a>
+                                            <a href="{{route('page.materi')}}">Tambah Materi Baru</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('page.list_materi')}}">Master Materi</a>
+                                            <a href="{{route('page.list_materi')}}">Tambah Mata Pelajaran</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('page.list_guru')}}">Master Guru</a>
+                                            <a href="{{route('page.list_guru')}}">Tambah Guru</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -224,17 +225,17 @@
                                             <a href="{{route('page.materi')}}">Tambah Materi Baru</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('page.list_materi')}}">Master Materi</a>
+                                            <a href="{{route('page.list_materi')}}">Tambah Mata Pelajaran</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('page.list_guru')}}">Master Guru</a>
+                                            <a href="{{route('page.list_guru')}}">Tambah Guru</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="has_sub">
                                     <a href="javascript:void(0);" class="waves-effect">
                                         <i class="mdi mdi-houzz"></i>
-                                        <span> Lomba </span>
+                                        <span> Lomba Aksi</span>
                                         <span class="float-right">
                                             <i class="mdi mdi-chevron-right"></i>
                                         </span>
@@ -378,11 +379,6 @@
                     <!-- Page content Wrapper -->
                 </div>
                 <!-- content -->
-
-                <footer class="footer">
-                    © 2018 Urora by Mannatthemes.
-                </footer>
-
             </div>
             <!-- End Right content here -->
 

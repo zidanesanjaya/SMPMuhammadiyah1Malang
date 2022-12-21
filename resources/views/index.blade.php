@@ -79,13 +79,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="position: absolute; z-index: 1;" data-interval="100">
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="2500">
-            <img src="/img/hero-bg.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
+            <img src="/img/indexCarousel1.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
         </div>
         <div class="carousel-item" data-bs-interval="2500">
-            <img src="/img/hero-bg.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
+            <img src="/img/indexCarousel2.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
         </div>
         <div class="carousel-item" data-bs-interval="2500" repeat>
-            <img src="/img/hero-bg.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
+            <img src="/img/indexCarousel3.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%);">
         </div>
     </div>
 </div>
@@ -477,11 +477,11 @@
 
     <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-        &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span><a target="_blank" href="https://github.com/zidanesanjaya">Zidane</a>, <a target="_blank" href="https://github.com/Reynaldi1912">Reynaldi</a></span></strong>. All Rights Reserved
         </div>
-        <div class="credits">
+        <!-- <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+        </div> -->
     </div>
     </div>
 </footer><!-- End Footer -->
