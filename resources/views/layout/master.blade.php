@@ -140,6 +140,9 @@
                                         <li>
                                             <a href="{{route('cermus')}}">Cerita Muhasa</a>
                                         </li>
+                                        <li>
+                                            <a href="{{route('jml')}}">Informasi Jumlah</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="has_sub">
@@ -209,6 +212,9 @@
                                         </li>
                                         <li>
                                             <a href="{{route('cermus')}}">Cerita Muhasa</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('jml')}}">Informasi Jumlah</a>
                                         </li>
                                     </ul>
                                 </li>
