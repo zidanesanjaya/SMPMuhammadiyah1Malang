@@ -12,6 +12,9 @@ use App\Models\ayah;
 use App\Models\ibu;
 use App\Models\wali;
 use App\Models\pembayaran;
+use App\Exports\ExportUser;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 // use App\Models\User;
 use Illuminate\Http\Request;
@@ -130,5 +133,8 @@ class AdminController extends Controller
             ]);
         }
         return redirect()->route('user_admin.page')->with('status', 'Data Berhasil Di Update');;
+    }
+    public function exportUsers(Request $request){
+        return Excel::download(new ExportUser, 'list-siswa.xlsx');
     }
 }

@@ -168,8 +168,6 @@ class SiswaController extends Controller
 
     public function insert_orang_tua(Request $request){
 
-    
-
         if($request->nik_ayah != null && $request->nama_ayah != null && $request->nik_ibu != null && $request->nama_ibu != null){
             $detail_orang_tua = new detail_orang_tua();
 

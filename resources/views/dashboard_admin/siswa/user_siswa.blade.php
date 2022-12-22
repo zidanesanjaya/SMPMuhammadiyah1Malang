@@ -13,6 +13,9 @@
         <div class="col">
             <h5>List Siswa Terdaftar</h5>
         </div>
+        <div class="col text-right">
+            <a href="{{route('export-users')}}" class="btn btn-success btn-raised"><i class="mdi mdi-file-excel"></i> Export</a>
+        </div>
     </div>
     <hr>
 
