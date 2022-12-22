@@ -13,6 +13,13 @@ use App\Models\ibu;
 use App\Models\wali;
 use App\Models\pembayaran;
 use App\Exports\ExportUser;
+use App\Imports\ImportUser;
+use App\Imports\importDetail;
+use App\Imports\importDetailOrangTua;
+use App\Imports\ImportAyah;
+use App\Imports\ImportIbu;
+use App\Imports\ImportWali;
+
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -136,5 +143,19 @@ class AdminController extends Controller
     }
     public function exportUsers(Request $request){
         return Excel::download(new ExportUser, 'list-siswa.xlsx');
+    }
+    public function importView(Request $request){
+        return view('importFile');
+    }
+
+    public function import(Request $request){
+        Excel::import(new ImportUser, $request->file('file')->store('files'));
+        Excel::import(new importDetail, $request->file('file')->store('files'));
+        Excel::import(new importDetailOrangTua, $request->file('file')->store('files'));
+        Excel::import(new importAyah, $request->file('file')->store('files'));
+        Excel::import(new importIbu, $request->file('file')->store('files'));
+        Excel::import(new importWali, $request->file('file')->store('files'));
+
+        return redirect()->back();
     }
 }

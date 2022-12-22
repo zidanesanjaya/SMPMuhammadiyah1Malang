@@ -7,6 +7,11 @@
             <h4 class="page-title">Siswa</h4>
         </div>
     </div>
+    <div class="col-sm-6 text-right">
+        <div class="page-title-box">
+            <a class="btn btn-success btn-raised" href="{{ route('export-users') }}"><i class="mdi mdi-file-excel"></i> Export Siswa</a>
+        </div>
+    </div>
 </div>
 <div class="container bg-white border p-3">
     <div class="row">
@@ -14,7 +19,16 @@
             <h5>List Siswa Terdaftar</h5>
         </div>
         <div class="col text-right">
-            <a href="{{route('export-users')}}" class="btn btn-success btn-raised"><i class="mdi mdi-file-excel"></i> Export</a>
+            <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                    <div class="form-group mb-4">
+                        <div class="custom-file text-left">
+                            <input type="file" name="file" class="form-control">
+                        </div>
+                    </div>
+                    <a class="btn btn-warning btn-raised" href="/admin/excel/template-import-siswa.xlsx"><i class="mdi mdi-arrow-down-bold-circle"></i> Template</a>
+                    <button class="btn btn-primary">Import Siswa</button>
+            </form>
         </div>
     </div>
     <hr>

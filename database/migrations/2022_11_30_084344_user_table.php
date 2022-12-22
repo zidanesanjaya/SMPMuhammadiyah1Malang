@@ -24,6 +24,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_gelombang')->nullable();//FK
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('excel_import_val')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

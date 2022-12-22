@@ -83,6 +83,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('dashboard_admin', [AuthController::class, 'dashboard_admin'])->name('dashboard_admin'); 
     
     Route::middleware([CheckRoleAdmin::class])->group(function(){
+        Route::get('/file-import',[AdminController::class,'importView'])->name('import-view');
+        Route::post('/import',[AdminController::class,'import'])->name('import');
         Route::get('/export-users',[AdminController::class,'exportUsers'])->name('export-users');
         //json
         Route::get('json_vw_histori_pembayaran/{id}', [GelombangController::class, 'json_vw_histori_pembayaran'])->name('json_vw_histori_pembayaran');

@@ -15,6 +15,7 @@ class ExportUser implements FromCollection , WithHeadings
     public function headings(): array
     {
         return [
+            'ID',
             'Email',
             'Nama Lengkap',
             'Telepon Siswa',

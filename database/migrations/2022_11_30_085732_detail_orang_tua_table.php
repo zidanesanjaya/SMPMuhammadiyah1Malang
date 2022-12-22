@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('detail_orang_tua', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_user'); //FK
-            $table->string('provinsi');
-            $table->string('kabupaten');
-            $table->string('kecamatan');
-            $table->string('kelurahan');
-            $table->string('telepon_orang_tua');
-            $table->string('alamat');
+            $table->string('provinsi')->nullable();
+            $table->string('kabupaten')->nullable();
+            $table->string('kecamatan')->nullable();
+            $table->string('kelurahan')->nullable();
+            $table->string('telepon_orang_tua')->nullable();
+            $table->string('alamat')->nullable();
             $table->timestamps();
         });
     }

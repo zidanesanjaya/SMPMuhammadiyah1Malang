@@ -12,6 +12,8 @@ class detail_siswa extends Model
 
     protected $fillable = [
         'id_user',
+        'nama_panggilan',
+        'telepon',
         'tempat_lahir',
         'tanggal_lahir',
         'jenis_kelamin',

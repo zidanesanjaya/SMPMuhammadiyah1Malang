@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('wali', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_user');
-            $table->string('nik'); 
-            $table->string('nama');
-            $table->string('pendidikan');
-            $table->string('pekerjaan');
-            $table->string('tempat_lahir');
-            $table->string('tanggal_lahir');
-            $table->string('penghasilan');
+            $table->string('nik')->nullable(); 
+            $table->string('nama')->nullable();
+            $table->string('pendidikan')->nullable();
+            $table->string('pekerjaan')->nullable();
+            $table->string('tempat_lahir')->nullable();
+            $table->string('tanggal_lahir')->nullable();
+            $table->string('penghasilan')->nullable();
             $table->timestamps();
         });
     }
