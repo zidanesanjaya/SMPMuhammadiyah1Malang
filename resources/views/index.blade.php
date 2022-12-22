@@ -61,7 +61,7 @@
             <li><a href="#main">Profile</a></li>
             <li><a href="#cermus">Cerita Muhasa</a></li>
             <li><a href="#galeri">Galeri</a></li>
-            <li><a href="{{ route('page.matpel') }}">Mata Pelajaran</a></li>
+            <li><a href="{{ route('page.matpel') }}">Mata Pembelajaran</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/aksimuhasa') }}">AKSI</a></li>
         </ul>
@@ -69,7 +69,7 @@
     </nav>
     <!-- .navbar -->
 
-    <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="get-started-btn">Daftar Sekarang</a>
+    <a href="{{ url ('http://127.0.0.1:8000/ppdb') }}" class="get-started-btn">Daftar Sekarang</a>
 
     </div>
 </header><!-- End Header -->
@@ -93,7 +93,7 @@
         <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
             <h1>SMP MUHAMMADIYAH 1 MALANG</h1>
             <h2>Berjiwa Pemimpin - Berakhlak Islami</h2>
-            <a href="{{ url ('https://ppdb.smpmuhasa.sch.id/') }}" class="btn-get-started">Daftar Sekarang</a>
+            <a href="{{ url ('http://127.0.0.1:8000/ppdb') }}" class="btn-get-started">Daftar Sekarang</a>
         </div>
     </div>
 </section>
@@ -195,7 +195,7 @@
     <div class="container" data-aos="fade-up">
 
         <div class="row">
-        <div class="col-lg-4 d-flex align-items-stretch">
+        <div class="col-lg-4 d-flex align-items-stretch text-center">
             <div class="content">
             <h3 style="text-align: center; font-size: 250%;-webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #3C4048;">SMP MUHAMMADIYAH 1 MALANG</h3>
@@ -335,21 +335,117 @@
         <div class="row g-4 portfolio-container">
             @foreach($galeri as $value)
             <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
                     <img class="img-fluid" src="/storage/lainya/{{$value->lainya}}" alt="">
-                    <div class="portfolio-text">
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div>
             @endforeach
         </div>
     </div>
 </div>
 <!-- Gallery End -->
+
+<!-- Projects Start -->
+<div class="container-xxl py-5">
+        <div class="container">
+        <div class="section-title">
+            <h2>Testimoni</h2>
+            <p>Testimoni Alumni</p>
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="/img/testimoni/rayhan.jpeg" alt="">
+                        <div class="portfolio-text">
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                                <h4 class="text-white mb-4">Rayhan Rezanabil Risadi</h4>
+                                <h4 class="text-white mb-4">S1 Desain Produk, STT</h4>
+                            </button>
+                        </div>
+
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="/img/testimoni/rayhan.jpeg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Rayhan Rezanabil Risadi</h4>
+                            <h4 class="text-white mb-4">S1 Desain Produk, STT</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Pruning plants</h4>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner rounded">
+                        <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h4 class="text-white mb-4">Irrigation & Drainage</h4>
+                            <div class="d-flex">
+                                <a href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
 
             <!-- ======= Trainers Section ======= -->
             <section id="trainers" class="trainers">
@@ -495,6 +591,9 @@
 <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="/vendor/php-email-form/validate.js"></script>
+<script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <!-- Template Main JS File -->
 <script src="/js/main.js"></script>
@@ -506,6 +605,11 @@
     // 👇️ show div
     const box = document.getElementById('sambutan');
     box.style.display = 'block';
+    });
+
+// modal
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
     });
 </script>
 

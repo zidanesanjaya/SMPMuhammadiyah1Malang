@@ -63,7 +63,7 @@ https://templatemo.com/tm-569-edu-meeting
             <div class="col-lg-12">
               <div class="filters">
                 <ul>
-                  <li data-filter="*"  class="active">Semua Mata Pelajaran</li>
+                  <li data-filter="*"  class="active">Semua Mata Pembelajaran</li>
                   <li data-filter=".kelas7">Kelas 7</li>
                   <li data-filter=".kelas8">Kelas 8</li>
                   <li data-filter=".kelas9">Kelas 9</li>

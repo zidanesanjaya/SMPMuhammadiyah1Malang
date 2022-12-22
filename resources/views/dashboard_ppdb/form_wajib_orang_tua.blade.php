@@ -170,7 +170,7 @@
                     </div>
 
                     <div class="bg-muted-m p-2 mt-5">
-                        <h6>Form Wali</h6>
+                        <h6>Form Ibu</h6>
                         <div class="row">
                             <div class="col">
                                 <label class="">NIK Ibu</label>

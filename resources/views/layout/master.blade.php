@@ -68,7 +68,7 @@
                 </button>
 
                 <!-- LOGO -->
-                <div class="topbar-left">
+                <div class="topbar-left1" style="background-color: #1C315E;">
                     <div class="text-center">
                         <a href="#" class="logo">
                             <img src="/img/logohead.png" alt="" class="w-25">
@@ -333,7 +333,7 @@
                     <!-- Top Bar Start -->
                     <div class="topbar">
 
-                        <nav class="navbar-custom">
+                        <nav class="navbar-custom" style="background-color: #1C315E;">
                             <ul class="list-inline float-right mb-0 mr-3">                         
                                 <li class="list-inline-item dropdown notification-list">
                                     <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
