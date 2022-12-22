@@ -33,24 +33,28 @@ class admin extends Seeder
                 'type' => 'narahubung2',
                 'lainya' => '08123456790',
                 'var1' => 'Bu Ulfa',
-            ],
-            [
-                'type' => 'jumlah_siswa',
-                'lainya' => 0
-            ],
-            [
-                'type' => 'jumlah_mapel',
-                'lainya' => 0
-            ],
-            [
-                'type' => 'jumlah_guru',
-                'lainya' => 0
-            ],
-            [
-                'type' => 'jumlah_ekskul',
-                'lainya' => 0
             ]
         ];
+
+        $no = [
+                [
+                    'type' => 'jumlah_siswa',
+                    'lainya' => 0
+                ],
+                [
+                    'type' => 'jumlah_mapel',
+                    'lainya' => 0
+                ],
+                [
+                    'type' => 'jumlah_guru',
+                    'lainya' => 0
+                ],
+                [
+                    'type' => 'jumlah_ekskul',
+                    'lainya' => 0
+                ]
+            ];
+        DB::table('informasi_lainya')->insert($no);
         DB::table('informasi_lainya')->insert($narahubung);
         DB::table('users')->insert($admin);
     }
