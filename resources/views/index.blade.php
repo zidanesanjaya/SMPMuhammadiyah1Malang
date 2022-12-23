@@ -24,6 +24,10 @@
     <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'> -->
+    
     <style>
         .course-content .deskripsi{
             word-wrap: break-word;
@@ -343,65 +347,35 @@
 </div>
 <!-- Gallery End -->
 
+
 <!-- Projects Start -->
 <div class="container-xxl py-5">
         <div class="container">
         <div class="section-title">
             <h2>Testimoni</h2>
             <p>Testimoni Alumni</p>
-            <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
         </div>
             <div class="row g-4 portfolio-container">
                 <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner rounded">
                         <img class="img-fluid" src="/img/testimoni/rayhan.jpeg" alt="">
                         <div class="portfolio-text">
-                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                 <h4 class="text-white mb-4">Rayhan Rezanabil Risadi</h4>
                                 <h4 class="text-white mb-4">S1 Desain Produk, STT</h4>
                             </button>
                         </div>
 
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content text-center">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable p-3">
+                                            Dulu waktu di Muhasa saya adalah pribadi yang tidak begitu paham dengan ajaran agama, di Muhasa saya mempelajari banyak pengetahuan tentang agama sehingga saat ini sangat membantu. dari situ pribadi dan akhlak saya terbentuk , terimakasih Muhasa.
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-bs-dismiss="modal">Tutup</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -409,35 +383,50 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="/img/testimoni/rayhan.jpeg" alt="">
+                        <img class="img-fluid" src="/img/testimoni/haqqi.jpeg" alt="">
                         <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Rayhan Rezanabil Risadi</h4>
-                            <h4 class="text-white mb-4">S1 Desain Produk, STT</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                <h4 class="text-white mb-4">M. Haqqi Mustofa Kamil</h4>
+                                <h4 class="text-white mb-4">D3 Teknik Sipil, Polinema</h4>
+                            </button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content text-center">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable p-3">
+                                            Selama sekolah di Muhasa saya merasa nyaman dan senang karena gurunya baik-baik dan sabar kalo mengajar. Dan nilai nilai Islam di SMP ini sangat dijunjung tinggi sehingga keimanan siswa akan semakin kuat dan bertambah
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-bs-dismiss="modal">Tutup</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        <img class="img-fluid" src="/img/testimoni/riven.jpeg" alt="">
                         <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Pruning plants</h4>
-                            <div class="d-flex">
-                                <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square rounded-circle mx-2" href=""><i class="fa fa-link"></i></a>
-                            </div>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                <h4 class="text-white mb-4">Riven Ayudita</h4>
+                                <h4 class="text-white mb-4">S1 Pend Matematika, UMM</h4>
+                            </button>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="portfolio-inner rounded">
-                        <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        <div class="portfolio-text">
-                            <h4 class="text-white mb-4">Irrigation & Drainage</h4>
-                            <div class="d-flex">
-                                <a href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content text-center">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable p-3">
+                                            Bersekolah di Muhasa selama tiga tahun saya didik oleh guru-guru yang sangat profesional pada bidangnya masing-masing. Disini saya dididik untuk bisa menjadi pribadi maju, kreatif dan tentunya berakhlak yang sampai saat ini saya ingat pesan itu.
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-bs-dismiss="modal">Tutup</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -446,59 +435,6 @@
         </div>
     </div>
     <!-- Projects End -->
-
-            <!-- ======= Trainers Section ======= -->
-            <section id="trainers" class="trainers">
-    <div class="container" data-aos="fade-up">
-    <div class="section-title">
-        <h2>Testimoni</h2>
-        <p>Testimoni Alumni</p>
-    </div>
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-            <img src="/img/testimoni/rayhan.jpeg" class="img-fluid" alt="">
-            <div class="member-content">
-                <h4>Rayhan Rezanabil Risadi</h4>
-                <span>S1 Desain Produk, STT</span>
-                <p>
-                Dulu waktu di Muhasa saya adalah pribadi yang tidak begitu paham dengan ajaran agama, di Muhasa saya mempelajari banyak pengetahuan tentang agama sehingga saat ini sangat membantu. dari situ pribadi dan akhlak saya terbentuk , terimakasih Muhasa.
-                </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-            <img src="/img/testimoni/haqqi.jpeg" class="img-fluid" alt="">
-            <div class="member-content">
-                <h4>M. Haqqi Mustofa Kamil</h4>
-                <span>D3 Teknik Sipil, Polinema</span>
-                <p>
-                Selama sekolah di Muhasa saya merasa nyaman dan senang karena gurunya baik-baik dan sabar kalo mengajar. Dan nilai nilai Islam di SMP ini sangat dijunjung tinggi sehingga keimanan siswa akan semakin kuat dan bertambah
-                </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-            <img src="/img/testimoni/riven.jpeg" class="img-fluid" alt="">
-            <div class="member-content">
-                <h4>Riven Ayudita</h4>
-                <span>S1 Pend Matematika, UMM</span>
-                <p>
-                Bersekolah di Muhasa selama tiga tahun saya didik oleh guru-guru yang sangat profesional pada bidangnya masing-masing. Disini saya dididik untuk bisa menjadi pribadi maju, kreatif dan tentunya berakhlak yang sampai saat ini saya ingat pesan itu.
-                </p>
-            </div>
-            </div>
-        </div>
-        </div>
-
-    </div>
-    </section>
-    <!-- End Trainers Section -->
 
     <section class="venue section-padding" id="section_6">
             <div class="container" data-aos="fade-up">
