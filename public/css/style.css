@@ -106,8 +106,8 @@
 }
 
 .portfolio-inner .portfolio-text .btn {
-  background: var(--light);
-  color: var(--primary);
+  /* background: var(--light);
+  color: var(--primary); */
 }
 
 .portfolio-inner .portfolio-text .btn:hover {

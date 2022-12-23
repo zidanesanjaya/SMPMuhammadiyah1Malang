@@ -25,8 +25,11 @@
     <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'> -->
+    <!-- index carousel -->
+    <!-- <link rel="stylesheet" href="/indexCarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/indexCarousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/indexCarousel/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css"> -->
     
     <style>
         .course-content .deskripsi{
@@ -65,6 +68,7 @@
             <li><a href="#main">Profile</a></li>
             <li><a href="#cermus">Cerita Muhasa</a></li>
             <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#kegiatanKami">Kegiatan Kami</a></li>
             <li><a href="{{ route('page.matpel') }}">Mata Pembelajaran</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/ppdb') }}">PPDB</a></li>
             <li><a href="{{ url ('http://127.0.0.1:8000/aksimuhasa') }}">AKSI</a></li>
@@ -74,7 +78,6 @@
     <!-- .navbar -->
 
     <a href="{{ url ('http://127.0.0.1:8000/ppdb') }}" class="get-started-btn">Daftar Sekarang</a>
-
     </div>
 </header><!-- End Header -->
 
@@ -326,7 +329,7 @@
     </section><!-- End Popular Courses Section -->
     
     <!-- Gallery Start -->
-<div id="galeri" class="trainers container-xxl py-5">
+<div id="galeri" class="trainers container-xxl py-5 w-150">
 <br><br>
     <div class="container" data-aos="fade-up">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -347,9 +350,75 @@
 </div>
 <!-- Gallery End -->
 
+<!-- Kegiatan Kami Start -->
+<!-- <div class="container" data-aos="fade-up" id="kegiatanKami">
+    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <div class="section-title">
+            <p>Kegiatan Kami</p>
+            <h2></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="featured-carousel owl-carousel">
+                <div class="item">
+                    <div class="work">
+                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
+                            <div class="text w-100">
+                                <span class="cat">Web Design</span>
+                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="work">
+                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
+                            <div class="text w-100">
+                                <span class="cat">Web Design</span>
+                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="work">
+                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
+                            <div class="text w-100">
+                                <span class="cat">Web Design</span>
+                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="work">
+                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
+                            <div class="text w-100">
+                                <span class="cat">Web Design</span>
+                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="work">
+                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
+                            <div class="text w-100">
+                                <span class="cat">Web Design</span>
+                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Kegiatan Kami End -->
 
 <!-- Projects Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-3 w-75">
         <div class="container">
         <div class="section-title">
             <h2>Testimoni</h2>
@@ -360,7 +429,7 @@
                     <div class="portfolio-inner rounded">
                         <img class="img-fluid" src="/img/testimoni/rayhan.jpeg" alt="">
                         <div class="portfolio-text">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                 <h4 class="text-white mb-4">Rayhan Rezanabil Risadi</h4>
                                 <h4 class="text-white mb-4">S1 Desain Produk, STT</h4>
                             </button>
@@ -530,6 +599,13 @@
 <script src="https://kit.fontawesome.com/3f31db6242.js" crossorigin="anonymous"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Index Carousel -->
+    <script src="/indexCarousel/js/jquery.min.js"></script>
+    <script src="/indexCarousel/js/popper.js"></script>
+    <script src="/indexCarousel/js/bootstrap.min.js"></script>
+    <script src="/indexCarousel/js/owl.carousel.min.js"></script>
+    <script src="/indexCarousel/js/main.js"></script>
 
 <!-- Template Main JS File -->
 <script src="/js/main.js"></script>
