@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Smp Muhammadiyah 1 Malang</title>
+    <title>SMP Muhammadiyah 1 Malang</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -26,10 +26,10 @@
     <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- index carousel -->
-    <!-- <link rel="stylesheet" href="/indexCarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/indexCarousel/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/indexCarousel/css/style.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+    <!-- <link href="/indexCarousel/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
     
     <style>
         .course-content .deskripsi{
@@ -85,14 +85,8 @@
 <section id="hero" class="d-flex justify-content-center align-items-center">
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="position: absolute; z-index: 1;" data-interval="100">
     <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="2500">
+        <div class="carousel-item active">
             <img src="/img/indexCarousel1.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%); size: 100px;">
-        </div>
-        <div class="carousel-item" data-bs-interval="2500">
-            <img src="/img/indexCarousel2.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%); size: 100px;">
-        </div>
-        <div class="carousel-item" data-bs-interval="2500" repeat>
-            <img src="/img/indexCarousel3.jpg" class="d-block w-100" alt="..." style="filter: brightness(50%); size: 100px;">
         </div>
     </div>
 </div>
@@ -351,70 +345,50 @@
 <!-- Gallery End -->
 
 <!-- Kegiatan Kami Start -->
-<!-- <div class="container" data-aos="fade-up" id="kegiatanKami">
-    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-        <div class="section-title">
-            <p>Kegiatan Kami</p>
-            <h2></h2>
-        </div>
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+<div class="section-title ms-lg-5">
+    <h2>Ekstrakulikuler</h2>
+    <p>Kegiatan Kami</p>
+</div>
+<div class="container w-50 rounded mx-auto d-block">
+
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/img/testimoni/rayhan.jpeg" alt="Los Angeles" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>We had such a great time in LA!</p>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="featured-carousel owl-carousel">
-                <div class="item">
-                    <div class="work">
-                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
-                            <div class="text w-100">
-                                <span class="cat">Web Design</span>
-                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="work">
-                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
-                            <div class="text w-100">
-                                <span class="cat">Web Design</span>
-                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="work">
-                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
-                            <div class="text w-100">
-                                <span class="cat">Web Design</span>
-                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="work">
-                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
-                            <div class="text w-100">
-                                <span class="cat">Web Design</span>
-                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="work">
-                        <div class="img d-flex align-items-end justify-content-center" style="background-image: url(img/service-1.jpg);">
-                            <div class="text w-100">
-                                <span class="cat">Web Design</span>
-                                <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="carousel-item">
+      <img src="/img/testimoni/rayhan.jpeg" alt="Chicago" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div> 
     </div>
-</div> -->
+    <div class="carousel-item">
+      <img src="/img/testimoni/rayhan.jpeg" alt="New York" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>We love the Big Apple!</p>
+      </div>  
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  
+</div>
+</div>
 <!-- Kegiatan Kami End -->
 
 <!-- Projects Start -->
@@ -578,12 +552,16 @@
 
     <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-        &copy; Copyright <strong><span><a target="_blank" href="https://github.com/zidanesanjaya">Zidane</a>, <a target="_blank" href="https://github.com/Reynaldi1912">Reynaldi</a></span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
         </div>
-        <!-- <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div> -->
-    </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
     </div>
 </footer><!-- End Footer -->
 
@@ -601,11 +579,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <!-- Index Carousel -->
-    <script src="/indexCarousel/js/jquery.min.js"></script>
-    <script src="/indexCarousel/js/popper.js"></script>
-    <script src="/indexCarousel/js/bootstrap.min.js"></script>
-    <script src="/indexCarousel/js/owl.carousel.min.js"></script>
-    <script src="/indexCarousel/js/main.js"></script>
 
 <!-- Template Main JS File -->
 <script src="/js/main.js"></script>

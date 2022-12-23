@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>HeroBiz Bootstrap Template - Home 1</title>
+  <title>Ajang Kompetensi dan Kreativitas Siswa - SMP MUHAMMADIYAH 1 MALANG</title>
+  <link href="/aksi/img/aksiLogo.png" rel="icon">
+
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/aksi/img/favicon.png" rel="icon">
   <link href="/aksi/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -63,6 +64,9 @@
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
+
+        
+      <!-- <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a> -->
       </nav><!-- .navbar -->
 
       <!-- <div class="btn-getstarted scrollto">+62-8133-0951-615 (SMP Muhasa) Jl. Brigjend Slamet Riadi No.134, Oro-oro Dowo, Kec. Klojen, Kota Malang</div> -->

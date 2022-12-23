@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>SMP Muhammadiyah 1 Malang - PPDB</title>
+    <title>PPDB - SMP Muhammadiyah 1 Malang</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -95,7 +95,7 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <img class="w-100" src="img/indexCarousel3.jpg" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -175,7 +175,7 @@
 <!-- Features End -->
 
 <!-- Facts Start -->
-<div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+<div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/3indexCarousel3.jpg">
     <div class="container py-5">
         <div class="row g-5">
             <div class="display-4 col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
@@ -350,7 +350,7 @@
 <!-- Testimonial End -->
 
 <!-- Quote Start -->
-<div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+<div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="/img/depanSekolah.jpg">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -392,7 +392,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                &copy; <a class="border-bottom" href="{{ url ('http://127.0.0.1:8000/') }}">SMP MUHAMMADIYAH 1 MALANG</a>, All Right Reserved.
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
