@@ -24,6 +24,7 @@ class ImportUser implements ToModel , WithStartRow
     {
         // echo json_encode($row);die();
         $user = new User([
+            'id_gelombang' => $row[47],
             'name' => $row[0],
             'email' => $row[1],
             'role'=> $row[2],
