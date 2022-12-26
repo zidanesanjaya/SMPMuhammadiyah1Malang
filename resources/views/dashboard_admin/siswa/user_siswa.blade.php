@@ -436,6 +436,10 @@
 </div>
 
 <script>
+    $( document ).ready(function() {
+        const button = document.querySelector("#dButtonLink");
+        button.setAttribute("disabled","disabled");
+    });
    function myFunction(val){
         detail(val);
         $('#detail').modal('show');
