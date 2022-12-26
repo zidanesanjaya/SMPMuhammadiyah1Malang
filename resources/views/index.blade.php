@@ -345,50 +345,113 @@
 <!-- Gallery End -->
 
 <!-- Kegiatan Kami Start -->
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-<div class="section-title ms-lg-5">
-    <h2>Ekstrakulikuler</h2>
-    <p>Kegiatan Kami</p>
-</div>
-<div class="container w-50 rounded mx-auto d-block">
+    <section id="kegiatanKami" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <br><br>
+      <div class="section-title ms-lg-5">
+        <h2>Ekstrakulikuler</h2>
+        <p>Kegiatan Kami</p>
+    </div>
 
-  
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/img/testimoni/rayhan.jpeg" alt="Los Angeles" class="d-block" style="width:100%">
-      <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>We had such a great time in LA!</p>
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/hisbulWathan.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Hisbul Watan</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/tapakSuci.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Tapak Suci</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/englishClub.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">English Club</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/kontenCreator.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Konten Kreator</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/eSport.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">E - Sport</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/tari.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Tari</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/drumBand.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Drumband</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/service-1.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Bina Vokal</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/service-1.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Band</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="/img/ekstrakulikuler/futsal.jpg" class="testimonial-img" alt="">
+                  <p class="fs-4">Futsal</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/img/testimoni/rayhan.jpeg" alt="Chicago" class="d-block" style="width:100%">
-      <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
-      </div> 
-    </div>
-    <div class="carousel-item">
-      <img src="/img/testimoni/rayhan.jpeg" alt="New York" class="d-block" style="width:100%">
-      <div class="carousel-caption">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
-      </div>  
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  
-</div>
-</div>
+    </section><!-- End Testimonials Section -->
 <!-- Kegiatan Kami End -->
 
 <!-- Projects Start -->

@@ -218,7 +218,7 @@
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-1.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/hisbulWathan.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">Hisbul Watan</h4>
@@ -226,7 +226,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-2.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/tapakSuci.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">Tapak Suci</h4>
@@ -234,7 +234,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/englishClub.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">English Club</h4>
@@ -242,7 +242,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/kontenCreator.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">Konten Kreator</h4>
@@ -250,7 +250,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/eSport.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">E-Sport</h4>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/tari.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">Tari</h4>
@@ -266,7 +266,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/drumBand.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">Drumband</h4>
@@ -290,7 +290,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/futsal.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">Futsal</h4>

@@ -1050,7 +1050,7 @@ ul {
 }
 
 .testimonials .testimonial-item {
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
   padding: 30px 30px 30px 60px;
   margin: 30px 15px;
   min-height: 200px;
@@ -1060,10 +1060,10 @@ ul {
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  width: 80%;
   border-radius: 10px;
   border: 6px solid #fff;
-  position: absolute;
+  /* position: absolute; */
   left: -45px;
 }
 
