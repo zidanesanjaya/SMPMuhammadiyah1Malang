@@ -16,7 +16,7 @@ class detail_orang_tua extends Model
         'provinsi',
         'kabupaten',
         'kecamatan',
-        'keluarahan',
+        'kelurahan',
         'telepon_orang_tua',
         'alamat',
         'created_at',

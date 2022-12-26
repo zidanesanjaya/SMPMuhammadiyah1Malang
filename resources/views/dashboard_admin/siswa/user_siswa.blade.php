@@ -23,11 +23,11 @@
                 @csrf
                     <div class="form-group mb-4">
                         <div class="custom-file text-left">
-                            <input type="file" name="file" class="form-control">
+                            <input type="file" name="file" class="form-control" id="dInputLink" onchange="disable_import()">
                         </div>
                     </div>
                     <a class="btn btn-warning btn-raised" href="/admin/excel/template-import-siswa.xlsx"><i class="mdi mdi-arrow-down-bold-circle"></i> Template</a>
-                    <button class="btn btn-primary">Import Siswa</button>
+                    <button class="btn btn-primary" id="dButtonLink">Import Siswa</button>
             </form>
         </div>
     </div>
@@ -593,6 +593,18 @@
             $('#gelombang').html(html);
         }
         });
+    }
+</script>
+<script>
+    function disable_import(){
+        const input = document.querySelector("#dInputLink");
+        const button = document.querySelector("#dButtonLink");
+
+        if(input == null || input == ""){
+            button.setAttribute("disabled", "disabled");
+        } else{
+            button.removeAttribute("disabled");
+        }
     }
 </script>
 
