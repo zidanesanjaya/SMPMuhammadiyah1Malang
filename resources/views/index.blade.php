@@ -349,8 +349,8 @@
       <div class="container" data-aos="fade-up">
         <br><br>
       <div class="section-title ms-lg-5">
-        <h2>Ekstrakulikuler</h2>
-        <p>Kegiatan Kami</p>
+        <h2>Kegiatan</h2>
+        <p>Ekstrakulikuler Kami</p>
     </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
