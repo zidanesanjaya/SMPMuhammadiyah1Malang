@@ -282,7 +282,7 @@
                 </div>
                 <div class="project-item pe-5 pb-5">
                     <div class="project-img mb-3">
-                        <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
+                        <img class="img-fluid rounded" src="/img/ekstrakulikuler/band.jpg" alt="">
                     </div>
                     <div class="project-title">
                         <h4 class="mb-0">Band</h4>
@@ -396,7 +396,7 @@
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+                Designed By <a target="_blank" href="https://github.com/zidanesanjaya">Zidane</a>, <a target="_blank" href="https://github.com/https://github.com/Reynaldi1912">Reynaldi</a>
             </div>
         </div>
     </div>

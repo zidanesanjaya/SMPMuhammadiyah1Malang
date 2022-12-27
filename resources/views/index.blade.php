@@ -431,7 +431,7 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="/img/service-1.jpg" class="testimonial-img" alt="">
+                  <img src="/img/ekstrakulikuler/band.jpg" class="testimonial-img" alt="">
                   <p class="fs-4">Band</p>
                 </div>
               </div>
@@ -622,7 +622,7 @@
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a target="_blank" href="https://github.com/zidanesanjaya">Zidane</a>, <a target="_blank" href="https://github.com/https://github.com/Reynaldi1912">Reynaldi</a>
         </div>
       </div>
     </div>
